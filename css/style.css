@@ -1,0 +1,47 @@
+@import url(../css/reset.css);
+@import url(../css/fonts.css);
+@import url(../css/header.css);
+@import url(../css/intro.css);
+@import url(../css/churches.css);
+@import url(../css/balloon.css);
+@import url(../css/traditions.css);
+@import url(../css/holidays.css);
+@import url(../css/history.css);
+@import url(../css/family.css);
+@import url(../css/about.css);
+@import url(../css/footer.css);
+
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

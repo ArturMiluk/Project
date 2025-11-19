@@ -1,0 +1,84 @@
+.churches {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(../img/bg.jpg) no-repeat center center / cover;
+}
+
+.churches::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.churches__inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.churches__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.churches__map {
+  width: 100%;
+  height: 70vh;
+  padding: 15px;
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+@media (max-width: 1200px) {
+  .churches__inner {
+    height: 60vh;
+  }
+
+  .churches__content {
+    width: 90%;
+    padding: 15px;
+    border-width: 1px;
+  }
+
+  .churches__map {
+    height: 50vh;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .churches__content {
+    width: 95%;
+    padding: 10px;
+    border-width: 1px;
+  }
+
+  .churches__map {
+    height: 40vh;
+    padding: 5px;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семья</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="./index.html" class="header__logo">Logo</a>
+          <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item nav__item--dropdown">
+                  <button class="nav__link nav__link--button">Храмы</button>
+                  <div class="nav__dropdown">
+                    <div class="nav__dropdown-list">
+                      <a href="./churches.html" class="nav__dropdown-item">Все города</a>
+                      <a href="./churches.html?city=minsk" class="nav__dropdown-item">Минск</a>
+                      <a href="./churches.html?city=gomel" class="nav__dropdown-item">Гомель</a>
+                      <a href="./churches.html?city=brest" class="nav__dropdown-item">Брест</a>
+                      <a href="./churches.html?city=grodno" class="nav__dropdown-item">Гродно</a>
+                      <a href="./churches.html?city=vitebsk" class="nav__dropdown-item">Витебск</a>
+                      <a href="./churches.html?city=mogilev" class="nav__dropdown-item">Могилев</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav__item nav__item--dropdown">
+                  <button class="nav__link nav__link--button">Традиции</button>
+                  <div class="nav__dropdown">
+                    <div class="nav__dropdown-list">
+                      <a href="./traditions.html" class="nav__dropdown-item">Традиции</a>
+                      <a href="" class="nav__dropdown-item">Еда</a>
+                      <a href="" class="nav__dropdown-item">Быт</a>
+                      <a href="" class="nav__dropdown-item">Культура</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav__item"><a href="./holidays.html" class="nav__link">Праздники</a></li>
+                <li class="nav__item nav__item--dropdown">
+                  <button class="nav__link nav__link--button">История</button>
+                  <div class="nav__dropdown">
+                    <div class="nav__dropdown-list">
+                      <a href="./history.html" class="nav__dropdown-item">История</a>
+                      <a href="" class="nav__dropdown-item">Зарождение храмов в РБ</a>
+                      <a href="" class="nav__dropdown-item">Зарождение традиций в РБ</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav__item nav__item--dropdown">
+                  <button class="nav__link nav__link--button">Семья</button>
+                  <div class="nav__dropdown">
+                    <div class="nav__dropdown-list">
+                      <a href="./family.html" class="nav__dropdown-item">Семья</a>
+                      <a href="" class="nav__dropdown-item">Формирование семейного устава</a>
+                      <a href="" class="nav__dropdown-item">Семейные праздники</a>
+                      <a href="" class="nav__dropdown-item">Взаимоотношения поколений</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <a href="./about.html" class="nav__link nav__link--info">О проекте</a>
+            </nav>
+            <div class="header__burger">
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+        <section class="family">
+            <div class="container">
+                <div class="family__inner"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__text">© 2025-2026 • Корни и крылья: Церкви Беларуси как хранители семейных традиций</div>
+      </div>
+    </footer>
+
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/burger.js"></script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(../img/bg.jpg) no-repeat center center / cover;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.about__inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 40px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.about__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.about__text {
+  margin: 40px 0 0 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #fff;
+  text-align: center;
+}
+
+.about__link {
+  position: relative;
+  margin: 40px 0 0 0;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.about__link:hover {
+  color: #1976d2;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .about__content {
+    padding: 32px;
+  }
+
+  .about__title {
+    font-size: 32px;
+  }
+
+  .about__text {
+    font-size: 20px;
+  }
+
+  .about__link {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__content {
+    padding: 28px;
+  }
+
+  .about__title {
+    font-size: 28px;
+  }
+
+  .about__text {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .about__link {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__content {
+    padding: 22px;
+    border-radius: 8px;
+  }
+
+  .about__title {
+    font-size: 24px;
+  }
+
+  .about__text {
+    font-size: 16px;
+  }
+
+  .about__link {
+    font-size: 15px;
+  }
+}
