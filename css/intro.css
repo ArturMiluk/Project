@@ -85,14 +85,6 @@
 }
 
 @media (max-width: 768px) {
-  .intro {
-    height: auto;
-  }
-
-  .intro__inner {
-    flex-direction: column;
-  }
-
   .intro__content {
     width: 80%;
     margin-top: auto;
@@ -112,14 +104,6 @@
 }
 
 @media (max-width: 480px) {
-  .intro {
-    min-height: 70vh;
-  }
-
-  .intro__inner {
-    min-height: 70vh;
-  }
-
   .intro__content {
     width: 90%;
     padding: 25px 15px;

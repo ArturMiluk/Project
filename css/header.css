@@ -136,10 +136,11 @@
   background: #fff;
   border-radius: 3px;
   transition: all 0.3s;
+  transform-origin: center;
 }
 
 .header__burger.active .header__burger-line:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .header__burger.active .header__burger-line:nth-child(2) {
@@ -147,7 +148,7 @@
 }
 
 .header__burger.active .header__burger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .burger-overlay {
@@ -201,14 +202,14 @@
     flex-direction: column;
     justify-content: flex-start;
     top: 0;
-    right: -100%;
-    width: 300px;
+    right: -50vw;
+    width: 50vw;
     height: 100vh;
     padding: 80px 30px;
     background: rgba(255, 255, 255, 0.1);
     border-left: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    transition: right 0.3s ease;
+    transition: right 0.5s ease;
     overflow-y: auto;
   }
 
@@ -251,7 +252,7 @@
     padding: 0;
     background: none;
     box-shadow: none;
-    transition: max-heigth 0.3s ease, padding 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .nav__dropdowndown.active {
@@ -289,12 +290,11 @@
   }
 
   .header__burger {
-    width: 25px;
     height: 18px;
   }
 
   .nav {
-    width: 250px;
+    width: 200px;
     padding: 70px 20px;
   }
 
