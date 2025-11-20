@@ -68,7 +68,7 @@
 
 .about__link:hover {
   color: #1976d2;
-  text-decoration: underline;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
