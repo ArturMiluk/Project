@@ -71,7 +71,6 @@
 
 @media (max-width: 1024px) {
   .intro__content {
-    width: 60%;
     padding: 35px;
   }
 
@@ -86,8 +85,6 @@
 
 @media (max-width: 768px) {
   .intro__content {
-    width: 80%;
-    margin-top: auto;
     padding: 30px 20px;
     border-width: 1px;
   }
@@ -105,7 +102,6 @@
 
 @media (max-width: 480px) {
   .intro__content {
-    width: 90%;
     padding: 25px 15px;
   }
 
@@ -121,7 +117,6 @@
 
 @media (max-width: 360px) {
   .intro__content {
-    width: 95%;
     padding: 20px 12px;
   }
 
