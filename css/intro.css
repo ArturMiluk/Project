@@ -53,6 +53,9 @@
   line-height: 1.2;
   color: #ffffff;
   text-align: justify;
+}
+
+.intro__text--indent {
   text-indent: 30px;
 }
 

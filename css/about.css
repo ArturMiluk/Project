@@ -55,6 +55,10 @@
   text-align: justify;
 }
 
+.about__text--span {
+  font-weight: 700;
+}
+
 .about__link {
   position: relative;
   margin: 40px 0 0 0;

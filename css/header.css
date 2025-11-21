@@ -56,8 +56,10 @@
   cursor: pointer;
 }
 
-.nav__link--active {
-  color: #1976d2;
+.nav__link:focus,
+.nav__link:active {
+  outline: none;
+  border: none;
 }
 
 .nav__link::after {
@@ -78,6 +80,10 @@
 .nav__link--info {
   margin-left: auto;
   white-space: nowrap;
+}
+
+.nav__link--active {
+  color: #3d8de6;
 }
 
 .nav__dropdown {
