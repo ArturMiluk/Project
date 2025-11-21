@@ -15,7 +15,7 @@
             <ul class="nav__list">
                 <li class="nav__item"><a href="./index.html" class="nav__link">Главная</a></li>
                 <li class="nav__item nav__item--dropdown">
-                  <button class="nav__link nav__link--button">Храмы</button>
+                  <a href="#" class="nav__link" data-no-open>Храмы</a>
                   <div class="nav__dropdown">
                     <div class="nav__dropdown-list">
                       <a href="./churches.html" class="nav__dropdown-item">Все города</a>
@@ -29,7 +29,7 @@
                   </div>
                 </li>
                 <li class="nav__item nav__item--dropdown">
-                  <button class="nav__link nav__link--button">Традиции</button>
+                  <a href="#" class="nav__link" data-no-open>Традиции</a>
                   <div class="nav__dropdown">
                     <div class="nav__dropdown-list">
                       <a href="./traditions.html" class="nav__dropdown-item">Традиции</a>
@@ -41,7 +41,7 @@
                 </li>
                 <li class="nav__item"><a href="./holidays.html" class="nav__link">Праздники</a></li>
                 <li class="nav__item nav__item--dropdown">
-                  <button class="nav__link nav__link--button">История</button>
+                  <a href="#" class="nav__link" data-no-open>История</a>
                   <div class="nav__dropdown">
                     <div class="nav__dropdown-list">
                       <a href="./history.html" class="nav__dropdown-item">История</a>
@@ -51,7 +51,7 @@
                   </div>
                 </li>
                 <li class="nav__item nav__item--dropdown">
-                  <button class="nav__link nav__link--button">Семья</button>
+                  <a href="#" class="nav__link" data-no-open>Семья</a>
                   <div class="nav__dropdown">
                     <div class="nav__dropdown-list">
                       <a href="./family.html" class="nav__dropdown-item">Семья</a>
@@ -76,7 +76,9 @@
     <main class="main">
         <section class="family">
             <div class="container">
-                <div class="family__inner"></div>
+                <div class="family__inner">
+                  <div class="family__content">Семья</div>
+                </div>
             </div>
         </section>
     </main>
@@ -87,6 +89,7 @@
       </div>
     </footer>
 
+    <script src="./js/active-link.js"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/burger.js"></script>
   </body>

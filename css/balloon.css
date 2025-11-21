@@ -1,6 +1,4 @@
 .balloon {
-  width: 100%;
-  max-width: 320px;
   padding: 15px;
   background: rgba(255, 255, 255, 0.95);
   color: #000;
@@ -54,4 +52,69 @@
   font-weight: 500;
   line-height: 1.2;
   color: #000;
+}
+
+@media (max-width: 768px) {
+  .ballon {
+    max-width: none;
+    width: 50vw;
+    padding: 12px;
+  }
+
+  .balloon__header--title {
+    font-size: 20px;
+  }
+
+  .balloon__image {
+    height: 130px;
+  }
+
+  .balloon__body {
+    padding: 0 5px;
+  }
+
+  .balloon__body--address,
+  .balloon__body--description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ballon {
+    padding: 10px;
+  }
+
+  .balloon__header--title {
+    font-size: 18px;
+  }
+
+  .balloon__image {
+    height: 110px;
+    border-radius: 6px;
+  }
+
+  .balloon__body--address,
+  .balloon__body--description {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 360px) {
+  .ballon {
+    padding: 8px;
+  }
+
+  .balloon__header--title {
+    font-size: 16px;
+  }
+
+  .balloon__image {
+    height: 90px;
+  }
+
+  .balloon__body--address,
+  .balloon__body--description {
+    font-size: 12px;
+  }
 }

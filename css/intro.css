@@ -1,7 +1,6 @@
 .intro {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   background: url(../img/bg.jpg) no-repeat center center / cover;
 }
 
@@ -21,9 +20,8 @@
   z-index: 3;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
-  min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -31,32 +29,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 100px 0;
   padding: 40px;
   background: transparent;
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
-  border-left: 2px solid rgba(255, 255, 255, 0.2);
-  border-right: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px 10px 0 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   animation: fadeInUp 0.8s ease-out;
 }
 
 .intro__title {
-  font-size: 64px;
+  font-size: 36px;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
 }
 
-.intro__subtitle {
+.intro__text {
   margin: 40px 0 0 0;
-  font-size: 32px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.2;
   color: #ffffff;
-  text-align: center;
+  text-align: justify;
+  text-indent: 30px;
 }
 
 @media (max-width: 1200px) {
@@ -64,8 +61,8 @@
     font-size: 54px;
   }
 
-  .intro__subtitle {
-    font-size: 28px;
+  .intro__text {
+    font-size: 16px;
   }
 }
 
@@ -76,10 +73,6 @@
 
   .intro__title {
     font-size: 48px;
-  }
-
-  .intro__subtitle {
-    font-size: 26px;
   }
 }
 
@@ -94,9 +87,8 @@
     line-height: 1.2;
   }
 
-  .intro__subtitle {
+  .intro__text {
     margin: 25px 0 0 0;
-    font-size: 20px;
   }
 }
 
@@ -108,11 +100,6 @@
   .intro__title {
     font-size: 30px;
   }
-
-  .intro__subtitle {
-    font-size: 18px;
-    line-height: 1.4;
-  }
 }
 
 @media (max-width: 360px) {
@@ -123,10 +110,6 @@
   .intro__title {
     font-size: 26px;
   }
-
-  .intro__subtitle {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 320px) {
@@ -134,7 +117,7 @@
     font-size: 22px;
   }
 
-  .intro__subtitle {
+  .intro__text {
     font-size: 15px;
   }
 }
