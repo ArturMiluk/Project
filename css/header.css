@@ -17,17 +17,16 @@
 }
 
 .header__logo {
-  color: #fff;
   font-size: 25px;
   font-weight: 600;
+  color: #fff;
   text-decoration: none;
+  white-space: nowrap;
 }
-
 .nav {
   display: flex;
   align-items: center;
   flex: 1;
-  margin: 0 0 0 40px;
 }
 
 .nav__list {
@@ -49,9 +48,9 @@
   padding: 5px 0;
   border: none;
   background: none;
-  color: #fff;
   font-size: 18px;
   font-weight: 500;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
@@ -116,8 +115,8 @@
   padding: 8px 12px;
   font-size: 14px;
   color: #333;
-  white-space: nowrap;
   text-decoration: none;
+  white-space: nowrap;
   border-radius: 4px;
   transition: background 0.3s;
 }
@@ -187,7 +186,7 @@
   }
 
   .nav__list {
-    gap: 25px;
+    gap: 28px;
   }
 
   .nav__link {

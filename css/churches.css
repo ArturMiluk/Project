@@ -1,6 +1,7 @@
 .churches {
   position: relative;
   width: 100%;
+  min-height: 100vh;
   background: url(../img/bg.jpg) no-repeat center center / cover;
 }
 
@@ -21,15 +22,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  height: 100%;
   min-height: 100vh;
-  margin: 0 auto;
 }
 
 .churches__content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 20px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
@@ -41,7 +44,7 @@
 .churches__map {
   width: 100%;
   height: 70vh;
-  padding: 15px;
+  overflow: hidden;
 }
 
 [class*="copyrights-pane"] {
@@ -53,31 +56,38 @@
 }
 
 @media (max-width: 1200px) {
-  .churches__inner {
-    height: 60vh;
-  }
-
   .churches__content {
-    width: 90%;
-    padding: 15px;
+    padding: 18px;
     border-width: 1px;
   }
 
   .churches__map {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .churches__content {
+    padding: 15px;
+  }
+
+  .churches__map {
     height: 50vh;
-    padding: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .churches__content {
-    width: 95%;
-    padding: 10px;
-    border-width: 1px;
+    padding: 12px;
   }
 
   .churches__map {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .churches__map {
     height: 40vh;
-    padding: 5px;
   }
 }

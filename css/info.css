@@ -1,0 +1,48 @@
+.info {
+  width: 100%;
+  background: #fff;
+}
+
+.info__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  padding: 40px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.info__text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+  text-align: justify;
+}
+
+.info__text--indent {
+  text-indent: 30px;
+}
+
+@media (max-width: 768px) {
+  .info__content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .info__text {
+    font-size: 14px;
+  }
+}

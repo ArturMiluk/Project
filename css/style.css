@@ -2,6 +2,7 @@
 @import url(../css/fonts.css);
 @import url(../css/header.css);
 @import url(../css/intro.css);
+@import url(../css/info.css);
 @import url(../css/churches.css);
 @import url(../css/balloon.css);
 @import url(../css/traditions.css);
@@ -25,6 +26,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: #fff;
 }
 
