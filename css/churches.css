@@ -60,34 +60,16 @@
     padding: 18px;
     border-width: 1px;
   }
-
-  .churches__map {
-    height: 55vh;
-  }
 }
 
 @media (max-width: 768px) {
   .churches__content {
     padding: 15px;
   }
-
-  .churches__map {
-    height: 50vh;
-  }
 }
 
 @media (max-width: 480px) {
   .churches__content {
     padding: 12px;
-  }
-
-  .churches__map {
-    height: 45vh;
-  }
-}
-
-@media (max-width: 360px) {
-  .churches__map {
-    height: 40vh;
   }
 }

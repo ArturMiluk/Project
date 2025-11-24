@@ -30,6 +30,7 @@
 .intro__content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 40px;
   background: transparent;
@@ -63,6 +64,7 @@
   font-size: 18px;
   font-weight: 500;
   color: #000;
+  text-align: center;
   text-decoration: none;
   background: #fff;
   border-radius: 20px;
