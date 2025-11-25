@@ -1,9 +1,9 @@
 .baloon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 33.3vh;
-  height: 100%;
-  min-height: 70vh;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .baloon__title {
@@ -13,7 +13,12 @@
 }
 
 .baloon__image {
+  width: 100%;
+  min-width: 320px;
+  height: 180px;
   margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .baloon__image-pic {
@@ -30,16 +35,17 @@
 }
 
 .baloon__adress {
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
 }
 
 .baloon__btn {
-  margin-top: 10px;
-  padding: 5px 10px;
-  font-size: 18px;
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
   font-weight: 500;
   color: #000;
   text-align: center;
@@ -56,11 +62,40 @@
 }
 
 .baloon__info {
-  margin-top: 10px;
+  display: none;
+  margin-top: 20px;
 }
 
 .baloon__info-text {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .baloon {
+    margin: 0;
+  }
+
+  .baloon__title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .baloon__title {
+    font-size: 22px;
+  }
+
+  .baloon__btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .baloon__description,
+  .baloon__adress,
+  .baloon__info-text {
+    font-size: 14px;
+  }
 }
