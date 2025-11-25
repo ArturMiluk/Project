@@ -37,6 +37,11 @@ body {
   padding: 0 15px;
 }
 
+.main {
+  width: 100%;
+  margin: auto;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
