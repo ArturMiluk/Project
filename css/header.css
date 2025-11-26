@@ -67,22 +67,6 @@
   border: none;
 }
 
-.nav__link::after {
-  content: "";
-  position: absolute;
-  bottom: -7px;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  background: #fff;
-  transform: translateX(-50%);
-  transition: width 0.3s ease;
-}
-
-.nav__link:hover::after {
-  width: 100%;
-}
-
 .nav__link--active {
   opacity: 1;
 }
@@ -95,7 +79,7 @@
 .nav__dropdown {
   position: absolute;
   top: 100;
-  left: -50%;
+  left: 0;
   z-index: 1000;
   padding: 15px;
   background: #fff;
