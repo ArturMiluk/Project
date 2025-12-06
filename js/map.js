@@ -68,7 +68,8 @@ function init() {
         address: "ул. Раковская, 4",
         description:
           "Один из старейших храмов Минска, построен в 1613 году. Памятник архитектуры с богатой историей.",
-        image: "",
+        image:
+          "https://www.tuda-suda.by/images/countries/europe/belarus/minsk/cerkov-svyatyh-petra-i-pavla/tserkov-svyatykh-petra-i-pavla.jpg",
       },
       {
         coords: [53.941667, 27.473333],
@@ -76,7 +77,8 @@ function init() {
         address: "ул. Козлова, 11",
         description:
           "Современный храм, построенный в 2006 году. Назван в честь святого князя Александра Невского.",
-        image: "",
+        image:
+          "https://tourweek.ru/storage/web/source/uploads/ckeditor/1134.jpg",
       },
       {
         coords: [53.931944, 27.645833],
@@ -84,7 +86,8 @@ function init() {
         address: "ул. Калиновского, 121",
         description:
           "Крупнейший храм Беларуси, построен в 2008 году. Вмещает до 1200 верующих.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/i?id=00cc05e0306b9895e59fa4dbfaa9a83d_l-9095672-images-thumbs&n=13",
       },
       {
         coords: [53.856944, 27.476944],
@@ -92,7 +95,8 @@ function init() {
         address: "ул. Аэродромная, 1",
         description:
           "Храм в честь чудотворной иконы Божией Матери. Построен в начале 2000-х годов.",
-        image: "",
+        image:
+          "https://planetabelarus.by/upload/iblock/5f6/5f6a749eb66a4dd50c3b4f3516261159.jpg",
       },
       {
         coords: [53.888889, 27.551667],
@@ -100,7 +104,8 @@ function init() {
         address: "ул. Володарского, 2",
         description:
           "Старинная церковь 1847 года постройка. Расположена на Военном кладбище.",
-        image: "",
+        image:
+          "https://planetabelarus.by/upload/iblock/315/31520df2b931b26ce581cd7aa0c3488f.jpg",
       },
       {
         coords: [53.858056, 27.663333],
@@ -108,7 +113,8 @@ function init() {
         address: "ул. Скрипникова, 32",
         description:
           "Современный храм, освященный в честь святой праведной Софии Слуцкой.",
-        image: "",
+        image:
+          "https://planetabelarus.by/upload/iblock/f66/f665431e240a4d56045c56e6f2044f30.jpg",
       },
       {
         coords: [53.876389, 27.595],
@@ -116,7 +122,7 @@ function init() {
         address: "ул. Тимирязева, 65/2",
         description:
           "Приходской храм в честь одного из самых почитаемых святых - Николая Чудотворца.",
-        image: "",
+        image: "https://welcometobelarus.ru/images/thumbs/9199/1300.jpg",
       },
       {
         coords: [53.860556, 27.481667],
@@ -124,7 +130,7 @@ function init() {
         address: "ул. Налибокская, 1",
         description:
           "Храм в честь апостола Андрея Первозванного. Современная архитектура.",
-        image: "",
+        image: "https://sobory.ru/pic/08850/08893_20160513_211048.jpg",
       },
       {
         coords: [53.908056, 27.438889],
@@ -132,7 +138,8 @@ function init() {
         address: "ул. Гамарника, 21",
         description:
           "Храм в традиционном православном стиле. Построен в 2000-х годах.",
-        image: "",
+        image:
+          "https://s3-minsk.becloud.by/media-assets/tvr/8443252d-804a-4bc3-8354-e53a39126c1a/conversions/a741474c-9708-4ce2-9a21-56fe0c99ec5f-xl-___webp_1920.webp",
       },
       {
         coords: [53.944444, 27.701667],
@@ -140,7 +147,7 @@ function init() {
         address: "ул. Одоевского, 52",
         description:
           "Крупный храм в микрорайоне Серебрянка. Построен в 2014 году.",
-        image: "",
+        image: "https://live.staticflickr.com/8464/8076744668_ffcc823f9a_b.jpg",
       },
       {
         coords: [53.866667, 27.633333],
@@ -148,7 +155,8 @@ function init() {
         address: "ул. Рафиева, 55",
         description:
           "Храм в честь Святой Троицы. Расположен в жилом районе Минска.",
-        image: "",
+        image:
+          "https://www.holiday.by/files/sights/cerkov_vostok_6_25.09.12-ad46031084b4a27549e1324facd244f6-orig-thumb-780x1500.jpg",
       },
       {
         coords: [53.933889, 27.65],
@@ -156,14 +164,16 @@ function init() {
         address: "ул. П. Мстиславца, 3",
         description:
           "Храм в честь Иоанна Крестителя. Современная архитектура с традиционными элементами.",
-        image: "",
+        image:
+          "https://eparhia-kaluga.ru/images/galleries/2022/20220708_03/1.jpg",
       },
       {
         coords: [53.951667, 27.701389],
         name: "Храм святой великомученицы Анастасии Узорешительницы",
         address: "ул. Толстого, 23",
         description: "Храм в честь святой Анастасии. Построен в 2000-х годах.",
-        image: "",
+        image:
+          "https://avatars.dzeninfra.ru/get-zen_doc/1704908/pub_5dbb3d5e92414d00ac4e2134_5dbb4366a660d700ac95f7fe/scale_1200",
       },
       {
         coords: [53.9475, 27.698056],
@@ -171,7 +181,8 @@ function init() {
         address: "пр-т Победителей, 82",
         description:
           "Храм в честь чудотворной иконы. Расположен в новых микрорайонах Минска.",
-        image: "",
+        image:
+          "https://travelagency.by/upload/iblock/3ed/vseh_skorbiashih.jpeg",
       },
       {
         coords: [53.927222, 27.586667],
@@ -179,7 +190,8 @@ function init() {
         address: "ул. Золотая Горка, 42",
         description:
           "Храм в честь Архистратига Михаила. Построен в традиционном византийском стиле.",
-        image: "",
+        image:
+          "https://planetabelarus.by/upload/resize_cache/iblock/9e5/1330_887_18e21fe612b4afb807a26ecc22279a1d9/9e5616af8b125b5f31178bf9e7a0abe5.jpg",
       },
       {
         coords: [53.940278, 27.465278],
@@ -187,7 +199,7 @@ function init() {
         address: "ул. Ратомская, 19",
         description:
           "Храм в честь Преображения Господня. Современная архитектура с золотыми куполами.",
-        image: "",
+        image: "https://sobory.ru/pic/12340/12348_20110422_131241.jpg",
       },
       {
         coords: [53.953056, 27.651389],
@@ -195,7 +207,8 @@ function init() {
         address: "ул. Червякова, 25",
         description:
           "Храм в честь святой равноапостольной княгини Ольги. Построен в 2000-х годах.",
-        image: "",
+        image:
+          "https://ucare.timepad.ru/32c76549-7b46-4cab-982f-9f3b4bd81e2f/-/preview/",
       },
       {
         coords: [53.861111, 27.636667],
@@ -203,7 +216,7 @@ function init() {
         address: "ул. Филатова, 15",
         description:
           "Храм в честь святителя Николая Японского. Один из новых храмов Минска.",
-        image: "",
+        image: "https://sobory.ru/pic/28100/28132_20131028_223532.jpg",
       },
       {
         coords: [53.95, 27.7],
@@ -211,7 +224,8 @@ function init() {
         address: "ул. Чюрлениса, 2",
         description:
           "Храм в честь крестителя Руси князя Владимира. Современная архитектура.",
-        image: "",
+        image:
+          "https://hrambel.by/image/upload/97c/fdk2k9nnzkd212r1hi6j6g7f1n0hoc3m.png",
       },
       {
         coords: [53.909722, 27.574167],
@@ -219,7 +233,7 @@ function init() {
         address: "ул. Кирилла и Мефодия, 3",
         description:
           "Главный кафедральный собор Белорусского экзархата. Хранится чудотворная икона Божией Матери Минская.",
-        image: "",
+        image: "https://sobory.ru/pic/07800/07812_20210317_2145111.jpg",
       },
       {
         coords: [53.918056, 27.558889],
@@ -227,7 +241,8 @@ function init() {
         address: "ул. Выготского, 4",
         description:
           "Крупный женский монастырь с уникальными мастерскими и социальным служением.",
-        image: "",
+        image:
+          "https://cdn.culture.ru/images/6a83a394-c506-5a22-987b-7c49a922a01b",
       },
     ],
 
@@ -238,7 +253,7 @@ function init() {
         address: "ул. Большая Троицкая, 2",
         description:
           "Один из старейших православных храмов Гродно. Построен в 1852 году.",
-        image: "",
+        image: "https://probelarus.by/images/thumbs/6191/1277.jpg",
       },
       {
         coords: [53.678889, 23.832222],
@@ -246,7 +261,8 @@ function init() {
         address: "ул. Элизы Ожешко, 23",
         description:
           "Кафедральный собор Гродненской епархии. Построен в 1907 году.",
-        image: "",
+        image:
+          "https://grodnonews.by/upload/medialibrary/047/047d4336caa3252c31e290f28f822313.JPG",
       },
       {
         coords: [53.683611, 23.835278],
@@ -254,7 +270,7 @@ function init() {
         address: "ул. Антонова, 5",
         description:
           "Храм в честь Иоанна Крестителя. Современная постройка с традиционным стилем.",
-        image: "",
+        image: "https://sobory.ru/pic/27050/27053_20240520_1829510.jpg",
       },
       {
         coords: [53.668889, 23.881667],
@@ -262,7 +278,8 @@ function init() {
         address: "ул. Гагарина, 82А",
         description:
           "Храм в честь святого князя Владимира. Расположен в новых районах Гродно.",
-        image: "",
+        image:
+          "https://by.planetabelarus.by/upload/resize_cache/iblock/4c5/1330_887_12879bfa30a1c933ea552a9c2b55e4a57/4c55464333e04ee1a244ab0eee538bbd.jpg",
       },
       {
         coords: [53.694167, 23.821111],
@@ -270,7 +287,7 @@ function init() {
         address: "ул. Пестрака, 33",
         description:
           "Храм в честь чудотворной иконы. Построен в начале 2000-х годов.",
-        image: "",
+        image: "https://sobory.ru/pic/11600/11629_20240717_1634350.jpg",
       },
       {
         coords: [53.686944, 23.823611],
