@@ -1,21 +1,17 @@
-.baloon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.balloon {
   width: 100%;
-  margin-left: 20px;
 }
 
-.baloon__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
+.balloon__header--title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
 }
 
 .balloon__image {
   width: 360px;
   height: 240px;
-  margin-top: 15px;
+  margin-top: 10px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -32,18 +28,18 @@
   object-position: center;
 }
 
-.baloon__description {
-  margin-top: 20px;
+.balloon__body--address {
+  margin-top: 15px;
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #000;
 }
 
-.baloon__adress {
-  margin-top: 20px;
+.balloon__body--description {
+  margin-top: 5px;
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #000;
 }
 
 .baloon__btn {
