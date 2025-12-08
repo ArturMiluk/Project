@@ -295,7 +295,8 @@ function init() {
         address: "Коложский парк",
         description:
           "Уникальный памятник древнерусского зодчества XII века. Внесена в список ЮНЕСКО.",
-        image: "",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/a/a5/Kalozha_Church_in_Hrodna_-_Dec_6%2C_2018_%282%29.jpg",
       },
       {
         coords: [53.6625, 23.876667],
@@ -303,7 +304,8 @@ function init() {
         address: "ул. Белые Росы, 69",
         description:
           "Современный храм, освященный в честь всех белорусских святых.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/15311720/2a00000197070f65fc52bfa67c5653af9bec/orig",
       },
       {
         coords: [53.695833, 23.823056],
@@ -311,7 +313,8 @@ function init() {
         address: "ул. Дубко, 15А",
         description:
           "Храм в честь Рождества Христова. Построен в 2000-х годах.",
-        image: "",
+        image:
+          "https://hrambel.by/image/upload/d26/3swcl2s36jhwmz8ntc6enibtmv0nupxa.jpg",
       },
       {
         coords: [53.691389, 23.836667],
@@ -319,7 +322,8 @@ function init() {
         address: "ул. Пушкина, 22",
         description:
           "Храм в честь святой праведной Марфы. Современная постройка.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/9709783/2a000001889f8f5176aea9ee8ff07553afac/orig",
       },
       {
         coords: [53.681111, 23.829444],
@@ -327,7 +331,8 @@ function init() {
         address: "ул. Ольги Соломовой, 77",
         description:
           "Храм в честь святой княгини Ольги. Расположен в жилом районе Гродно.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/i?id=84649ca2e15ef45176a190b33274812e_l-4809712-images-thumbs&n=13",
       },
       {
         coords: [53.684722, 23.828056],
@@ -335,7 +340,7 @@ function init() {
         address: "ул. Горького, 75",
         description:
           "Действующий женский монастырь с храмом в честь Рождества Богородицы.",
-        image: "",
+        image: "https://sobory.ru/pic/40950/40973_20160304_115304_1.jpg",
       },
       {
         coords: [53.667222, 23.878611],
@@ -343,7 +348,8 @@ function init() {
         address: "ул. Брикеля, 15",
         description:
           "Храм в честь святой блаженной Матроны Московской. Современная постройка.",
-        image: "",
+        image:
+          "https://planetabelarus.by/upload/iblock/c4d/4rn4wy5h8lugrl6cs8vj8gszrimowwnr.jpg",
       },
       {
         coords: [53.6725, 23.869167],
@@ -351,7 +357,8 @@ function init() {
         address: "ул. Победы, 25",
         description:
           "Храм в честь святителя Спиридона Тримифунтского. Построен в 2000-х годах.",
-        image: "",
+        image:
+          "https://mchs.gov.by/upload/resize_cache/iblock/116/1280_1082_19a20e5127c124c53586921eaf043b9cf/photo5303402587942401564.jpg",
       },
       {
         coords: [53.6975, 23.818611],
@@ -359,7 +366,8 @@ function init() {
         address: "ул. Белуша, 5",
         description:
           "Храм в честь святителя Луки Крымского. Расположен в новых микрорайонах.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/10232404/2a0000018f9c7326911be7516a73d6167f3e/orig",
       },
       {
         coords: [53.693889, 23.819722],
@@ -367,7 +375,8 @@ function init() {
         address: "ул. Пестрака, 41",
         description:
           "Храм в честь преподобномученика Серафима, архимандрита Жировицкого.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/6119709/2a0000017f2657f5b27fdddabf7d06809878/XXL_height",
       },
     ],
 
@@ -378,7 +387,8 @@ function init() {
         address: "ул. Крылова, 9",
         description:
           "Восстановленный кафедральный собор на Успенской горке. Исторический символ Витебска.",
-        image: "",
+        image:
+          "https://www.tury.ru/turyclub.img.php?src=02a83da96b9c5a4ddb41a44ba0c90219%2FEFWoLstb%2F9drr_ulO.jpg&img=4670abfcbf22a58f96ec05e8035cee47",
       },
       {
         coords: [55.195833, 30.205278],
@@ -386,7 +396,7 @@ function init() {
         address: "Рыночная площадь",
         description:
           "Восстановленный храм в стиле виленского барокко. Исторический центр Витебска.",
-        image: "",
+        image: "https://a.d-cd.net/fd2ba24s-960.jpg",
       },
       {
         coords: [55.191111, 30.201667],
@@ -394,7 +404,8 @@ function init() {
         address: "ул. Шубина, 2",
         description:
           "Кафедральный собор в честь Покрова Пресвятой Богородицы. Действующий храм.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/11471993/2a0000019071396325535228ea7815195baf/orig",
       },
       {
         coords: [55.196389, 30.203889],
@@ -402,7 +413,8 @@ function init() {
         address: "ул. Замковая, 1",
         description:
           "Памятник древнеполоцкой архитектуры XII века. Один из старейших храмов Беларуси.",
-        image: "",
+        image:
+          "https://i.pinimg.com/originals/ce/36/b6/ce36b6a275ed9e5315805b10a9d15ff2.jpg",
       },
       {
         coords: [55.189722, 30.198611],
@@ -410,7 +422,8 @@ function init() {
         address: "пр-т Фрунзе, 13А",
         description:
           "Храм в честь святой мученицы Татьяны. Современная постройка.",
-        image: "",
+        image:
+          "https://cont.ws/uploads/pic/2025/1/%D0%A5%D1%80%D0%B0%D0%BC%20%D1%81%D0%B2%D1%8F%D1%82%D0%BE%D0%B9%20%D0%BC%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%86%D1%8B%20%D0%A2%D0%B0%D1%82%D0%B8%D0%B0%D0%BD%D1%8B%2C%20%D0%B3.%20%D0%92%D0%B8%D1%82%D0%B5%D0%B1%D1%81%D0%BA.webp",
       },
       {
         coords: [55.188056, 30.204167],
@@ -418,7 +431,8 @@ function init() {
         address: "ул. Воинов-Интернационалистов, 30",
         description:
           "Храм в честь святого Георгия Победоносца. Построен в 1990-х годах.",
-        image: "",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Saint_George_Orthodox_church_in_Viciebsk_%2801%29.jpg/960px-Saint_George_Orthodox_church_in_Viciebsk_%2801%29.jpg",
       },
       {
         coords: [55.1925, 30.207222],
@@ -426,7 +440,8 @@ function init() {
         address: "ул. Чкалова, 55",
         description:
           "Храм в честь святителя Тихона Задонского. Расположен в жилом районе.",
-        image: "",
+        image:
+          "https://lib.vstu.by/Vitebsk_site/img/Xram%20Vitebska/ul%20Titova.jpg",
       },
       {
         coords: [55.194167, 30.199722],
@@ -434,7 +449,8 @@ function init() {
         address: "ул. Ленина, 32",
         description:
           "Храм в честь апостола и евангелиста Луки. Современная архитектура.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/11398069/2a000001916c35a3403f7c2c577a849690be/orig",
       },
       {
         coords: [55.187222, 30.196667],
@@ -442,7 +458,8 @@ function init() {
         address: "ул. П. Бровки, 15",
         description:
           "Храм в честь апостола Андрея Первозванного. Построен в 2000-х годах.",
-        image: "",
+        image:
+          "https://travelagency.by/upload/iblock/9ae/hram_v_serebranke.jpeg",
       },
       {
         coords: [55.185833, 30.208611],
@@ -450,7 +467,7 @@ function init() {
         address: "пр-т Московский, 77",
         description:
           "Храм построен к 2000-летию христианства. Современная архитектура.",
-        image: "",
+        image: "https://sobory.ru/pic/19620/19633_20111113_214006.jpg",
       },
       {
         coords: [55.191667, 30.195833],
@@ -458,7 +475,7 @@ function init() {
         address: "ул. Толстого, 8",
         description:
           "Храм в честь святой Евфросинии Полоцкой - небесной покровительницы Беларуси.",
-        image: "",
+        image: "https://vitebsk.1prof.by/file/2023/04/i.jpg",
       },
       {
         coords: [55.190278, 30.209167],
@@ -466,7 +483,7 @@ function init() {
         address: "ул. Гагарина, 25",
         description:
           "Храм в честь святого мученика Лонгина Сотника. Современная постройка.",
-        image: "",
+        image: "https://vitprav.by/wp-content/uploads/2014/08/0124.jpg",
       },
       {
         coords: [55.193056, 30.194444],
@@ -474,7 +491,7 @@ function init() {
         address: "ул. Чехова, 12",
         description:
           "Храм в честь священномученика Фаддея, архиепископа Тверского.",
-        image: "",
+        image: "https://www.fotobel.by/images/vitebsk/vitebsk-hramfad_1.jpg",
       },
       {
         coords: [55.186389, 30.202222],
@@ -482,7 +499,8 @@ function init() {
         address: "ул. Чкалова, 68",
         description:
           "Храм в честь иконы Божией Матери 'Целительница'. Расположен в больничном комплексе.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/1881820/2a0000016aa28745eb35485eb9af3a98319b/XXL_height",
       },
       {
         coords: [55.188889, 30.1975],
@@ -490,7 +508,8 @@ function init() {
         address: "ул. Правды, 33",
         description:
           "Храм в честь святой блаженной Матроны Московской. Современная постройка.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/11937297/2a0000018e3537474c0c36d9b5ffff91fb6f/XXL_height",
       },
     ],
 
@@ -501,7 +520,8 @@ function init() {
         address: "ул. Гоголя, 2",
         description:
           "Легендарный храм - символ героизма защитников Брестской крепости. Построен в 1851-1876 гг.",
-        image: "",
+        image:
+          "https://avatars.dzeninfra.ru/get-zen_doc/5205780/pub_6362d4e6febbba473de389ea_6362d59aaa962d13f87c889d/scale_1200",
       },
       {
         coords: [52.093611, 23.683889],
@@ -509,7 +529,7 @@ function init() {
         address: "ул. К. Маркса, 84",
         description:
           "Главный православный собор Бреста. Построен в 1865 году в русско-византийском стиле.",
-        image: "",
+        image: "https://openborder.brsu.by/wp-content/uploads/2024/02/1.jpg",
       },
       {
         coords: [52.090278, 23.6875],
@@ -517,7 +537,8 @@ function init() {
         address: "ул. Московская, 271",
         description:
           "Храм в честь иконы Божией Матери 'Всецарица'. Современная постройка.",
-        image: "",
+        image:
+          "https://planetabelarus.by/upload/resize_cache/iblock/766/1330_747_18e21fe612b4afb807a26ecc22279a1d9/766dcac2939e6dbcd4e6a56c26443024.jpg",
       },
       {
         coords: [52.095, 23.681667],
@@ -525,7 +546,8 @@ function init() {
         address: "ул. Советская, 10",
         description:
           "Памятник архитектуры XIX века. Один из старейших храмов Бреста.",
-        image: "",
+        image:
+          "https://ldd.by/wp-content/uploads/2025/09/brest-svyato-nikolaevskaya-cerkov.jpg",
       },
       {
         coords: [52.088611, 23.689444],
@@ -533,7 +555,7 @@ function init() {
         address: "пр-т Машерова, 22",
         description:
           "Крупнейший храм Бреста. Построен в 1995-1998 годах в честь 50-летия Победы.",
-        image: "",
+        image: "https://www.fotobel.by/images/brest/brest-xram_18.jpg",
       },
       {
         coords: [52.092222, 23.678889],
@@ -541,7 +563,7 @@ function init() {
         address: "ул. Ленина, 33",
         description:
           "Храм в честь чудотворной иконы. Расположен в историческом центре города.",
-        image: "",
+        image: "https://sobory.ru/pic/11600/11635_20210815_1353400.jpg",
       },
       {
         coords: [52.094167, 23.686111],
@@ -549,7 +571,7 @@ function init() {
         address: "ул. Мицкевича, 25",
         description:
           "Храм в честь Тихвинской иконы Божией Матери. Построен в 1990-х годах.",
-        image: "",
+        image: "https://welcometobelarus.ru/images/thumbs/9068/1088.jpg",
       },
       {
         coords: [52.089722, 23.684167],
@@ -557,7 +579,8 @@ function init() {
         address: "ул. Куйбышева, 32",
         description:
           "Храм в честь святителя Спиридона Тримифунтского. Современная архитектура.",
-        image: "",
+        image:
+          "https://mchs.gov.by/upload/resize_cache/iblock/116/1280_1082_19a20e5127c124c53586921eaf043b9cf/photo5303402587942401564.jpg",
       },
       {
         coords: [52.0875, 23.682778],
@@ -565,7 +588,8 @@ function init() {
         address: "ул. Кирова, 55",
         description:
           "Храм в честь Рождества Христова. Расположен в жилом районе Бреста.",
-        image: "",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/9/9e/%D0%A1%D0%92%D0%AF%D0%A2%D0%9E-%D0%A5%D0%A0%D0%98%D0%A1%D0%A2%D0%9E-%D0%A0%D0%9E%D0%96%D0%94%D0%95%D0%A1%D0%A2%D0%92%D0%95%D0%9D%D0%A1%D0%9A%D0%90%D0%AF_%D0%A6%D0%95%D0%A0%D0%9A%D0%9E%D0%92%D0%AC_%D0%B3.%D0%9A%D0%9E%D0%91%D0%A0%D0%98%D0%9D_%28%D0%A4%D0%9E%D0%A2%D0%9E_2%29.jpg",
       },
       {
         coords: [52.091111, 23.680556],
@@ -573,7 +597,8 @@ function init() {
         address: "ул. Гоголя, 45",
         description:
           "Храм в честь апостола Фомы. Современная постройка с традиционными элементами.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/10768923/2a0000018af168efb80b057216bf42b07325/XXXL",
       },
       {
         coords: [52.093056, 23.678056],
@@ -588,7 +613,8 @@ function init() {
         address: "ул. Лейтенанта Рябцева, 8",
         description:
           "Храм в честь преподобного Серафима Саровского. Построен в 2000-х годах.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/5584339/2a0000017cfe35b4e4f5cb7fedc38b2f6c70/XXL_height",
       },
       {
         coords: [52.095833, 23.685],
@@ -604,7 +630,8 @@ function init() {
         address: "ул. Карбышева, 25",
         description:
           "Храм в честь святого Георгия Победоносца. Современная архитектура.",
-        image: "",
+        image:
+          "https://vitebsk.flatbook.by/img/landmarks/vitebsk/full/9q6w3hv6lkcosg4wgo0s0480g.jpg",
       },
       {
         coords: [52.09, 23.679722],
@@ -612,7 +639,7 @@ function init() {
         address: "ул. Куйбышева, 2",
         description:
           "Действующий женский монастырь с храмом в честь Рождества Пресвятой Богородицы.",
-        image: "",
+        image: "https://sobory.ru/pic/40950/40973_20160304_115304_1.jpg",
       },
     ],
 
@@ -623,7 +650,8 @@ function init() {
         address: "пл. Ленина, 1",
         description:
           "Храм в неорусском стиле. Расположен в центральной части Гомеля.",
-        image: "",
+        image:
+          "https://img.belta.by/uploads/lotus/news/2023/000019_EA9D550C488234374325899F002BBE03_834931.jpg",
       },
       {
         coords: [52.431111, 31.003889],
@@ -631,7 +659,8 @@ function init() {
         address: "ул. Советская, 45",
         description:
           "Храм в честь Архангела Михаила. Современная архитектура с традиционными элементами.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/9368060/2a00000189cb2b3563c7e713a13d7d30408d/XXXL",
       },
       {
         coords: [52.434444, 31.008333],
@@ -639,7 +668,8 @@ function init() {
         address: "ул. Ильича, 25",
         description:
           "Храм в честь святителя Николая Чудотворца. Один из старейших в Гомеле.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/9828935/2a0000018998f496bffad6b9e63af9f07ee1/orig",
       },
       {
         coords: [52.429722, 31.004167],
@@ -647,7 +677,8 @@ function init() {
         address: "ул. Юбилейная, 3",
         description:
           "Храм в честь святого Георгия Победоносца. Современная постройка.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/4802381/2a000001793d343cdba9d46c4d2c6c566e01/XXL_height",
       },
       {
         coords: [52.432778, 31.009444],
@@ -655,7 +686,8 @@ function init() {
         address: "ул. Барыкина, 15",
         description:
           "Храм в честь святителя Луки Крымского. Расположен в новых микрорайонах.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/10232404/2a0000018f9c7326911be7516a73d6167f3e/orig",
       },
       {
         coords: [52.430556, 31.007222],
@@ -663,14 +695,14 @@ function init() {
         address: "ул. Ильича, 55",
         description:
           "Храм в честь Иверской иконы Божией Матери. Построен в 2000-х годах.",
-        image: "",
+        image: "https://s2.fotokto.ru/photo/full/330/3301561.jpg",
       },
       {
         coords: [52.433611, 31.005556],
         name: "Храм Иконы Божией Матери Всех Скорбящих Радость",
         address: "ул. 50 лет БССР, 23",
         description: "Храм в честь чудотворной иконы. Современная архитектура.",
-        image: "",
+        image: "https://sobory.ru/pic/11600/11635_20210815_1353400.jpg",
       },
       {
         coords: [52.4275, 31.01],
@@ -678,7 +710,7 @@ function init() {
         address: "ул. Фрунзе, 8",
         description:
           "Храм в честь Святой Троицы. Расположен в исторической части города.",
-        image: "",
+        image: "https://www.fotobel.by/images/gomel/gomel-troickhram_2.jpg",
       },
       {
         coords: [52.435278, 31.0025],
@@ -686,7 +718,7 @@ function init() {
         address: "ул. Крестьянская, 25",
         description:
           "Храм в честь Скитковской иконы Божией Матери. Построен в 1990-х годах.",
-        image: "",
+        image: "https://www.fotobel.by/images/gomel/gomel-troickhram_2.jpg",
       },
       {
         coords: [52.428889, 31.008056],
@@ -694,7 +726,8 @@ function init() {
         address: "ул. Интернациональная, 33",
         description:
           "Храм в честь святого Иоанна Кормянского. Современная постройка.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/i?id=28220fa5d9522b4dd1b94e0248c2f65e_l-5221961-images-thumbs&n=13",
       },
       {
         coords: [52.431667, 31.006111],
@@ -702,7 +735,8 @@ function init() {
         address: "ул. Жарковского, 12",
         description:
           "Храм в честь преподобного Сергия Радонежского. Традиционная архитектура.",
-        image: "",
+        image:
+          "https://avatars.mds.yandex.net/get-altay/1871013/2a0000016b31d9775eda86582ecd2849d386/XXL_height",
       },
       {
         coords: [52.434167, 31.003333],
@@ -710,7 +744,8 @@ function init() {
         address: "ул. Богдана Хмельницкого, 45",
         description:
           "Храм в честь святого великомученика и целителя Пантелеймона.",
-        image: "",
+        image:
+          "https://www.holiday.by/files/sights/thumbnails/sights_gallery_fullsize/1bde3deee4e0c8de135951cd42d97b2c-orig.jpg",
       },
       {
         coords: [52.429167, 31.009167],
@@ -718,7 +753,8 @@ function init() {
         address: "ул. Советская, 88",
         description:
           "Храм в честь преподобного Серафима Саровского. Современная постройка.",
-        image: "",
+        image:
+          "https://planetabelarus.by/upload/iblock/ca6/ca669576c94c3846a6e29fdd99a80375.jpg",
       },
       {
         coords: [52.4325, 31.004722],
@@ -726,7 +762,7 @@ function init() {
         address: "ул. Советская, 25",
         description:
           "Храм в честь святого благоверного князя Александра Невского.",
-        image: "",
+        image: "https://nevsky.by/wp-content/uploads/2024/02/img_5646.jpg",
       },
       {
         coords: [52.426944, 31.005833],
@@ -734,7 +770,8 @@ function init() {
         address: "ул. Добрушская, 27",
         description:
           "Действующий мужской монастырь с храмом в честь святителя Николая.",
-        image: "",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7cu4Y-0AK416Zl3ZCo9Wf19ZxFzenZVUvw&s",
       },
     ],
 
@@ -745,7 +782,8 @@ function init() {
         address: "ул. К. Маркса, 2",
         description:
           "Кафедральный собор Могилёвской епархии. Построен в 2014 году.",
-        image: "",
+        image:
+          "https://planetabelarus.by/upload/iblock/c20/c20059d3491632dc46947ffb38b443b6.jpg",
       },
       {
         coords: [53.896667, 30.333056],
@@ -753,7 +791,8 @@ function init() {
         address: "ул. Первомайская, 75",
         description:
           "Храм в честь трёх вселенских учителей и святителей. Построен в 1909-1914 гг.",
-        image: "",
+        image:
+          "https://www.palomnik-tur.by/upload/resize_cache/iblock/de7/800_600_1/de76df04c64e621b81dfa08ad4ae956e.jpg",
       },
       {
         coords: [53.892222, 30.334722],
@@ -761,7 +800,7 @@ function init() {
         address: "ул. Каштановая, 15",
         description:
           "Храм в честь святых праведных Иоакима и Анны - родителей Пресвятой Богородицы.",
-        image: "",
+        image: "https://mogeparhia.by/wp-content/uploads/2018/09/dsc_0605.jpg",
       },
       {
         coords: [53.901111, 30.330833],
@@ -769,7 +808,8 @@ function init() {
         address: "ул. Т. Сутры, 19",
         description:
           "Действующий женский монастырь с уникальным деревянным храмом.",
-        image: "",
+        image:
+          "https://welcome-belarus.ru/wp-content/uploads/2018/08/Mogilev_ghenskij_monastyr1.jpg",
       },
     ],
   };
