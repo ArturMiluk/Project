@@ -852,24 +852,24 @@ function createAllPlacemarks(placesData, colors) {
 }
 
 function createBalloonContent(place) {
-  const imageHtml = place.image
-    ? `
-     <div class="balloon__image">
-      <img src="${place.image}" alt="${place.name}" loading="lazy" onerror="this.parentElement.classList.add('balloon__image-empty')" class="balloon__image--pic">
-    </div>`
-    : `<div class="balloon__image"></div>`;
-  return `
-     <div class="balloon">
-      <div class="balloon__header">
-        <div class="balloon__header--title">${place.name}</div>
-      </div>
-      ${imageHtml}
-      <div class="balloon__body">
-        <div class="balloon__body--address">${place.address}</div>
-        <div class="balloon__body--description">${place.description}</div>
-      </div>
-    </div>
-    `;
+  // const imageHtml = place.image
+  //   ? `
+  //    <div class="balloon__image">
+  //     <img src="${place.image}" alt="${place.name}" loading="lazy" onerror="this.parentElement.classList.add('balloon__image-empty')" class="balloon__image--pic">
+  //   </div>`
+  //   : `<div class="balloon__image"></div>`;
+  // return `
+  //    <div class="balloon">
+  //     <div class="balloon__header">
+  //       <div class="balloon__header--title">${place.name}</div>
+  //     </div>
+  //     ${imageHtml}
+  //     <div class="balloon__body">
+  //       <div class="balloon__body--address">${place.address}</div>
+  //       <div class="balloon__body--description">${place.description}</div>
+  //     </div>
+  //   </div>
+  //   `;
 }
 
 function handleUrlParams() {

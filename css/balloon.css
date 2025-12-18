@@ -1,51 +1,52 @@
-.balloon {
+.baloon {
   width: 100%;
 }
 
-.balloon__header--title {
+.baloon__title {
+  margin-bottom: 10px;
   font-size: 24px;
   font-weight: 600;
-  color: #000;
+  color: #fff;
+  text-align: center;
 }
 
-.balloon__image {
-  width: 360px;
+.baloon__image {
+  width: 100%;
   height: 240px;
-  margin-top: 10px;
+  margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.balloon__image-empty {
-  display: none;
-}
-
-.balloon__image--pic {
-  display: block;
-  width: 360px;
+.baloon__image-pic {
+  width: 100%;
   height: 240px;
+  display: block;
   object-fit: cover;
   object-position: center;
 }
 
-.balloon__body--address {
-  margin-top: 15px;
+.baloon__description {
+  margin-top: 10px;
   font-size: 16px;
   font-weight: 400;
-  color: #000;
+  color: #fff;
+  text-align: center;
 }
 
-.balloon__body--description {
-  margin-top: 5px;
+.baloon__adress {
+  margin: 10px 0 10px 0;
   font-size: 16px;
   font-weight: 400;
-  color: #000;
+  color: #fff;
+  text-align: center;
 }
 
 .baloon__btn {
-  margin-top: 20px;
   width: 40px;
   height: 40px;
+  display: block;
+  margin: 0 auto;
   font-size: 20px;
   font-weight: 500;
   color: #000;
@@ -71,6 +72,18 @@
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .baloon__image {
+    max-width: 50vw;
+  }
+
+  .churches__content-line {
+    width: 100%;
+    height: 4px;
+    margin: 20px 0;
+  }
 }
 
 @media (max-width: 768px) {
