@@ -5,6 +5,8 @@
 @import url(../css/info.css);
 @import url(../css/churches.css);
 @import url(../css/balloon.css);
+@import url(../css/browsing-history-form.css);
+@import url(../css/test.css);
 @import url(../css/traditions.css);
 @import url(../css/holidays.css);
 @import url(../css/history.css);
@@ -40,15 +42,4 @@ body {
 .main {
   width: 100%;
   margin: auto;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

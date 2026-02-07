@@ -1,9 +1,10 @@
 .info {
+  position: relative;
   width: 100%;
   background: url(../img/bg.jpg) no-repeat center center / cover;
 }
 
-/* .info::after {
+.info::after {
   content: "";
   position: absolute;
   top: 0;
@@ -12,7 +13,7 @@
   left: 0;
   z-index: 2;
   background: rgba(0, 0, 0, 0.3);
-} */
+}
 
 .info__inner {
   position: relative;
@@ -26,14 +27,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0;
+  margin: 10px 0;
   padding: 40px;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  animation: fadeInUp 0.8s ease-out;
 }
 
 .info__text {

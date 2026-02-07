@@ -1,6 +1,7 @@
 let center = [53.5, 28.0];
 let map;
 let allPlacemarks = {};
+let belarusPolygon;
 
 window.applyFilter = function () {
   const filterSelect = document.getElementById("controlsFilters");
@@ -10,6 +11,7 @@ window.applyFilter = function () {
 
     if (selectedCity) {
       map.geoObjects.removeAll();
+      map.geoObjects.add(belarusPolygon);
 
       if (allPlacemarks[selectedCity]) {
         allPlacemarks[selectedCity].forEach((placemark) => {
@@ -36,6 +38,8 @@ function init() {
     center: center,
     zoom: 7,
   });
+
+  drawBelarus(map);
 
   setTimeout(() => {
     if (typeof window.applyFilter === "function") {
@@ -70,6 +74,7 @@ function init() {
           "Один из старейших храмов Минска, построен в 1613 году. Памятник архитектуры с богатой историей.",
         image:
           "https://www.tuda-suda.by/images/countries/europe/belarus/minsk/cerkov-svyatyh-petra-i-pavla/tserkov-svyatykh-petra-i-pavla.jpg",
+        url: "http://sppsobor.by/",
       },
       {
         coords: [53.941667, 27.473333],
@@ -79,6 +84,7 @@ function init() {
           "Современный храм, построенный в 2006 году. Назван в честь святого князя Александра Невского.",
         image:
           "https://tourweek.ru/storage/web/source/uploads/ckeditor/1134.jpg",
+        url: "https://nevsky.by/",
       },
       {
         coords: [53.931944, 27.645833],
@@ -88,6 +94,7 @@ function init() {
           "Крупнейший храм Беларуси, построен в 2008 году. Вмещает до 1200 верующих.",
         image:
           "https://avatars.mds.yandex.net/i?id=00cc05e0306b9895e59fa4dbfaa9a83d_l-9095672-images-thumbs&n=13",
+        url: "https://prihodvs.by/",
       },
       {
         coords: [53.856944, 27.476944],
@@ -97,6 +104,7 @@ function init() {
           "Храм в честь чудотворной иконы Божией Матери. Построен в начале 2000-х годов.",
         image:
           "https://planetabelarus.by/upload/iblock/5f6/5f6a749eb66a4dd50c3b4f3516261159.jpg",
+        url: "https://vpg.by/",
       },
       {
         coords: [53.888889, 27.551667],
@@ -106,6 +114,7 @@ function init() {
           "Старинная церковь 1847 года постройка. Расположена на Военном кладбище.",
         image:
           "https://planetabelarus.by/upload/iblock/315/31520df2b931b26ce581cd7aa0c3488f.jpg",
+        url: "https://yandex.by/maps/org/tserkov_svyatoy_mironositsy_ravnoapostolnoy_marii_magdaliny/1003036690/?ll=27.553675%2C53.916032&z=16",
       },
       {
         coords: [53.858056, 27.663333],
@@ -115,6 +124,7 @@ function init() {
           "Современный храм, освященный в честь святой праведной Софии Слуцкой.",
         image:
           "https://planetabelarus.by/upload/iblock/f66/f665431e240a4d56045c56e6f2044f30.jpg",
+        url: "https://yandex.by/maps/org/khram_pravednoy_sofii_knyagini_slutskoy/199242184673/?ll=27.565281%2C53.016627&z=16",
       },
       {
         coords: [53.876389, 27.595],
@@ -123,6 +133,7 @@ function init() {
         description:
           "Приходской храм в честь одного из самых почитаемых святых - Николая Чудотворца.",
         image: "https://welcometobelarus.ru/images/thumbs/9199/1300.jpg",
+        url: "https://niko.cerkov.ru/",
       },
       {
         coords: [53.860556, 27.481667],
@@ -131,6 +142,7 @@ function init() {
         description:
           "Храм в честь апостола Андрея Первозванного. Современная архитектура.",
         image: "https://sobory.ru/pic/08850/08893_20160513_211048.jpg",
+        url: "https://xn--80aefeathgw5ao.xn--80aykt.xn--90ais/",
       },
       {
         coords: [53.908056, 27.438889],
@@ -140,6 +152,7 @@ function init() {
           "Храм в традиционном православном стиле. Построен в 2000-х годах.",
         image:
           "https://s3-minsk.becloud.by/media-assets/tvr/8443252d-804a-4bc3-8354-e53a39126c1a/conversions/a741474c-9708-4ce2-9a21-56fe0c99ec5f-xl-___webp_1920.webp",
+        url: "https://pokrovgrodno.org/ru",
       },
       {
         coords: [53.944444, 27.701667],
@@ -148,6 +161,7 @@ function init() {
         description:
           "Крупный храм в микрорайоне Серебрянка. Построен в 2014 году.",
         image: "https://live.staticflickr.com/8464/8076744668_ffcc823f9a_b.jpg",
+        url: "https://voskresenie.by/",
       },
       {
         coords: [53.866667, 27.633333],
@@ -157,6 +171,7 @@ function init() {
           "Храм в честь Святой Троицы. Расположен в жилом районе Минска.",
         image:
           "https://www.holiday.by/files/sights/cerkov_vostok_6_25.09.12-ad46031084b4a27549e1324facd244f6-orig-thumb-780x1500.jpg",
+        url: "https://prihodvs.by/o-prihode/hram-v-chest-svyatoj-troicy",
       },
       {
         coords: [53.933889, 27.65],
@@ -166,6 +181,7 @@ function init() {
           "Храм в честь Иоанна Крестителя. Современная архитектура с традиционными элементами.",
         image:
           "https://eparhia-kaluga.ru/images/galleries/2022/20220708_03/1.jpg",
+        url: "https://prodromos.by/",
       },
       {
         coords: [53.951667, 27.701389],
@@ -174,6 +190,7 @@ function init() {
         description: "Храм в честь святой Анастасии. Построен в 2000-х годах.",
         image:
           "https://avatars.dzeninfra.ru/get-zen_doc/1704908/pub_5dbb3d5e92414d00ac4e2134_5dbb4366a660d700ac95f7fe/scale_1200",
+        url: "https://uzorhram.by/",
       },
       {
         coords: [53.9475, 27.698056],
@@ -183,6 +200,7 @@ function init() {
           "Храм в честь чудотворной иконы. Расположен в новых микрорайонах Минска.",
         image:
           "https://travelagency.by/upload/iblock/3ed/vseh_skorbiashih.jpeg",
+        url: "https://yandex.by/maps/157/minsk/house/Zk4Ycg5jQEADQFtpfXVydnViZg==/?ll=27.493955%2C53.937913&z=16",
       },
       {
         coords: [53.927222, 27.586667],
@@ -192,6 +210,7 @@ function init() {
           "Храм в честь Архистратига Михаила. Построен в традиционном византийском стиле.",
         image:
           "https://planetabelarus.by/upload/resize_cache/iblock/9e5/1330_887_18e21fe612b4afb807a26ecc22279a1d9/9e5616af8b125b5f31178bf9e7a0abe5.jpg",
+        url: "https://yandex.by/maps/org/khram_svyatogo_arkhangela_mikhaila/125131070171/?ll=25.108101%2C53.402434&z=16",
       },
       {
         coords: [53.940278, 27.465278],
@@ -200,6 +219,7 @@ function init() {
         description:
           "Храм в честь Преображения Господня. Современная архитектура с золотыми куполами.",
         image: "https://sobory.ru/pic/12340/12348_20110422_131241.jpg",
+        url: "https://yandex.by/maps/org/tserkov_preobrazheniya_gospodnya/236536970455/",
       },
       {
         coords: [53.953056, 27.651389],
@@ -209,6 +229,7 @@ function init() {
           "Храм в честь святой равноапостольной княгини Ольги. Построен в 2000-х годах.",
         image:
           "https://ucare.timepad.ru/32c76549-7b46-4cab-982f-9f3b4bd81e2f/-/preview/",
+        url: "https://maps.app.goo.gl/rMkA6oEGcbLtCCc57",
       },
       {
         coords: [53.861111, 27.636667],
@@ -217,6 +238,7 @@ function init() {
         description:
           "Храм в честь святителя Николая Японского. Один из новых храмов Минска.",
         image: "https://sobory.ru/pic/28100/28132_20131028_223532.jpg",
+        url: "https://n-do.by/",
       },
       {
         coords: [53.95, 27.7],
@@ -226,6 +248,7 @@ function init() {
           "Храм в честь крестителя Руси князя Владимира. Современная архитектура.",
         image:
           "https://hrambel.by/image/upload/97c/fdk2k9nnzkd212r1hi6j6g7f1n0hoc3m.png",
+        url: "https://orthos.org/khramy/kartochki-khramov/khram-ravnoapostol-nogo-knyazya-vladimira/",
       },
       {
         coords: [53.909722, 27.574167],
@@ -234,6 +257,7 @@ function init() {
         description:
           "Главный кафедральный собор Белорусского экзархата. Хранится чудотворная икона Божией Матери Минская.",
         image: "https://sobory.ru/pic/07800/07812_20210317_2145111.jpg",
+        url: "https://sobor.minsk.by/",
       },
       {
         coords: [53.918056, 27.558889],
@@ -243,6 +267,7 @@ function init() {
           "Крупный женский монастырь с уникальными мастерскими и социальным служением.",
         image:
           "https://cdn.culture.ru/images/6a83a394-c506-5a22-987b-7c49a922a01b",
+        url: "https://obitel-minsk.ru/",
       },
     ],
 
@@ -254,6 +279,7 @@ function init() {
         description:
           "Один из старейших православных храмов Гродно. Построен в 1852 году.",
         image: "https://probelarus.by/images/thumbs/6191/1277.jpg",
+        url: "",
       },
       {
         coords: [53.678889, 23.832222],
@@ -263,6 +289,7 @@ function init() {
           "Кафедральный собор Гродненской епархии. Построен в 1907 году.",
         image:
           "https://grodnonews.by/upload/medialibrary/047/047d4336caa3252c31e290f28f822313.JPG",
+        url: "",
       },
       {
         coords: [53.683611, 23.835278],
@@ -271,6 +298,7 @@ function init() {
         description:
           "Храм в честь Иоанна Крестителя. Современная постройка с традиционным стилем.",
         image: "https://sobory.ru/pic/27050/27053_20240520_1829510.jpg",
+        url: "",
       },
       {
         coords: [53.668889, 23.881667],
@@ -280,6 +308,7 @@ function init() {
           "Храм в честь святого князя Владимира. Расположен в новых районах Гродно.",
         image:
           "https://by.planetabelarus.by/upload/resize_cache/iblock/4c5/1330_887_12879bfa30a1c933ea552a9c2b55e4a57/4c55464333e04ee1a244ab0eee538bbd.jpg",
+        url: "",
       },
       {
         coords: [53.694167, 23.821111],
@@ -288,6 +317,7 @@ function init() {
         description:
           "Храм в честь чудотворной иконы. Построен в начале 2000-х годов.",
         image: "https://sobory.ru/pic/11600/11629_20240717_1634350.jpg",
+        url: "",
       },
       {
         coords: [53.686944, 23.823611],
@@ -297,6 +327,7 @@ function init() {
           "Уникальный памятник древнерусского зодчества XII века. Внесена в список ЮНЕСКО.",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/a/a5/Kalozha_Church_in_Hrodna_-_Dec_6%2C_2018_%282%29.jpg",
+        url: "",
       },
       {
         coords: [53.6625, 23.876667],
@@ -306,6 +337,7 @@ function init() {
           "Современный храм, освященный в честь всех белорусских святых.",
         image:
           "https://avatars.mds.yandex.net/get-altay/15311720/2a00000197070f65fc52bfa67c5653af9bec/orig",
+        url: "",
       },
       {
         coords: [53.695833, 23.823056],
@@ -315,6 +347,7 @@ function init() {
           "Храм в честь Рождества Христова. Построен в 2000-х годах.",
         image:
           "https://hrambel.by/image/upload/d26/3swcl2s36jhwmz8ntc6enibtmv0nupxa.jpg",
+        url: "",
       },
       {
         coords: [53.691389, 23.836667],
@@ -324,6 +357,7 @@ function init() {
           "Храм в честь святой праведной Марфы. Современная постройка.",
         image:
           "https://avatars.mds.yandex.net/get-altay/9709783/2a000001889f8f5176aea9ee8ff07553afac/orig",
+        url: "",
       },
       {
         coords: [53.681111, 23.829444],
@@ -333,6 +367,7 @@ function init() {
           "Храм в честь святой княгини Ольги. Расположен в жилом районе Гродно.",
         image:
           "https://avatars.mds.yandex.net/i?id=84649ca2e15ef45176a190b33274812e_l-4809712-images-thumbs&n=13",
+        url: "",
       },
       {
         coords: [53.684722, 23.828056],
@@ -341,6 +376,7 @@ function init() {
         description:
           "Действующий женский монастырь с храмом в честь Рождества Богородицы.",
         image: "https://sobory.ru/pic/40950/40973_20160304_115304_1.jpg",
+        url: "",
       },
       {
         coords: [53.667222, 23.878611],
@@ -350,6 +386,7 @@ function init() {
           "Храм в честь святой блаженной Матроны Московской. Современная постройка.",
         image:
           "https://planetabelarus.by/upload/iblock/c4d/4rn4wy5h8lugrl6cs8vj8gszrimowwnr.jpg",
+        url: "",
       },
       {
         coords: [53.6725, 23.869167],
@@ -359,6 +396,7 @@ function init() {
           "Храм в честь святителя Спиридона Тримифунтского. Построен в 2000-х годах.",
         image:
           "https://mchs.gov.by/upload/resize_cache/iblock/116/1280_1082_19a20e5127c124c53586921eaf043b9cf/photo5303402587942401564.jpg",
+        url: "",
       },
       {
         coords: [53.6975, 23.818611],
@@ -368,15 +406,27 @@ function init() {
           "Храм в честь святителя Луки Крымского. Расположен в новых микрорайонах.",
         image:
           "https://avatars.mds.yandex.net/get-altay/10232404/2a0000018f9c7326911be7516a73d6167f3e/orig",
+        url: "",
       },
+      // {
+      //   coords: [53.693889, 23.819722],
+      //   name: "Храм преподобномученика Серафима Жировицкого",
+      //   address: "ул. Пестрака, 41",
+      //   description:
+      //     "Храм в честь преподобномученика Серафима, архимандрита Жировицкого.",
+      //   image:
+      //     "https://avatars.mds.yandex.net/get-altay/6119709/2a0000017f2657f5b27fdddabf7d06809878/XXL_height",
+      //   url: "",
+      // },
+
       {
         coords: [53.693889, 23.819722],
-        name: "Храм преподобномученика Серафима Жировицкого",
-        address: "ул. Пестрака, 41",
-        description:
-          "Храм в честь преподобномученика Серафима, архимандрита Жировицкого.",
+        name: "Церковь Усекновения главы Иоанна Предтечи",
+        address: "ул. Курчатова, 19",
+        description: "Церковь Усекновения главы Иоанна Предтечи",
         image:
-          "https://avatars.mds.yandex.net/get-altay/6119709/2a0000017f2657f5b27fdddabf7d06809878/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/11374564/2a00000193bae54807ff0296012477307c2e/XXL_height",
+        url: "https://prodromos.by/",
       },
     ],
 
@@ -389,6 +439,7 @@ function init() {
           "Восстановленный кафедральный собор на Успенской горке. Исторический символ Витебска.",
         image:
           "https://www.tury.ru/turyclub.img.php?src=02a83da96b9c5a4ddb41a44ba0c90219%2FEFWoLstb%2F9drr_ulO.jpg&img=4670abfcbf22a58f96ec05e8035cee47",
+        url: "",
       },
       {
         coords: [55.195833, 30.205278],
@@ -397,6 +448,7 @@ function init() {
         description:
           "Восстановленный храм в стиле виленского барокко. Исторический центр Витебска.",
         image: "https://a.d-cd.net/fd2ba24s-960.jpg",
+        url: "",
       },
       {
         coords: [55.191111, 30.201667],
@@ -406,6 +458,7 @@ function init() {
           "Кафедральный собор в честь Покрова Пресвятой Богородицы. Действующий храм.",
         image:
           "https://avatars.mds.yandex.net/get-altay/11471993/2a0000019071396325535228ea7815195baf/orig",
+        url: "",
       },
       {
         coords: [55.196389, 30.203889],
@@ -415,6 +468,7 @@ function init() {
           "Памятник древнеполоцкой архитектуры XII века. Один из старейших храмов Беларуси.",
         image:
           "https://i.pinimg.com/originals/ce/36/b6/ce36b6a275ed9e5315805b10a9d15ff2.jpg",
+        url: "",
       },
       {
         coords: [55.189722, 30.198611],
@@ -424,6 +478,7 @@ function init() {
           "Храм в честь святой мученицы Татьяны. Современная постройка.",
         image:
           "https://cont.ws/uploads/pic/2025/1/%D0%A5%D1%80%D0%B0%D0%BC%20%D1%81%D0%B2%D1%8F%D1%82%D0%BE%D0%B9%20%D0%BC%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%86%D1%8B%20%D0%A2%D0%B0%D1%82%D0%B8%D0%B0%D0%BD%D1%8B%2C%20%D0%B3.%20%D0%92%D0%B8%D1%82%D0%B5%D0%B1%D1%81%D0%BA.webp",
+        url: "",
       },
       {
         coords: [55.188056, 30.204167],
@@ -433,6 +488,7 @@ function init() {
           "Храм в честь святого Георгия Победоносца. Построен в 1990-х годах.",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Saint_George_Orthodox_church_in_Viciebsk_%2801%29.jpg/960px-Saint_George_Orthodox_church_in_Viciebsk_%2801%29.jpg",
+        url: "",
       },
       {
         coords: [55.1925, 30.207222],
@@ -442,6 +498,7 @@ function init() {
           "Храм в честь святителя Тихона Задонского. Расположен в жилом районе.",
         image:
           "https://lib.vstu.by/Vitebsk_site/img/Xram%20Vitebska/ul%20Titova.jpg",
+        url: "",
       },
       {
         coords: [55.194167, 30.199722],
@@ -451,6 +508,7 @@ function init() {
           "Храм в честь апостола и евангелиста Луки. Современная архитектура.",
         image:
           "https://avatars.mds.yandex.net/get-altay/11398069/2a000001916c35a3403f7c2c577a849690be/orig",
+        url: "",
       },
       {
         coords: [55.187222, 30.196667],
@@ -460,6 +518,7 @@ function init() {
           "Храм в честь апостола Андрея Первозванного. Построен в 2000-х годах.",
         image:
           "https://travelagency.by/upload/iblock/9ae/hram_v_serebranke.jpeg",
+        url: "",
       },
       {
         coords: [55.185833, 30.208611],
@@ -468,6 +527,7 @@ function init() {
         description:
           "Храм построен к 2000-летию христианства. Современная архитектура.",
         image: "https://sobory.ru/pic/19620/19633_20111113_214006.jpg",
+        url: "",
       },
       {
         coords: [55.191667, 30.195833],
@@ -476,6 +536,7 @@ function init() {
         description:
           "Храм в честь святой Евфросинии Полоцкой - небесной покровительницы Беларуси.",
         image: "https://vitebsk.1prof.by/file/2023/04/i.jpg",
+        url: "",
       },
       {
         coords: [55.190278, 30.209167],
@@ -484,6 +545,7 @@ function init() {
         description:
           "Храм в честь святого мученика Лонгина Сотника. Современная постройка.",
         image: "https://vitprav.by/wp-content/uploads/2014/08/0124.jpg",
+        url: "",
       },
       {
         coords: [55.193056, 30.194444],
@@ -492,6 +554,7 @@ function init() {
         description:
           "Храм в честь священномученика Фаддея, архиепископа Тверского.",
         image: "https://www.fotobel.by/images/vitebsk/vitebsk-hramfad_1.jpg",
+        url: "",
       },
       {
         coords: [55.186389, 30.202222],
@@ -501,6 +564,7 @@ function init() {
           "Храм в честь иконы Божией Матери 'Целительница'. Расположен в больничном комплексе.",
         image:
           "https://avatars.mds.yandex.net/get-altay/1881820/2a0000016aa28745eb35485eb9af3a98319b/XXL_height",
+        url: "",
       },
       {
         coords: [55.188889, 30.1975],
@@ -510,6 +574,7 @@ function init() {
           "Храм в честь святой блаженной Матроны Московской. Современная постройка.",
         image:
           "https://avatars.mds.yandex.net/get-altay/11937297/2a0000018e3537474c0c36d9b5ffff91fb6f/XXL_height",
+        url: "",
       },
     ],
 
@@ -522,6 +587,7 @@ function init() {
           "Легендарный храм - символ героизма защитников Брестской крепости. Построен в 1851-1876 гг.",
         image:
           "https://avatars.dzeninfra.ru/get-zen_doc/5205780/pub_6362d4e6febbba473de389ea_6362d59aaa962d13f87c889d/scale_1200",
+        url: "",
       },
       {
         coords: [52.093611, 23.683889],
@@ -530,6 +596,7 @@ function init() {
         description:
           "Главный православный собор Бреста. Построен в 1865 году в русско-византийском стиле.",
         image: "https://openborder.brsu.by/wp-content/uploads/2024/02/1.jpg",
+        url: "",
       },
       {
         coords: [52.090278, 23.6875],
@@ -539,6 +606,7 @@ function init() {
           "Храм в честь иконы Божией Матери 'Всецарица'. Современная постройка.",
         image:
           "https://planetabelarus.by/upload/resize_cache/iblock/766/1330_747_18e21fe612b4afb807a26ecc22279a1d9/766dcac2939e6dbcd4e6a56c26443024.jpg",
+        url: "",
       },
       {
         coords: [52.095, 23.681667],
@@ -548,6 +616,7 @@ function init() {
           "Памятник архитектуры XIX века. Один из старейших храмов Бреста.",
         image:
           "https://ldd.by/wp-content/uploads/2025/09/brest-svyato-nikolaevskaya-cerkov.jpg",
+        url: "",
       },
       {
         coords: [52.088611, 23.689444],
@@ -556,6 +625,7 @@ function init() {
         description:
           "Крупнейший храм Бреста. Построен в 1995-1998 годах в честь 50-летия Победы.",
         image: "https://www.fotobel.by/images/brest/brest-xram_18.jpg",
+        url: "",
       },
       {
         coords: [52.092222, 23.678889],
@@ -564,6 +634,7 @@ function init() {
         description:
           "Храм в честь чудотворной иконы. Расположен в историческом центре города.",
         image: "https://sobory.ru/pic/11600/11635_20210815_1353400.jpg",
+        url: "",
       },
       {
         coords: [52.094167, 23.686111],
@@ -572,6 +643,7 @@ function init() {
         description:
           "Храм в честь Тихвинской иконы Божией Матери. Построен в 1990-х годах.",
         image: "https://welcometobelarus.ru/images/thumbs/9068/1088.jpg",
+        url: "",
       },
       {
         coords: [52.089722, 23.684167],
@@ -581,6 +653,7 @@ function init() {
           "Храм в честь святителя Спиридона Тримифунтского. Современная архитектура.",
         image:
           "https://mchs.gov.by/upload/resize_cache/iblock/116/1280_1082_19a20e5127c124c53586921eaf043b9cf/photo5303402587942401564.jpg",
+        url: "",
       },
       {
         coords: [52.0875, 23.682778],
@@ -590,6 +663,7 @@ function init() {
           "Храм в честь Рождества Христова. Расположен в жилом районе Бреста.",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/9/9e/%D0%A1%D0%92%D0%AF%D0%A2%D0%9E-%D0%A5%D0%A0%D0%98%D0%A1%D0%A2%D0%9E-%D0%A0%D0%9E%D0%96%D0%94%D0%95%D0%A1%D0%A2%D0%92%D0%95%D0%9D%D0%A1%D0%9A%D0%90%D0%AF_%D0%A6%D0%95%D0%A0%D0%9A%D0%9E%D0%92%D0%AC_%D0%B3.%D0%9A%D0%9E%D0%91%D0%A0%D0%98%D0%9D_%28%D0%A4%D0%9E%D0%A2%D0%9E_2%29.jpg",
+        url: "",
       },
       {
         coords: [52.091111, 23.680556],
@@ -599,6 +673,7 @@ function init() {
           "Храм в честь апостола Фомы. Современная постройка с традиционными элементами.",
         image:
           "https://avatars.mds.yandex.net/get-altay/10768923/2a0000018af168efb80b057216bf42b07325/XXXL",
+        url: "",
       },
       {
         coords: [52.093056, 23.678056],
@@ -606,6 +681,7 @@ function init() {
         address: "ул. Орловская, 15",
         description: "Приходской храм в честь святителя Николая Чудотворца.",
         image: "",
+        url: "",
       },
       {
         coords: [52.096389, 23.683056],
@@ -615,6 +691,7 @@ function init() {
           "Храм в честь преподобного Серафима Саровского. Построен в 2000-х годах.",
         image:
           "https://avatars.mds.yandex.net/get-altay/5584339/2a0000017cfe35b4e4f5cb7fedc38b2f6c70/XXL_height",
+        url: "",
       },
       {
         coords: [52.095833, 23.685],
@@ -623,6 +700,7 @@ function init() {
         description:
           "Храм в честь Святой Троицы. Расположен в центральной части города.",
         image: "",
+        url: "",
       },
       {
         coords: [52.097222, 23.681389],
@@ -632,6 +710,7 @@ function init() {
           "Храм в честь святого Георгия Победоносца. Современная архитектура.",
         image:
           "https://vitebsk.flatbook.by/img/landmarks/vitebsk/full/9q6w3hv6lkcosg4wgo0s0480g.jpg",
+        url: "",
       },
       {
         coords: [52.09, 23.679722],
@@ -640,6 +719,7 @@ function init() {
         description:
           "Действующий женский монастырь с храмом в честь Рождества Пресвятой Богородицы.",
         image: "https://sobory.ru/pic/40950/40973_20160304_115304_1.jpg",
+        url: "",
       },
     ],
 
@@ -652,6 +732,7 @@ function init() {
           "Храм в неорусском стиле. Расположен в центральной части Гомеля.",
         image:
           "https://img.belta.by/uploads/lotus/news/2023/000019_EA9D550C488234374325899F002BBE03_834931.jpg",
+        url: "",
       },
       {
         coords: [52.431111, 31.003889],
@@ -661,6 +742,7 @@ function init() {
           "Храм в честь Архангела Михаила. Современная архитектура с традиционными элементами.",
         image:
           "https://avatars.mds.yandex.net/get-altay/9368060/2a00000189cb2b3563c7e713a13d7d30408d/XXXL",
+        url: "",
       },
       {
         coords: [52.434444, 31.008333],
@@ -670,6 +752,7 @@ function init() {
           "Храм в честь святителя Николая Чудотворца. Один из старейших в Гомеле.",
         image:
           "https://avatars.mds.yandex.net/get-altay/9828935/2a0000018998f496bffad6b9e63af9f07ee1/orig",
+        url: "",
       },
       {
         coords: [52.429722, 31.004167],
@@ -679,6 +762,7 @@ function init() {
           "Храм в честь святого Георгия Победоносца. Современная постройка.",
         image:
           "https://avatars.mds.yandex.net/get-altay/4802381/2a000001793d343cdba9d46c4d2c6c566e01/XXL_height",
+        url: "",
       },
       {
         coords: [52.432778, 31.009444],
@@ -688,6 +772,7 @@ function init() {
           "Храм в честь святителя Луки Крымского. Расположен в новых микрорайонах.",
         image:
           "https://avatars.mds.yandex.net/get-altay/10232404/2a0000018f9c7326911be7516a73d6167f3e/orig",
+        url: "",
       },
       {
         coords: [52.430556, 31.007222],
@@ -696,6 +781,7 @@ function init() {
         description:
           "Храм в честь Иверской иконы Божией Матери. Построен в 2000-х годах.",
         image: "https://s2.fotokto.ru/photo/full/330/3301561.jpg",
+        url: "",
       },
       {
         coords: [52.433611, 31.005556],
@@ -703,6 +789,7 @@ function init() {
         address: "ул. 50 лет БССР, 23",
         description: "Храм в честь чудотворной иконы. Современная архитектура.",
         image: "https://sobory.ru/pic/11600/11635_20210815_1353400.jpg",
+        url: "",
       },
       {
         coords: [52.4275, 31.01],
@@ -711,6 +798,7 @@ function init() {
         description:
           "Храм в честь Святой Троицы. Расположен в исторической части города.",
         image: "https://www.fotobel.by/images/gomel/gomel-troickhram_2.jpg",
+        url: "",
       },
       {
         coords: [52.435278, 31.0025],
@@ -719,6 +807,7 @@ function init() {
         description:
           "Храм в честь Скитковской иконы Божией Матери. Построен в 1990-х годах.",
         image: "https://www.fotobel.by/images/gomel/gomel-troickhram_2.jpg",
+        url: "",
       },
       {
         coords: [52.428889, 31.008056],
@@ -728,6 +817,7 @@ function init() {
           "Храм в честь святого Иоанна Кормянского. Современная постройка.",
         image:
           "https://avatars.mds.yandex.net/i?id=28220fa5d9522b4dd1b94e0248c2f65e_l-5221961-images-thumbs&n=13",
+        url: "",
       },
       {
         coords: [52.431667, 31.006111],
@@ -737,6 +827,7 @@ function init() {
           "Храм в честь преподобного Сергия Радонежского. Традиционная архитектура.",
         image:
           "https://avatars.mds.yandex.net/get-altay/1871013/2a0000016b31d9775eda86582ecd2849d386/XXL_height",
+        url: "",
       },
       {
         coords: [52.434167, 31.003333],
@@ -746,6 +837,7 @@ function init() {
           "Храм в честь святого великомученика и целителя Пантелеймона.",
         image:
           "https://www.holiday.by/files/sights/thumbnails/sights_gallery_fullsize/1bde3deee4e0c8de135951cd42d97b2c-orig.jpg",
+        url: "",
       },
       {
         coords: [52.429167, 31.009167],
@@ -755,6 +847,7 @@ function init() {
           "Храм в честь преподобного Серафима Саровского. Современная постройка.",
         image:
           "https://planetabelarus.by/upload/iblock/ca6/ca669576c94c3846a6e29fdd99a80375.jpg",
+        url: "",
       },
       {
         coords: [52.4325, 31.004722],
@@ -763,6 +856,7 @@ function init() {
         description:
           "Храм в честь святого благоверного князя Александра Невского.",
         image: "https://nevsky.by/wp-content/uploads/2024/02/img_5646.jpg",
+        url: "",
       },
       {
         coords: [52.426944, 31.005833],
@@ -772,6 +866,7 @@ function init() {
           "Действующий мужской монастырь с храмом в честь святителя Николая.",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7cu4Y-0AK416Zl3ZCo9Wf19ZxFzenZVUvw&s",
+        url: "",
       },
     ],
 
@@ -784,6 +879,7 @@ function init() {
           "Кафедральный собор Могилёвской епархии. Построен в 2014 году.",
         image:
           "https://planetabelarus.by/upload/iblock/c20/c20059d3491632dc46947ffb38b443b6.jpg",
+        url: "",
       },
       {
         coords: [53.896667, 30.333056],
@@ -793,6 +889,7 @@ function init() {
           "Храм в честь трёх вселенских учителей и святителей. Построен в 1909-1914 гг.",
         image:
           "https://www.palomnik-tur.by/upload/resize_cache/iblock/de7/800_600_1/de76df04c64e621b81dfa08ad4ae956e.jpg",
+        url: "",
       },
       {
         coords: [53.892222, 30.334722],
@@ -801,6 +898,7 @@ function init() {
         description:
           "Храм в честь святых праведных Иоакима и Анны - родителей Пресвятой Богородицы.",
         image: "https://mogeparhia.by/wp-content/uploads/2018/09/dsc_0605.jpg",
+        url: "",
       },
       {
         coords: [53.901111, 30.330833],
@@ -810,6 +908,7 @@ function init() {
           "Действующий женский монастырь с уникальным деревянным храмом.",
         image:
           "https://welcome-belarus.ru/wp-content/uploads/2018/08/Mogilev_ghenskij_monastyr1.jpg",
+        url: "",
       },
     ],
   };
@@ -819,57 +918,139 @@ function init() {
   handleUrlParams();
 }
 
+function drawBelarus(map) {
+  const simplifiedCoords = [
+    // [56.0, 23.0],
+    // [56.0, 26.0],
+    // [55.5, 28.0],
+    // [55.0, 30.5],
+    // [54.0, 31.5],
+    // [52.5, 31.5],
+    // [52.0, 30.0],
+    // [51.5, 28.0],
+    // [51.5, 26.0],
+    // [52.0, 24.0],
+    // [53.0, 23.5],
+    // [54.0, 23.5],
+    // [55.0, 24.0],
+    // [56.0, 23.0],
+  ];
+
+  belarusPolygon = new ymaps.GeoObject(
+    {
+      geometry: {
+        type: "Polygon",
+        coordinates: [simplifiedCoords],
+      },
+    },
+    {
+      fillColor: "#1E90FF33",
+      strokeColor: "#FFD700",
+      strokeWidth: 2,
+      strokeOpacity: 1,
+      zIndex: 1,
+      interactivityModel: "default#transparent",
+    },
+  );
+
+  map.geoObjects.add(belarusPolygon);
+}
+
+function updateInfoBlock(place) {
+  const title = document.querySelector(".baloon__title");
+  const image = document.querySelector(".baloon__image-pic");
+  const description = document.querySelector(".baloon__description");
+  const address = document.querySelector(".baloon__adress");
+  const imageBtn = document.querySelector(".baloon__image-btn");
+
+  if (!title || !image || !description || !address) return;
+
+  title.textContent = place.name;
+  description.textContent = place.description;
+  address.textContent = place.address;
+
+  if (place.image) {
+    image.src = place.image;
+    image.style.display = "block";
+  } else {
+    image.style.display = "none";
+  }
+
+  if (place.url) {
+    imageBtn.href = place.url;
+    imageBtn.style.display = "inline-block";
+  } else {
+    imageBtn.href = "#";
+    imageBtn.style.display = "none";
+  }
+}
+
 function createAllPlacemarks(placesData, colors) {
   Object.keys(placesData).forEach((city) => {
     allPlacemarks[city] = [];
 
     placesData[city].forEach((place) => {
+      const iconHtml = `
+        <div style="
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: ${colors[city]};
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid white;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+          cursor: pointer;
+        ">
+          <img src="${place.image || ""}" 
+               alt="${place.name}"
+               style="
+                 width: 24px;
+                 height: 24px;
+                 border-radius: 50%;
+                 object-fit: cover;
+               "
+               onerror="this.style.display='none'; this.parentNode.innerHTML='🏛️';">
+        </div>
+      `;
+
       let placemark = new ymaps.Placemark(
         place.coords,
         {
-          balloonContent: createBalloonContent(place),
           hintContent: place.name,
         },
         {
-          preset: "islands#icon",
-          iconColor: colors[city],
-          balloonCloseButton: true,
-          hideIconOnBalloonOpen: false,
-        }
+          iconLayout: "default#imageWithContent",
+          iconImageHref: "",
+          iconImageSize: [40, 40],
+          iconImageOffset: [-20, -20],
+          iconContentLayout: ymaps.templateLayoutFactory.createClass(iconHtml),
+          iconContentOffset: [0, 0],
+        },
       );
 
+      placemark.events.add("click", function () {
+        updateInfoBlock(place);
+      });
+
       placemark.events.add("mouseenter", function () {
-        placemark.options.set("iconColor", "#ff0000");
+        placemark.options.set({
+          iconImageSize: [46, 46],
+          iconImageOffset: [-23, -23],
+        });
       });
 
       placemark.events.add("mouseleave", function () {
-        placemark.options.set("iconColor", colors[city]);
+        placemark.options.set({
+          iconImageSize: [40, 40],
+          iconImageOffset: [-20, -20],
+        });
       });
 
       allPlacemarks[city].push(placemark);
     });
   });
-}
-
-function createBalloonContent(place) {
-  // const imageHtml = place.image
-  //   ? `
-  //    <div class="balloon__image">
-  //     <img src="${place.image}" alt="${place.name}" loading="lazy" onerror="this.parentElement.classList.add('balloon__image-empty')" class="balloon__image--pic">
-  //   </div>`
-  //   : `<div class="balloon__image"></div>`;
-  // return `
-  //    <div class="balloon">
-  //     <div class="balloon__header">
-  //       <div class="balloon__header--title">${place.name}</div>
-  //     </div>
-  //     ${imageHtml}
-  //     <div class="balloon__body">
-  //       <div class="balloon__body--address">${place.address}</div>
-  //       <div class="balloon__body--description">${place.description}</div>
-  //     </div>
-  //   </div>
-  //   `;
 }
 
 function handleUrlParams() {
@@ -896,6 +1077,7 @@ function applyFilter() {
   const visibleCities = [];
 
   map.geoObjects.removeAll();
+  map.geoObjects.add(belarusPolygon);
 
   if (selectedCity === "belarus") {
     showAllCities();
@@ -916,6 +1098,7 @@ function applyFilter() {
 
 function showAllCities() {
   map.geoObjects.removeAll();
+  map.geoObjects.add(belarusPolygon);
 
   Object.values(allPlacemarks).forEach((cityPlacemarks) => {
     cityPlacemarks.forEach((placemark) => {

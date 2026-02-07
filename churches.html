@@ -10,7 +10,7 @@
     <header id="header" class="header">
       <div class="container">
         <div class="header__inner">
-          <a href="./index.html" class="header__logo">Logo</a>
+          <a href="./index.html" class="header__logo"><img src="./img/favicon/favicon.jpg" alt="logo">Корни и крылья</a>
           <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="./index.html" class="nav__link">Главная</a></li>
@@ -28,6 +28,7 @@
                     </div>
                   </div>
                 </li>
+                <li class="nav__item"><a href="./test.html" class="nav__link">Древо</a></li>
                 <li class="nav__item nav__item--dropdown">
                   <a href="#" class="nav__link" data-no-open>Традиции</a>
                   <div class="nav__dropdown">
@@ -79,18 +80,15 @@
           <div class="churches__inner">
             <div class="churches__content">
               <div id="churchesMap" class="churches__map"></div>
-              <div class="churches__content-line"></div>
               <div class="baloon">
                 <h3 class="baloon__title">Название</h3>
                 <div class="baloon__image">
                   <img src="./img/bg.jpg" alt="Изображение" class="baloon__image-pic">
+                  <a href="#" target="_blank" class="baloon__image-btn">Подробнее</a>
                 </div>
                 <div class="baloon__description">Описание</div>
                 <div class="baloon__adress">Адрес</div>
-                <button type="button" class="baloon__btn">+</button>
-                <div class="baloon__info">
-                  <div class="baloon__info-text">Подробнее</div>
-                </div>
+                <a class="baloon__btn popup-with-form" href="#browsing-history__form">История посещений группы</a>
               </div>
             </div>
           </div>
@@ -103,11 +101,19 @@
         <div class="footer__text">© 2025-2026 • Корни и крылья: Церкви Беларуси как хранители семейных традиций</div>
       </div>
     </footer>
+
+    <form class="browsing-history__form mfp-hide white-popup-block" id="browsing-history__form">
+
+    </form>
     
+    <script src="./js/main.js"></script>
     <script src="./js/active-link.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/burger.js"></script>
     <script src="./js/map.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.magnific-popup.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
   </body>
 </html>
