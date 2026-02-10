@@ -1,10 +1,10 @@
-.history {
+.test {
   position: relative;
   width: 100%;
   background: url(../img/bg.jpg) no-repeat center center / cover;
 }
 
-.history::after {
+.test::after {
   content: "";
   position: absolute;
   top: 0;
@@ -15,7 +15,7 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-.history__inner {
+.test__inner {
   position: relative;
   z-index: 3;
   display: flex;
@@ -24,38 +24,20 @@
   min-height: 100vh;
 }
 
-.history__content {
+.test__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 80px 0 10px 0;
+  margin: 0 auto;
   padding: 40px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.history__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-}
-
-.history__subtitle {
-  margin-top: 40px;
   font-size: 24px;
   font-weight: 500;
+  line-height: 1.6;
   color: #fff;
-}
-
-.history__text {
-  margin-top: 40px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #fff;
-  text-align: justify;
+  text-align: center;
 }

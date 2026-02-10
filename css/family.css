@@ -28,16 +28,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 80px 0 10px 0;
   padding: 40px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.6;
+}
+
+.family__title {
+  font-size: 36px;
+  font-weight: 700;
   color: #fff;
   text-align: center;
+}
+
+.family__subtitle {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.family__text {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fff;
+  text-align: justify;
 }

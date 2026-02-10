@@ -22,6 +22,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .about__content {
@@ -59,7 +60,7 @@
 
 .about__link {
   margin: 40px 0 0 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
   overflow: hidden;

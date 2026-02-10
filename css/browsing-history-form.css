@@ -1,0 +1,37 @@
+@import url(../css/magnific-popup.css);
+
+.browsing-history__form {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px;
+  background: linear-gradient(
+    213.56deg,
+    rgba(176, 176, 176, 0.88) 3.11%,
+    rgba(106, 106, 106, 0.88) 95.43%
+  );
+  border-radius: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.form__subtitle {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+.form__photo {
+  margin-top: 20px;
+  width: 400px;
+  height: 240px;
+  border-radius: 10px;
+}

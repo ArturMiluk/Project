@@ -408,17 +408,6 @@ function init() {
           "https://avatars.mds.yandex.net/get-altay/10232404/2a0000018f9c7326911be7516a73d6167f3e/orig",
         url: "",
       },
-      // {
-      //   coords: [53.693889, 23.819722],
-      //   name: "Храм преподобномученика Серафима Жировицкого",
-      //   address: "ул. Пестрака, 41",
-      //   description:
-      //     "Храм в честь преподобномученика Серафима, архимандрита Жировицкого.",
-      //   image:
-      //     "https://avatars.mds.yandex.net/get-altay/6119709/2a0000017f2657f5b27fdddabf7d06809878/XXL_height",
-      //   url: "",
-      // },
-
       {
         coords: [53.693889, 23.819722],
         name: "Церковь Усекновения главы Иоанна Предтечи",
@@ -437,8 +426,7 @@ function init() {
         address: "ул. Крылова, 9",
         description:
           "Восстановленный кафедральный собор на Успенской горке. Исторический символ Витебска.",
-        image:
-          "https://www.tury.ru/turyclub.img.php?src=02a83da96b9c5a4ddb41a44ba0c90219%2FEFWoLstb%2F9drr_ulO.jpg&img=4670abfcbf22a58f96ec05e8035cee47",
+        image: "",
         url: "",
       },
       {
@@ -1003,15 +991,14 @@ function createAllPlacemarks(placesData, colors) {
           box-shadow: 0 2px 5px rgba(0,0,0,0.3);
           cursor: pointer;
         ">
-          <img src="${place.image || ""}" 
+          <img src="${place.image}" 
                alt="${place.name}"
                style="
                  width: 24px;
                  height: 24px;
                  border-radius: 50%;
                  object-fit: cover;
-               "
-               onerror="this.style.display='none'; this.parentNode.innerHTML='🏛️';">
+               ">
         </div>
       `;
 
