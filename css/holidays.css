@@ -88,7 +88,7 @@
 .calendar__list {
   display: grid;
   grid-template-columns: 80px 80px 80px 80px 80px 80px 80px;
-  grid-template-rows: 40px 40px 40px 40px;
+  grid-template-rows: 40px 40px 40px 40px 40px;
   margin-top: 20px;
   gap: 10px;
 }
@@ -129,7 +129,7 @@
   font-weight: 500;
   color: #fff;
   text-transform: uppercase;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .holiday__date {
@@ -144,4 +144,5 @@
   font-size: 16px;
   font-weight: 500;
   color: #fff;
+  text-align: center;
 }
