@@ -40,7 +40,7 @@
 
 .churches__map {
   width: 100%;
-  /* min-width: 720px; */
+  min-width: 720px;
   height: 480px;
   overflow: hidden;
 }
@@ -104,8 +104,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .churches__map {
+    min-width: 480px;
+  }
+}
+
 @media (max-width: 480px) {
   .churches__content {
     padding: 12px;
+  }
+
+  .churches__map {
+    min-width: 320px;
   }
 }
