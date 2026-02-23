@@ -65,7 +65,7 @@
   text-decoration: none;
   cursor: pointer;
   opacity: 0.7;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s linear;
 }
 
 .nav__link:hover {
@@ -98,7 +98,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s linear;
 }
 
 .nav__item--dropdown:hover .nav__dropdown {
@@ -120,7 +120,7 @@
   text-decoration: none;
   white-space: nowrap;
   border-radius: 4px;
-  transition: background 0.3s;
+  transition: background 0.3s linear;
 }
 
 .nav__dropdown-item:hover {
@@ -142,12 +142,12 @@
   height: 3px;
   background: #fff;
   border-radius: 3px;
-  transition: all 1s ease;
+  transition: all 0.3s linear;
   transform-origin: center;
 }
 
 .header__burger.active .header__burger-line:nth-child(1) {
-  transform: translateY(10px);
+  transform: rotate(45deg) translateY(13px);
 }
 
 .header__burger.active .header__burger-line:nth-child(2) {
@@ -156,7 +156,7 @@
 }
 
 .header__burger.active .header__burger-line:nth-child(3) {
-  transform: translateY(-10px);
+  transform: rotate(-45deg) translateY(-13px);
 }
 
 .burger-overlay {
@@ -167,7 +167,7 @@
   backdrop-filter: blur(4px);
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s ease;
+  transition: 0.3s linear;
 }
 
 .burger-overlay.active {
@@ -177,8 +177,8 @@
 
 .nav__item--dropdown .nav__dropdown {
   transition:
-    max-heigth 0.3s ease,
-    padding 0.3s ease;
+    max-heigth 0.3s linear,
+    padding 0.3s linear;
 }
 
 .nav__dropdown.active {
@@ -197,6 +197,10 @@
 }
 
 @media (max-width: 768px) {
+  .header__logo {
+    z-index: 1;
+  }
+
   .nav {
     position: fixed;
     flex-direction: column;
@@ -205,15 +209,15 @@
     height: 100vh;
     padding: 80px 30px;
     background: rgba(255, 255, 255, 0.1);
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
     backdrop-filter: blur(10px);
-    transition: right 1s ease;
+    transition: right 0.3s linear;
     overflow-y: auto;
   }
 
   .nav.active {
     right: 0;
-    width: 100vw;
+    width: 100%;
   }
 
   .nav__list {
@@ -232,7 +236,7 @@
     justify-content: center;
     padding: 15px 0;
     border-bottom: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s linear;
   }
 
   .nav__link:hover {
@@ -250,7 +254,7 @@
     padding: 0;
     background: none;
     box-shadow: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s linear;
   }
 
   .nav__dropdown-item {

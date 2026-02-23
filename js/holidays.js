@@ -58,7 +58,7 @@ const movingHolidays2026 = {
 
 function getHolidaysForDate(month, day, year = 2026) {
   const key = `${month}-${day}`;
-  let holidays = [];
+  const holidays = [];
 
   if (belarusHolidays[key]) {
     holidays.push(belarusHolidays[key]);
@@ -98,47 +98,6 @@ async function getExactDate() {
   }
 }
 
-async function setCurrentMonthYearInSelectors() {
-  const date = await getExactDate();
-  const currentMonth = String(date.getMonth() + 1).padStart(2, "0");
-  const currentYear = date.getFullYear();
-
-  const monthSelect = document.getElementById("monthSelect");
-  const yearSelect = document.getElementById("yearSelect");
-
-  if (monthSelect) {
-    monthSelect.value = currentMonth;
-  }
-
-  if (yearSelect) {
-    yearSelect.value = currentYear;
-  }
-}
-
-function setupCalendarControls() {
-  const updateBtn = document.getElementById("updateCalendarBtn");
-  const monthSelect = document.getElementById("monthSelect");
-  const yearSelect = document.getElementById("yearSelect");
-
-  if (updateBtn) {
-    updateBtn.addEventListener("click", function () {
-      const selectedMonth = monthSelect.value;
-      const selectedYear = parseInt(yearSelect.value);
-
-      const calendarItems = document.querySelectorAll(".calendar__item");
-      calendarItems.forEach((item) => {
-        item.dataset.month = selectedMonth;
-        item.dataset.year = selectedYear;
-      });
-
-      alert(
-        `Показан календарь на ${monthSelect.options[monthSelect.selectedIndex].text} ${selectedYear} года`,
-      );
-    });
-  }
-}
-
-// Обновление блока "Сегодня"
 async function updateTodayBlock() {
   const date = await getExactDate();
   const day = String(date.getDate()).padStart(2, "0");
@@ -148,13 +107,14 @@ async function updateTodayBlock() {
 
   const holidays = getHolidaysForDate(month, day, year);
 
-  document.querySelector(".holiday__date").textContent = formattedDate;
+  const dateElement = document.querySelector(".holiday__date");
+  if (dateElement) dateElement.textContent = formattedDate;
 
   const descriptionElement = document.querySelector(".holiday__description");
-  if (holidays.length > 0) {
-    descriptionElement.innerHTML = holidays.map((h) => `${h}`).join("<br>");
-  } else {
-    descriptionElement.innerHTML = "";
+  if (descriptionElement) {
+    descriptionElement.innerHTML = holidays.length
+      ? holidays.map((h) => `${h}`).join("<br>")
+      : "";
   }
 }
 
@@ -166,41 +126,29 @@ function setupCalendarClicks() {
       e.preventDefault();
 
       const day = this.textContent.trim();
-
-      const monthSelect = document.getElementById("monthSelect");
-      const yearSelect = document.getElementById("yearSelect");
-
-      let month, year;
-
-      if (this.dataset.month && this.dataset.year) {
-        month = this.dataset.month;
-        year = parseInt(this.dataset.year);
-      } else {
-        const now = new Date();
-        month = String(now.getMonth() + 1).padStart(2, "0");
-        year = now.getFullYear();
-      }
+      const now = new Date();
+      const month = String(now.getMonth() + 1).padStart(2, "0");
+      const year = now.getFullYear();
 
       const holidays = getHolidaysForDate(month, day, year);
 
       const popupTitle = document.querySelector(".holidays-list__form-title");
-      popupTitle.textContent = `Праздники на ${day}.${month}.${year}`;
+      if (popupTitle) {
+        popupTitle.textContent = `Праздники на ${day}.${month}.${year}`;
+      }
 
       const popupSubtitle = document.querySelector(
         ".holidays-list__form-subtitle",
       );
-
-      if (holidays.length > 0) {
-        popupSubtitle.innerHTML = holidays.map((h) => `• ${h}`).join("<br>");
-      } else {
-        popupSubtitle.innerHTML = "В этот день праздников нет";
+      if (popupSubtitle) {
+        popupSubtitle.innerHTML = holidays.length
+          ? holidays.map((h) => `• ${h}`).join("<br>")
+          : "В этот день праздников нет";
       }
 
       if (window.jQuery && jQuery.magnificPopup) {
         jQuery.magnificPopup.open({
-          items: {
-            src: "#holidays-list__form",
-          },
+          items: { src: "#holidays-list__form" },
           type: "inline",
         });
       }
@@ -212,10 +160,29 @@ function highlightCurrentDay() {
   const today = new Date();
   const currentDay = today.getDate();
 
-  const calendarItems = document.querySelectorAll(".calendar__item");
-  calendarItems.forEach((item) => {
+  document.querySelectorAll(".calendar__item").forEach((item) => {
     if (item.textContent.trim() === String(currentDay)) {
       item.classList.add("calendar__item--today");
+    } else {
+      item.classList.remove("calendar__item--today");
+    }
+  });
+}
+
+function highlightHolidayDays() {
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const year = now.getFullYear();
+
+  document.querySelectorAll(".calendar__item").forEach((item) => {
+    const day = item.textContent.trim();
+    if (day && !isNaN(parseInt(day))) {
+      const holidays = getHolidaysForDate(month, day, year);
+      if (holidays.length > 0) {
+        item.classList.add("calendar__item--has-holiday");
+      } else {
+        item.classList.remove("calendar__item--has-holiday");
+      }
     }
   });
 }
@@ -224,8 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateTodayBlock();
   setupCalendarClicks();
   highlightCurrentDay();
-  setCurrentMonthYearInSelectors();
-  setupCalendarControls();
+  highlightHolidayDays();
 
   const now = new Date();
   const tomorrow = new Date(
@@ -237,11 +203,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
     updateTodayBlock();
-    setCurrentMonthYearInSelectors();
+    highlightCurrentDay();
+    highlightHolidayDays();
     setInterval(
       () => {
         updateTodayBlock();
-        setCurrentMonthYearInSelectors();
+        highlightCurrentDay();
+        highlightHolidayDays();
       },
       24 * 60 * 60 * 1000,
     );
