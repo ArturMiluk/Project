@@ -29,7 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 80px 0 10px 0;
+  margin: 112px 0 20px 0;
   padding: 20px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -40,7 +40,7 @@
 
 .churches__map {
   width: 100%;
-  min-width: 720px;
+  /* min-width: 720px; */
   height: 480px;
   overflow: hidden;
 }
@@ -51,6 +51,42 @@
 
 [class*="ground-pane"] {
   filter: grayscale(1);
+}
+
+.browsing-history__form {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px;
+  background: linear-gradient(
+    213.56deg,
+    rgba(176, 176, 176, 0.88) 3.11%,
+    rgba(106, 106, 106, 0.88) 95.43%
+  );
+  border-radius: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.browsing-history__form-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.browsing-history__form-subtitle {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+.browsing-history__form-pic {
+  margin-top: 20px;
+  width: 400px;
+  height: 240px;
+  border-radius: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -71,9 +107,5 @@
 @media (max-width: 480px) {
   .churches__content {
     padding: 12px;
-  }
-
-  .churches__map {
-    min-height: 50vh;
   }
 }

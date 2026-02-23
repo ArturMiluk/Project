@@ -91,42 +91,63 @@
                   <div class="holidays__calendar">
                     <div class="calendar__title">Календарь праздников</div>
                     <div class="calendar__list">
-                      <div class="calendar__item">1</div>
-                      <div class="calendar__item">2</div>
-                      <div class="calendar__item">3</div>
-                      <div class="calendar__item">4</div>
-                      <div class="calendar__item">5</div>
-                      <div class="calendar__item">6</div>
-                      <div class="calendar__item">7</div>
-                      <div class="calendar__item">8</div>
-                      <div class="calendar__item">9</div>
-                      <div class="calendar__item">10</div>
-                      <div class="calendar__item">11</div>
-                      <div class="calendar__item">12</div>
-                      <div class="calendar__item">13</div>
-                      <div class="calendar__item">14</div>
-                      <div class="calendar__item">15</div>
-                      <div class="calendar__item">16</div>
-                      <div class="calendar__item">17</div>
-                      <div class="calendar__item">18</div>
-                      <div class="calendar__item">19</div>
-                      <div class="calendar__item">20</div>
-                      <div class="calendar__item">21</div>
-                      <div class="calendar__item">22</div>
-                      <div class="calendar__item">23</div>
-                      <div class="calendar__item">24</div>
-                      <div class="calendar__item">25</div>
-                      <div class="calendar__item">26</div>
-                      <div class="calendar__item">27</div>
-                      <div class="calendar__item">28</div>
-                      <div class="calendar__item">29</div>
-                      <div class="calendar__item">30</div>
-                      <div class="calendar__item">31</div>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">1</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">2</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">3</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">4</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">5</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">6</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">7</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">8</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">9</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">10</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">11</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">12</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">13</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">14</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">15</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">16</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">17</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">18</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">19</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">20</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">21</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">22</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">23</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">24</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">25</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">26</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">27</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">28</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">29</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">30</a>
+                      <a href="#holidays-list__form" class="calendar__item popup-with-form">31</a>
                     </div>
+                    <!-- <div class="calendar__month-selector">
+                      <select id="monthSelect" class="calendar__select">
+                        <option value="01" class="calendar__select-month">Январь</option>
+                        <option value="02" class="calendar__select-month">Февраль</option>
+                        <option value="03" class="calendar__select-month">Март</option>
+                        <option value="04" class="calendar__select-month">Апрель</option>
+                        <option value="05" class="calendar__select-month">Май</option>
+                        <option value="06" class="calendar__select-month">Июнь</option>
+                        <option value="07" class="calendar__select-month">Июль</option>
+                        <option value="08" class="calendar__select-month">Август</option>
+                        <option value="09" class="calendar__select-month">Сентябрь</option>
+                        <option value="10" class="calendar__select-month">Октябрь</option>
+                        <option value="11" class="calendar__select-month">Ноябрь</option>
+                        <option value="12" class="calendar__select-month">Декабрь</option>
+                      </select>
+                      <select id="yearSelect" class="calendar__select">
+                        <option value="2026" class="calendar__select-year">2026</option>
+                        <option value="2025" class="calendar__select-year">2025</option>
+                      </select>
+                      <button id="updateCalendarBtn" class="calendar__update-btn">Показать</button>
+                    </div> -->
                   </div>
                   <div class="holiday">
                     <div class="holiday__title">Сегодня</div>
-                    <div class="holiday__date">00.00.0000</div>
+                    <div class="holiday__date"></div>
                     <div class="holiday__description"></div>
                   </div>
                 </div>
@@ -136,14 +157,27 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__inner">
-        <div class="footer__text">© 2025-2026 • Корни и крылья: Церкви Беларуси как хранители семейных традиций</div>
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__text">© 2025-2026 • Корни и крылья: Церкви Беларуси как хранители семейных традиций</div>
+          <div class="footer__contacts">
+            <a href="https://www.instagram.com/traditions_for_life?igsh=NG5mcnZwbGRzOThh" class="footer__contacts--link"><img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png " alt="Instagram" class="footer__contacts--img">Instagram</a>
+          </div>
+        </div>
       </div>
     </footer>
 
+    <div class="holidays-list__form mfp-hide white-popup-block" id="holidays-list__form">
+      <div class="holidays-list__form-title"></div>
+      <div class="holidays-list__form-subtitle"></div>
+    </div>
+
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
     <script src="./js/burger.js"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/holidays.js"></script>
     <script src="./js/active-link.js"></script>
+    <script src="./js/magnific-popup.js"></script>
   </body>
 </html>

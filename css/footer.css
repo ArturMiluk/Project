@@ -5,7 +5,7 @@
 
 .footer__inner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 0;
 }
@@ -14,14 +14,40 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
-  color: #fff;
+  color: #ccc;
   text-align: center;
-  opacity: 0.8;
+}
+
+.footer__contacts--link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer__contacts--img {
+  margin-right: 5px;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+
   .footer__text {
     font-size: 13px;
+  }
+
+  .footer__contacts {
+    margin-top: 5px;
+  }
+
+  .footer__contacts--img {
+    width: 24px;
+    height: 24px;
   }
 }
 

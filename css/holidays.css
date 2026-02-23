@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 80px 0 10px 0;
+  margin: 112px 0 20px 0;
   padding: 40px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -87,8 +87,8 @@
 
 .calendar__list {
   display: grid;
-  grid-template-columns: 80px 80px 80px 80px 80px 80px 80px;
-  grid-template-rows: 40px 40px 40px 40px 40px;
+  grid-template-columns: repeat(8, 80px);
+  grid-template-rows: repeat(4, 40px);
   margin-top: 20px;
   gap: 10px;
 }
@@ -101,6 +101,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #fff;
+  text-decoration: none;
   background: rgba(0, 191, 255, 0.1);
   border-radius: 10px;
   transition: background 0.3s ease;
@@ -145,4 +146,40 @@
   font-weight: 500;
   color: #fff;
   text-align: center;
+}
+
+.holidays-list__form {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px;
+  background: linear-gradient(
+    213.56deg,
+    rgba(176, 176, 176, 0.88) 3.11%,
+    rgba(106, 106, 106, 0.88) 95.43%
+  );
+  border-radius: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.holidays-list__form-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.holidays-list__form-subtitle {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .calendar__list {
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(8, 40px);
+  }
 }
