@@ -103,11 +103,15 @@
     align-items: center;
     padding: 15px;
   }
+
+  .churches__map {
+    min-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
   .churches__map {
-    min-width: 480px;
+    height: 480px;
   }
 }
 
@@ -117,6 +121,12 @@
   }
 
   .churches__map {
-    min-width: 320px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 368px) {
+  .churches__map {
+    height: 300px;
   }
 }
