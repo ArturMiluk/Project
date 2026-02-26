@@ -47,7 +47,8 @@
     flex-direction: column;
   }
 
-  .footer__text {
+  .footer__text,
+  .footer__contacts--link {
     font-size: 13px;
   }
 
@@ -66,13 +67,20 @@
     padding: 15px 0;
   }
 
-  .footer__text {
+  .footer__text,
+  .footer__contacts--link {
     font-size: 12px;
+  }
+
+  .footer__contacts--img {
+    width: 16px;
+    height: 16px;
   }
 }
 
 @media (max-width: 360px) {
-  .footer__text {
+  .footer__text,
+  .footer__contacts--link {
     font-size: 11px;
   }
 }

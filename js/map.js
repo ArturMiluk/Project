@@ -118,6 +118,7 @@ function init() {
           "https://avatars.mds.yandex.net/get-altay/9428388/2a0000018a316ddb7b7f4e881ff3f3aa23f8/L_height",
         ],
         url: "https://prodromos.by/",
+        hasHistory: true,
       },
       {
         coords: [53.657512, 23.856855],
@@ -132,6 +133,7 @@ function init() {
           "https://avatars.mds.yandex.net/get-altay/16480821/2a000001984c7d75e17899b090ba94e0c8d9/L_height",
         ],
         url: "https://svbs.by/",
+        hasHistory: true,
       },
       {
         coords: [53.678411, 23.822452],
@@ -406,24 +408,29 @@ function filterByCity(city) {
   map.geoObjects.removeAll();
   if (belarusPolygon) map.geoObjects.add(belarusPolygon);
 
+  let marksToShow = [];
   if (city && allPlacemarks[city]) {
-    allPlacemarks[city].forEach((placemark) => {
-      map.geoObjects.add(placemark);
-    });
-    const bounds = map.geoObjects.getBounds();
-    if (bounds) {
-      map.setBounds(bounds, { checkZoomRange: true, duration: 300 });
-    }
+    marksToShow = allPlacemarks[city];
   } else {
-    Object.values(allPlacemarks).forEach((cityPlacemarks) => {
-      cityPlacemarks.forEach((placemark) => {
-        map.geoObjects.add(placemark);
-      });
+    marksToShow = Object.values(allPlacemarks).flat();
+  }
+
+  if (marksToShow.length > 0) {
+    const clusterer = new ymaps.Clusterer({
+      preset: "islands#invertedVioletClusterIcons",
+      clusterIconColor: "#000",
+      groupByCoordinates: false,
+      clusterDisableClickZoom: false,
+      clusterHideIconOnBalloonOpen: false,
+      geoObjectHideIconOnBalloonOpen: false,
     });
-    const bounds = map.geoObjects.getBounds();
-    if (bounds) {
-      map.setBounds(bounds, { checkZoomRange: true, duration: 300 });
-    }
+    clusterer.add(marksToShow);
+    map.geoObjects.add(clusterer);
+  }
+
+  const bounds = map.geoObjects.getBounds();
+  if (bounds) {
+    map.setBounds(bounds, { checkZoomRange: true, duration: 300 });
   }
 }
 
@@ -598,6 +605,41 @@ function updateInfoBlock(place) {
   } else {
     mainImage.style.display = "none";
     thumbsContainer.style.display = "none";
+  }
+
+  function openImagePopup(e) {
+    e.preventDefault();
+    const src = this.src;
+    if ($.magnificPopup) {
+      $.magnificPopup.open(
+        {
+          items: { src: src },
+          type: "image",
+          closeOnContentClick: true,
+          closeOnBgClick: true,
+          showCloseBtn: true,
+          enableEscapeKey: true,
+          image: { verticalFit: true },
+        },
+        0,
+      );
+    }
+  }
+
+  mainImage.removeEventListener("click", openImagePopup);
+  mainImage.addEventListener("click", openImagePopup);
+
+  if (place.url) {
+    detailBtn.href = place.url;
+    detailBtn.style.display = "inline-block";
+  } else {
+    detailBtn.style.display = "none";
+  }
+
+  if (place.hasHistory) {
+    historyBtn.style.display = "inline-block";
+  } else {
+    historyBtn.style.display = "none";
   }
 }
 

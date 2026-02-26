@@ -5,7 +5,7 @@
 @import url(../css/churches.css);
 @import url(../css/balloon.css);
 @import url(../css/magnific-popup.css);
-@import url(../css/test.css);
+@import url(../css/tree.css);
 @import url(../css/traditions.css);
 @import url(../css/holidays.css);
 @import url(../css/history.css);
@@ -28,7 +28,6 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fff;
 }
 
 .container {

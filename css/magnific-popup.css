@@ -301,18 +301,19 @@ button::-moz-focus-inner {
   background: #000;
 }
 
-/* Main image in popup */
+/* Основное изображение в попапе — адаптивная версия */
 img.mfp-img {
   width: auto;
   max-width: 100%;
-  height: 500px;
+  max-height: 90vh;
   display: block;
   line-height: 0;
   box-sizing: border-box;
   padding: 40px 0 40px;
+  margin: 0 auto;
 }
 
-/* The shadow behind the image */
+/* Тень за изображением */
 .mfp-figure {
   line-height: 0;
 }
@@ -368,11 +369,9 @@ img.mfp-img {
   cursor: pointer;
 }
 
+/* Мобильная адаптация */
 @media screen and (max-width: 800px) and (orientation: landscape),
   screen and (max-height: 300px) {
-  /**
-         * Remove all paddings around the image on small screen
-         */
   .mfp-img-mobile .mfp-image-holder {
     padding-left: 0;
     padding-right: 0;
@@ -443,5 +442,33 @@ img.mfp-img {
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px;
+  }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов */
+@media (max-width: 768px) {
+  img.mfp-img {
+    padding: 20px 0 20px;
+    max-height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  img.mfp-img {
+    padding: 10px 0 10px;
+    max-height: 80vh;
+  }
+
+  .mfp-arrow {
+    width: 60px;
+    height: 80px;
+    margin-top: -40px;
+  }
+
+  .mfp-close {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
   }
 }
