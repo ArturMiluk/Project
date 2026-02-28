@@ -136,6 +136,7 @@
 }
 
 .header__burger {
+  position: relative;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -155,7 +156,7 @@
 }
 
 .header__burger.active .header__burger-line:nth-child(1) {
-  transform: rotate(45deg) translateY(13px);
+  transform: translateY(9.5px) rotate(45deg);
 }
 
 .header__burger.active .header__burger-line:nth-child(2) {
@@ -164,7 +165,7 @@
 }
 
 .header__burger.active .header__burger-line:nth-child(3) {
-  transform: rotate(-45deg) translateY(-13px);
+  transform: translateY(-9.5px) rotate(-45deg);
 }
 
 .burger-overlay {
@@ -271,10 +272,6 @@
   .nav__dropdown-item:hover {
     background: rgba(255, 255, 255, 0.15);
     opacity: 1;
-  }
-
-  .nav__link--info {
-    margin-top: 10px;
   }
 
   .header__burger {
