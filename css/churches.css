@@ -34,36 +34,36 @@
 }
 
 .churches__content {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 112px 0 20px 0;
-  padding: 20px;
+  width: 100%;
+  margin: 7rem 0 1.25rem 0;
+  padding: 1.25rem;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
+  border: 0.125rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.625rem;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .churches__map {
   width: 100%;
-  height: 480px;
+  height: 30rem;
   overflow: hidden;
 }
 
 .browsing-history__form {
   position: relative;
-  max-width: 480px;
+  max-width: 30rem;
   margin: 0 auto;
-  padding: 40px;
+  padding: 2.5rem;
   background: linear-gradient(
     213.56deg,
     rgba(176, 176, 176, 0.88) 3.11%,
     rgba(106, 106, 106, 0.88) 95.43%
   );
-  border-radius: 24px;
+  border-radius: 1.5rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -75,25 +75,25 @@
 }
 
 .browsing-history__form-subtitle {
-  margin-top: 20px;
-  font-size: 16px;
+  margin-top: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #fff;
   text-align: center;
 }
 
 .browsing-history__form-pic {
-  margin-top: 20px;
   width: 100%;
-  max-width: 480px;
-  height: 240px;
-  border-radius: 10px;
+  max-width: 30rem;
+  height: 15rem;
+  margin-top: 1.25rem;
+  border-radius: 0.625rem;
 }
 
 @media (max-width: 1200px) {
   .churches__content {
-    padding: 18px;
-    border-width: 1px;
+    padding: 1.125rem;
+    border-width: 0.0625rem;
   }
 }
 
@@ -101,7 +101,7 @@
   .churches__content {
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    padding: 0.9375rem;
   }
 
   .churches__map {
@@ -111,31 +111,53 @@
 
 @media (max-width: 768px) {
   .churches__map {
-    height: 400px;
+    height: 25rem;
   }
 }
 
 @media (max-width: 480px) {
   .churches__content {
-    margin: 100px 10px 20px 10px;
-    padding: 12px;
+    margin: 6.25rem 0.625rem 1.25rem 0.625rem;
+    padding: 0.75rem;
   }
 
   .churches__map {
-    height: 350px;
+    height: 21.875rem;
   }
 
   .browsing-history__form {
-    padding: 20px;
+    padding: 1.25rem;
   }
 
   .browsing-history__form-title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
 @media (max-width: 368px) {
+  .churches__content {
+    margin: 6.25rem 0.3125rem 1.25rem 0.3125rem;
+  }
+
   .churches__map {
-    height: 300px;
+    height: 18.75rem;
+  }
+
+  .browsing-history__form {
+    padding: 0.9375rem;
+  }
+
+  .browsing-history__form-pic {
+    height: 11.25rem;
+  }
+
+  .browsing-history__form-title {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .churches__map {
+    height: 17.5rem;
   }
 }
