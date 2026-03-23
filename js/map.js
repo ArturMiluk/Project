@@ -41,7 +41,11 @@ function init() {
           "Главный православный храм города, возведенный в стиле виленского барокко. Здесь хранится чудотворная Минская икона Божией Матери, обретенная в 1500 году.",
         workTime: "Пн-Пт: 07:00-21:00, Сб-Вс: 06:00-21:00",
         year: 1642,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/1352335/2a000001642aab427b1fe1efacacbecde4b9/XXL_height",
+          "https://avatars.mds.yandex.net/get-vh/13965829/2a00000198dabe6272b3483ed2442543d258/smart_crop_483x322",
+          "https://avatars.mds.yandex.net/get-vh/14921819/2a00000198be3cdec01435fd1589fb6d37a0/smart_crop_483x322",
+        ],
         url: "https://sobor.minsk.by",
       },
       {
@@ -52,7 +56,11 @@ function init() {
           "Старейшая действующая церковь Минска, памятник архитектуры Ренессанса. Храм на протяжении веков оставался единственным оплотом православия в городе.",
         workTime: "Пн-Пт: 07:00-20:00, Сб-Вс: 06:30-20:00",
         year: 1612,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/961502/2a000001642ab3305cde167c3e3d38c1eccb/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/1426646/2a0000016939b36aaf0c98b3f84b28631e34/XXL_height",
+          "https://avatars.mds.yandex.net/get-vh/16462352/2a00000198b91bc4e36df4048bbb17871d74/smart_crop_483x322",
+        ],
         url: "http://sppsobor.by",
       },
       {
@@ -63,8 +71,12 @@ function init() {
           "Уникальный 72-метровый храм в форме шатра. В крипте храма собрана земля с мест сражений, где гибли сыны белорусской земли.",
         workTime: "Пн-Пт: 08:00-19:00, Сб-Вс: 07:30-20:00",
         year: 2010,
-        images: ["./img/bg.jpg", "", ""],
-        url: "https://hramvs.by",
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/10488540/2a0000018a6db93e36cc92653968b9b81b36/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/1018126/2a000001642ab37404956ccb44c5a1767d9c/XXL_height",
+          "https://avatars.mds.yandex.net/get-vh/5109306/2a00000192a4e86adf13307f4d7fc5a84257/smart_crop_483x322",
+        ],
+        url: "",
       },
       {
         coords: [53.9482, 27.5391],
@@ -74,7 +86,11 @@ function init() {
           "Крупный духовный и культурный центр. Включает несколько храмов, мастерские и паломническую гостиницу.",
         workTime: "Ежедневно: 07:00-21:00",
         year: 1999,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/5534836/2a000001845447d8a347f3725c4b21b22b13/L_height",
+          "https://ekskursii.by/images/obj2/17939/c552he5_92_true.jpg",
+          "https://avatars.mds.yandex.net/get-altay/7979597/2a000001845447efb32f730e6c7e821b1e37/L_height",
+        ],
         url: "https://obitel-minsk.by",
       },
       {
@@ -85,7 +101,11 @@ function init() {
           "Единственный храм города, почти полностью сохранивший облик XIX века. Возведен в память о воинах, павших в русско-турецкой войне.",
         workTime: "Ежедневно: 08:00-20:00",
         year: 1898,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://nevsky.by/wp-content/uploads/2024/02/img_5646.jpg",
+          "https://nevsky.by/wp-content/uploads/2023/07/DSC_3664.jpg",
+          "https://nevsky.by/wp-content/uploads/2024/02/img_3221.jpg",
+        ],
         url: "http://nevsky.by",
       },
       {
@@ -96,8 +116,12 @@ function init() {
           "Храм в стиле классицизма. При нем действует старейшее в городе православное братство.",
         workTime: "Ежедневно: 08:00-20:00",
         year: 1847,
-        images: ["./img/bg.jpg", "", ""],
-        url: "http://hram-minsk.by",
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/6406681/2a00000180b3435220bc8ae11d3b0fa978a3/L_height",
+          "https://bpcmm.by/wp-content/uploads/2024/01/xxxl-2.webp",
+          "https://planetabelarus.by/upload/resize_cache/iblock/88d/1330_887_18e21fe612b4afb807a26ecc22279a1d9/88df04f6aa92a4385c82e482ef4247ca.jpg",
+        ],
+        url: "",
       },
       {
         coords: [54.0042, 27.9348],
@@ -107,8 +131,12 @@ function init() {
           "Мужской монастырь с богатой историей, известный своим духовным просвещением и почитаемой святыней — списком иконы «Отрада и Утешение».",
         workTime: "06:00-20:00",
         year: 1794,
-        images: ["./img/bg.jpg", "", ""],
-        url: "http://lyady.by",
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/16454077/2a00000199045b7ae286958bdfae5c2d47c0/orig",
+          "https://avatars.mds.yandex.net/get-altay/14816713/2a00000194e4dfde619a1131ac8af6c065b8/M_height",
+          "https://obitel-minsk.ru/assets/images/read/2020/inside/lyadenskij-monastyr-1.jpg",
+        ],
+        url: "",
       },
       {
         coords: [54.2312, 28.5034],
@@ -118,8 +146,12 @@ function init() {
           "Величественный собор из красного кирпича в псевдорусском стиле, доминанта исторического центра Борисова.",
         workTime: "08:00-19:00",
         year: 1874,
-        images: ["./img/bg.jpg", "", ""],
-        url: "http://borisov-spas.by",
+        images: [
+          "https://storage.googleapis.com/my-places-bucket-1/images/blob-1726684151798",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrSVSiAcP6jHaKAkX_Pjgpy7LerkQNhl5haw&s",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxoMk4E6sAlwZMiBkTgll_HtisghPjvUv-QA&s",
+        ],
+        url: "",
       },
       {
         coords: [53.1118, 27.5684],
@@ -129,8 +161,12 @@ function init() {
           "Памятник деревянного зодчества XVIII века. Главная православная святыня древнего Слуцка.",
         workTime: "07:00-19:00",
         year: 1795,
-        images: ["./img/bg.jpg", "", ""],
-        url: "http://sluck-eparchiya.by",
+        images: [
+          "https://poshyk.info/wp-content/uploads/2022/07/sluckiy-sobor.jpg.webp",
+          "https://poshyk.info/wp-content/uploads/2022/07/sluck-mihailovskiy-sobor.jpg.webp",
+          "https://sluck-eparchiya.by/wp-content/uploads/2023/08/scale_1200.webp",
+        ],
+        url: "",
       },
     ],
     grodno: [
@@ -147,7 +183,7 @@ function init() {
           "https://avatars.mds.yandex.net/get-altay/11374564/2a00000193bae54807ff0296012477307c2e/orig",
           "https://avatars.mds.yandex.net/get-altay/9428388/2a0000018a316ddb7b7f4e881ff3f3aa23f8/L_height",
         ],
-        url: "https://prodromos.by/",
+        url: "",
         hasHistory: true,
       },
       {
@@ -163,7 +199,7 @@ function init() {
           "https://avatars.mds.yandex.net/get-altay/15311720/2a00000197070f65fc52bfa67c5653af9bec/orig",
           "https://avatars.mds.yandex.net/get-altay/16480821/2a000001984c7d75e17899b090ba94e0c8d9/L_height",
         ],
-        url: "https://svbs.by/",
+        url: "",
         hasHistory: true,
       },
       {
@@ -174,8 +210,12 @@ function init() {
           "Уникальный памятник архитектуры XII века. Знаменита вставками из майоликовых плиток и отличной акустикой благодаря встроенным в стены голосникам.",
         workTime: "Ежедневно: 09:00-18:00 (службы до 20:00)",
         year: 1180,
-        images: ["./img/bg.jpg", "", ""],
-        url: "https://kalozha.by/",
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/239474/2a0000015ed669342b45105634c0097b42be/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/372953/2a0000015ed6693c926c3f9d5d36a774a730/XXL_height",
+          "https://avatars.mds.yandex.net/get-vh/4838477/2a0000019500717d328f55a2dc09ac117793/smart_crop_483x322",
+        ],
+        url: "",
       },
       {
         coords: [53.684534, 23.839885],
@@ -185,8 +225,12 @@ function init() {
           "Главный православный храм Гродно, возведенный в память о воинах, погибших в Русско-японской войне. Отличается богатым внутренним убранством.",
         workTime: "Пн-Сб: 07:30-20:00, Вс: 06:30-20:00",
         year: 1904,
-        images: ["./img/bg.jpg", "", ""],
-        url: "https://pokrovbor.by",
+        images: [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/%D0%93%D1%80%D0%BE%D0%B4%D0%BD%D0%BE_%D1%83%D0%BB._%D0%9E%D0%B6%D0%B5%D1%88%D0%BA%D0%BE_09.jpg/1280px-%D0%93%D1%80%D0%BE%D0%B4%D0%BD%D0%BE_%D1%83%D0%BB._%D0%9E%D0%B6%D0%B5%D1%88%D0%BA%D0%BE_09.jpg",
+          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/dc/b9/a3/pakrouskaya-orthodox.jpg?w=900&h=500&s=1",
+          "https://pokrovgrodno.org/files/images/Sobor/2023-05-20--9-1.jpg",
+        ],
+        url: "",
       },
       {
         coords: [53.680654, 23.826723],
@@ -196,8 +240,12 @@ function init() {
           "Обитель на месте древней Пречистенской церкви XII века. Здесь хранится чудотворная Владимирская икона Божией Матери.",
         workTime: "Пн-Сб: 07:00-20:00, Вс: 06:00-20:00",
         year: 1720,
-        images: ["./img/bg.jpg", "", ""],
-        url: "https://obitel-grodno.by",
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/6545454/2a00000190af5ee19e01540f2e428cdbcb00/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/15081387/2a00000194ae0a8367c0c7a62c8169f16586/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/4699294/2a00000190af5ee64cad4ff4602b77fa867a/XXL_height",
+        ],
+        url: "",
       },
       {
         coords: [53.6934, 23.8055],
@@ -207,7 +255,11 @@ function init() {
           "Деревянная церковь, выполненная в традициях православного зодчества, центр духовной жизни северной части города.",
         workTime: "08:00-19:00",
         year: 2000,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/16398472/2a00000199176d4787844c5ade1753a465f2/orig",
+          "https://avatars.mds.yandex.net/get-altay/7179902/2a00000183a92427ca7f9f1ba5d29c218f64/L_height",
+          "https://avatars.mds.yandex.net/get-altay/5179687/2a000001904ccd6be36e45462245d6f49ca7/L_height",
+        ],
         url: "https://orthos.org",
       },
       {
@@ -218,7 +270,11 @@ function init() {
           "Главная православная святыня Беларуси. Место явления чудотворной Жировичской иконы Божией Матери — самой маленькой из почитаемых икон в мире.",
         workTime: "06:00-21:00",
         year: 1470,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/13287730/2a00000190bc28f8e6a3fd7c5a4dc66f562c/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/16403814/2a000001970c5b73eaf13b8acef235326e22/XXL_height",
+          "https://avatars.mds.yandex.net/get-vh/10268831/2a0000019a065178ee5b3bc83c92abc7f5a5/smart_crop_483x322",
+        ],
         url: "https://zhirovichi-monastery.by",
       },
       {
@@ -229,22 +285,15 @@ function init() {
           "Один из самых ранних храмов-крепостей в Европе. Уникальное сочетание готики и православной архитектуры.",
         workTime: "08:00-19:00",
         year: 1407,
-        images: ["./img/bg.jpg", "", ""],
-        url: "https://synkovichi.by",
+        images: [
+          "https://upload.wikimedia.org/wikipedia/commons/5/51/%D0%A1%D1%8B%D0%BD%D0%BA%D0%BE%D0%B2%D0%B8%D1%87%D0%B8_%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE_%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%B0_01.jpg",
+          "https://hawat.by/sites/default/files/2018-03/DSC_0875.jpg",
+          "https://planetabelarus.by/upload/resize_cache/iblock/fad/1330_886_18e21fe612b4afb807a26ecc22279a1d9/fad12ec872964ebd6d979a869ea0a415.jpg",
+        ],
+        url: "",
       },
     ],
     vitebsk: [
-      {
-        coords: [55.195353, 30.201734],
-        name: "Свято-Успенский кафедральный собор",
-        address: "ул. Комиссара Крылова, 9",
-        description:
-          "Величественный храм в стиле виленского барокко на Успенской горе. Главный собор города.",
-        workTime: "Пн-Сб: 07:30-20:00, Вс: 06:30-20:00",
-        year: 2001,
-        images: ["./img/bg.jpg", "", ""],
-        url: "http://vitprav.by",
-      },
       {
         coords: [55.191422, 30.203875],
         name: "Благовещенская церковь",
@@ -253,7 +302,11 @@ function init() {
           "Древнейший храм (XII век), уникальный образец византийского зодчества с аутентичной кладкой.",
         workTime: "Пн-Пт: 08:30-19:30, Сб-Вс: 07:30-20:00",
         year: 1140,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3e_wighs2PmYQ_L2h6cbxlS0fA8bCk7HCXA&s",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl4rrXqMznSDAZKh7kpSWeBwedpWx8WS0SQg&s",
+          "https://ekskursii.by/images/obj2/16511/2_clear_resize1.jpg",
+        ],
         url: "http://vitprav.by",
       },
       {
@@ -264,7 +317,11 @@ function init() {
           "Изящный храм в стиле виленского барокко, визитная карточка Ратушной площади.",
         workTime: "Пн-Пт: 08:00-19:00, Сб-Вс: 07:00-20:00",
         year: 2001,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://probelarus.by/images/thumbs/5983/2.jpg",
+          "https://cdn.mlyn.by/svoe.by/2024/05/svyatovoskresnskij-brest.webp",
+          "https://planetabelarus.by/upload/resize_cache/iblock/f75/1330_887_18e21fe612b4afb807a26ecc22279a1d9/f75a6670da036557e610327294490d73.jpg",
+        ],
         url: "http://vitprav.by",
       },
       {
@@ -275,8 +332,12 @@ function init() {
           "Место паломничества к мощам прп. Евфросинии Полоцкой. Сохранились уникальные фрески XII века.",
         workTime: "06:00-20:00",
         year: 1125,
-        images: ["./img/bg.jpg", "", ""],
-        url: "https://spas-monastery.by",
+        images: [
+          "https://lh3.googleusercontent.com/gps-cs-s/AHVAwephF4r0lHNtIoEiFsCzebHE1yprqEsk9L0E43lQgR-1Px925kAmC9Fm--w3iqn_aRoVzqoxZP7sznliBDpfYrRpjtOTNXgq-XZErvYPqozbM2mcJ6N7MGgLXZAke2oku21ororICfJ9GN0=w270-h312-n-k-no",
+          "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer1N2sLAFGWegZ4rvz4MGPR0bJhJo0mJhb7azDCdKJJvmXFJUoNpVP_vm7kIPoIw5FnAFF5iPAW-lSoCD9FWFKN2jmoT8PVLk4M7aR5Q6gXvxV76UQ5SFeQag1ybopwgnM_ZUO5=w135-h156-n-k-no",
+          "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerFwoU8sef9yqVE8GTjNvf56p1imSmx5_-dyNQLwdqotUjW2JEqkRxFY5bOqmeAw_9xrNs_VUOtvXJIsVMsCRPNwO7mfWCctwywXljG9OTJqbxr8C1xlpJ1OfvdIDDXL-huu5wEIQ=w135-h156-n-k-no",
+        ],
+        url: "",
       },
       {
         coords: [54.5152, 30.4305],
@@ -286,8 +347,12 @@ function init() {
           "Знаменитый центр книгопечатания XVII века. Здесь Спиридон Соболь напечатал первый «Букварь».",
         workTime: "08:00-20:00",
         year: 1623,
-        images: ["./img/bg.jpg", "", ""],
-        url: "https://kuteyn-monastery.by",
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/902827/2a000001642aaaa87693ce2f2c0425a52f27/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/15386900/2a00000197705e512b1cab24b5800fa5a899/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/16474107/2a0000019a739d9369c5ddf10e655c82e11c/XXL_height",
+        ],
+        url: "",
       },
       {
         coords: [55.1385, 27.6952],
@@ -297,8 +362,12 @@ function init() {
           "Один из красивейших православных храмов Беларуси. Поражает своим масштабом и подземными криптами.",
         workTime: "08:00-19:00",
         year: 1639,
-        images: ["./img/bg.jpg", "", ""],
-        url: "http://glubokoe.by",
+        images: [
+          "https://my-places.by/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmy-places-bucket-1%2Fimages%2Fblob-1728902053005&w=3840&q=75",
+          "https://avatars.mds.yandex.net/get-altay/9728306/2a0000018a60f4502ad04b09e0adc35be958/L_height",
+          "https://bestbelarus.by/upload/dev2fun.imagecompress/webp/iblock/26c/26c3be1d8e72e79953feac9d262f7be0.webp",
+        ],
+        url: "",
       },
       {
         coords: [54.4093, 29.7042],
@@ -308,8 +377,12 @@ function init() {
           "Обитель, основанная при древнем храме XVIII века. Известна своими чудотворными святынями.",
         workTime: "07:00-19:00",
         year: 1769,
-        images: ["./img/bg.jpg", "", ""],
-        url: "http://tolochin.by",
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/1588111/2a0000016fb67d97226b70c45ba971308c68/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/16011054/2a00000199710cd0b37ca7a0d55cc9d3b3c8/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/15629777/2a0000019a9301eabf154109e9e96cced877/XXL_height",
+        ],
+        url: "",
       },
     ],
     brest: [
@@ -322,7 +395,7 @@ function init() {
         workTime: "Пн-Вс: 08:00-19:00 (в дни праздников с 06:30)",
         year: 1876,
         images: ["./img/bg.jpg", "", ""],
-        url: "https://sobormonastyr.by",
+        url: "",
       },
       {
         coords: [52.091176, 23.684841],
@@ -333,7 +406,7 @@ function init() {
         workTime: "Пн-Сб: 07:00-20:00, Вс: 06:00-20:00",
         year: 1865,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://brest-svisimeon.by",
+        url: "",
       },
       {
         coords: [52.1035, 23.7542],
@@ -344,7 +417,7 @@ function init() {
         workTime: "07:00-20:00",
         year: 1995,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://voskresenka.by",
+        url: "",
       },
       {
         coords: [52.0792, 23.6705],
@@ -366,7 +439,7 @@ function init() {
         workTime: "08:00-18:00",
         year: 1864,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://pruzhany-sob.by",
+        url: "",
       },
       {
         coords: [52.1158, 26.1035],
@@ -377,7 +450,7 @@ function init() {
         workTime: "07:00-19:00",
         year: 1786,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://pinsk-eparchy.by",
+        url: "",
       },
       {
         coords: [52.7214, 25.1385],
@@ -388,7 +461,7 @@ function init() {
         workTime: "09:00-17:00",
         year: 1784,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://bezdezh.by",
+        url: "",
       },
     ],
     gomel: [
@@ -401,7 +474,7 @@ function init() {
         workTime: "Пн-Сб: 08:00-20:00, Вс: 06:30-20:00",
         year: 1819,
         images: ["./img/bg.jpg", "", ""],
-        url: "https://pavel-petr.by",
+        url: "",
       },
       {
         coords: [52.433241, 31.014234],
@@ -412,7 +485,7 @@ function init() {
         workTime: "Ежедневно: 07:00-20:00",
         year: 1904,
         images: ["./img/bg.jpg", "", ""],
-        url: "https://nikolsky.by",
+        url: "",
       },
       {
         coords: [52.4345, 31.0102],
@@ -423,7 +496,7 @@ function init() {
         workTime: "07:30-19:00",
         year: 1943,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://tihvinka.by",
+        url: "",
       },
       {
         coords: [52.4182, 31.0025],
@@ -434,7 +507,7 @@ function init() {
         workTime: "08:00-20:00",
         year: 1996,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://mikhail-gomel.by",
+        url: "",
       },
       {
         coords: [52.4932, 31.3125],
@@ -445,7 +518,7 @@ function init() {
         workTime: "06:30-20:00",
         year: 1760,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://korma.by",
+        url: "",
       },
       {
         coords: [52.0465, 29.2315],
@@ -456,7 +529,7 @@ function init() {
         workTime: "07:00-19:00",
         year: 1745,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://turov-eparhia.by",
+        url: "",
       },
       {
         coords: [52.0625, 27.7342],
@@ -467,7 +540,7 @@ function init() {
         workTime: "08:00-18:00",
         year: 2013,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://turov.by",
+        url: "",
       },
     ],
     mogilev: [
@@ -480,7 +553,7 @@ function init() {
         workTime: "Ежедневно: 07:00-19:00",
         year: 1636,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://mazary.by",
+        url: "",
       },
       {
         coords: [53.9038, 30.3421],
@@ -491,7 +564,7 @@ function init() {
         workTime: "07:00-20:00",
         year: 2000,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://mogilev-eparchy.by",
+        url: "",
       },
       {
         coords: [53.8964, 30.3375],
@@ -502,7 +575,7 @@ function init() {
         workTime: "08:00-19:00",
         year: 1903,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://treh-svyatiteley.by",
+        url: "",
       },
       {
         coords: [53.9512, 30.3745],
@@ -513,7 +586,7 @@ function init() {
         workTime: "09:00-18:00",
         year: 1830,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://polykovichi.by",
+        url: "",
       },
       {
         coords: [53.4025, 30.3342],
@@ -524,7 +597,7 @@ function init() {
         workTime: "06:00-21:00",
         year: 1380,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://pustynki.by",
+        url: "",
       },
       {
         coords: [53.8925, 29.2314],
@@ -546,7 +619,7 @@ function init() {
         workTime: "08:00-18:00",
         year: 1870,
         images: ["./img/bg.jpg", "", ""],
-        url: "http://mstislavl.by",
+        url: "",
       },
     ],
   };
