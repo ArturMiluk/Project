@@ -1,6 +1,6 @@
 let map;
 let allPlacemarks = {};
-let belarusPolygon;
+let colors;
 
 function init() {
   const mapContainer = document.getElementById("churchesMap");
@@ -22,7 +22,7 @@ function init() {
   map.controls.remove("zoomControl");
   map.controls.remove("rulerControl");
 
-  const colors = {
+  colors = {
     minsk: "#3366cc",
     grodno: "#109618",
     vitebsk: "#dc3912",
@@ -394,7 +394,11 @@ function init() {
           "Храм в византийском стиле в центре Брестской крепости. Свидетель героической обороны 1941 года, ныне полностью восстановлен и является духовным символом цитадели.",
         workTime: "Пн-Вс: 08:00-19:00 (в дни праздников с 06:30)",
         year: 1876,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://forts.by/wp-content/uploads/2025/11/i_banner-2.jpg",
+          "https://fs.tonkosti.ru/sized/c800x800/93/bh/93bhd02cihwkg800kgkkwogoc.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/0/0f/%D0%91%D1%80%D0%B5%D1%81%D1%82_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE-%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80.jpg",
+        ],
         url: "",
       },
       {
@@ -405,7 +409,11 @@ function init() {
           "Главный православный храм города в русско-византийском стиле. Здесь почивают мощи небесного покровителя города — преподобномученика Афанасия Брестского.",
         workTime: "Пн-Сб: 07:00-20:00, Вс: 06:00-20:00",
         year: 1865,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/10647561/2a0000018b493c49b5f99e56211b388cdd3f/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/14014133/2a000001935868460a92b205b2286d8896b5/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/14922087/2a00000196e83521bee7bc27869fed948e14/XXL_height",
+        ],
         url: "",
       },
       {
@@ -416,7 +424,11 @@ function init() {
           "Крупнейший культовый объект города, возведенный в память о 50-летии Победы в Великой Отечественной войне. Вмещает до 5000 прихожан.",
         workTime: "07:00-20:00",
         year: 1995,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://culttourism.ru/data/photos/d/a/dab6e769e2bde73041e32477197d26dd.jpg",
+          "https://yt3.googleusercontent.com/zD1_ZCzAN8_lzRts1CGzUjVZqh8FZoOwRUdBwQt-6PxMP4DnpoeG4Y71aw4tmN9h9Vz9zcDiOw=s900-c-k-c0x00ffffff-no-rj",
+          "https://planetabelarus.by/upload/resize_cache/iblock/f75/1330_887_18e21fe612b4afb807a26ecc22279a1d9/f75a6670da036557e610327294490d73.jpg",
+        ],
         url: "",
       },
       {
@@ -427,7 +439,11 @@ function init() {
           "Женская обитель, расположенная на территории крепости. Храм монастыря находится в отреставрированном здании бывшего каземата.",
         workTime: "08:00-19:00",
         year: 2002,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/902827/2a000001642aaa62a7b34dd374ed81deb910/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/19636095/2a0000019bd2753f47efd111b5c72f063d89/XXL_height",
+          "https://avatars.mds.yandex.net/get-vh/15247478/2a00000197b6f58c9ec570e84c54d018d706/smart_crop_483x322",
+        ],
         url: "https://obitel-brest.by",
       },
       {
@@ -438,7 +454,11 @@ function init() {
           "Архитектурная жемчужина региона в стиле позднего классицизма с элементами ретроспективно-русского стиля.",
         workTime: "08:00-18:00",
         year: 1864,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://upload.wikimedia.org/wikipedia/commons/7/7f/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%B2_%D0%A3%D0%B7%D0%BA%D0%BE%D0%BC..JPG",
+          "https://sobory.ru/pic/03250/03294bb.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPSrIO7D129WlXLDh258QwZRoq0BYTv8DKTQ&s",
+        ],
         url: "",
       },
       {
@@ -449,7 +469,11 @@ function init() {
           "Кафедральный собор Пинской епархии. Бывший храм бернардинского монастыря, переосвященный в православный в XIX веке.",
         workTime: "07:00-19:00",
         year: 1786,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://pinsk.gov.by/upload/medialibrary/8cb/8cb144d5cc97453c13774f01948422d4.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/%D0%9Fi%D0%BD%D1%81%D0%BA%2C%D0%92%D0%B0%D1%80%D0%B2%D0%B0%D1%80%D1%8B%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%86%D0%B0%D1%80%D0%BA%D0%B2%D0%B0.JPG/330px-%D0%9Fi%D0%BD%D1%81%D0%BA%2C%D0%92%D0%B0%D1%80%D0%B2%D0%B0%D1%80%D1%8B%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%86%D0%B0%D1%80%D0%BA%D0%B2%D0%B0.JPG",
+          "https://sobory.ru/pic/11300/11306bb.jpg",
+        ],
         url: "",
       },
       {
@@ -460,7 +484,11 @@ function init() {
           "Уникальный памятник деревянного зодчества Полесья. Рядом находится знаменитый пункт дуги Струве.",
         workTime: "09:00-17:00",
         year: 1784,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/15042938/2a000001982e6f4917edb3017ce00551f926/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/1363018/2a000001642ab53250cd2dcc3a7d581b0ec2/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/5098065/2a000001818f5cdec3cd12b7294ef87867a6/XXL_height",
+        ],
         url: "",
       },
     ],
@@ -473,7 +501,11 @@ function init() {
           "Величественный кафедральный собор в стиле классицизма, архитектурная доминанта дворцово-паркового ансамбля. Построен по инициативе графа Н.П. Румянцева.",
         workTime: "Пн-Сб: 08:00-20:00, Вс: 06:30-20:00",
         year: 1819,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/961502/2a000001642ab3305cde167c3e3d38c1eccb/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/1426646/2a0000016939b36aaf0c98b3f84b28631e34/XXL_height",
+          "https://avatars.mds.yandex.net/get-vh/16462352/2a00000198b91bc4e36df4048bbb17871d74/smart_crop_483x322",
+        ],
         url: "",
       },
       {
@@ -484,7 +516,11 @@ function init() {
           "Духовный центр Гомеля. Каменный храм был построен в 1904 году на пожертвования железнодорожников и является редким примером сохранившейся дореволюционной архитектуры города.",
         workTime: "Ежедневно: 07:00-20:00",
         year: 1904,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://my-places.by/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmy-places-bucket-1%2Fimages%2Fblob-1729110733500&w=3840&q=75",
+          "https://avatars.mds.yandex.net/get-altay/14165812/2a00000193ef207e7d09bad0e68599646453/orig",
+          "https://obitel-minsk.ru/assets/images/read/2025/main/monastyr-v-gomele-big.jpg",
+        ],
         url: "",
       },
       {
@@ -495,7 +531,11 @@ function init() {
           "Обитель, выросшая из приходского храма. Главная святыня — чтимая Тихвинская икона Божией Матери.",
         workTime: "07:30-19:00",
         year: 1943,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/13941727/2a00000194ac7949f1ee19e7fb5fa002fb43/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/813485/2a0000018817e42ea720ee4d0c44ad029eab/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/14014133/2a00000194ac7949b5f6fcb276af74eb8f7a/XXL_height",
+        ],
         url: "",
       },
       {
@@ -506,7 +546,11 @@ function init() {
           "Храм-памятник жертвам Чернобыльской катастрофы. Построен в византийском стиле, украшен уникальной мозаикой.",
         workTime: "08:00-20:00",
         year: 1996,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/15389647/2a00000197fe3e94d984a8d84193b6c176fa/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/16792294/2a000001994d8308e5b7c3f51bb7dc8f0e80/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/9686455/2a000001892ac372d49457319b361b343998/XXL_height",
+        ],
         url: "",
       },
       {
@@ -517,7 +561,11 @@ function init() {
           "Место упокоения святого праведного Иоанна Кормянского. Один из самых посещаемых паломнических центров Беларуси.",
         workTime: "06:30-20:00",
         year: 1760,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/8093564/2a00000187a4a375d9b72bd77019d2058bec/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/7691421/2a0000018872116011379583cb579fb54a1f/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/14599414/2a000001996a61fc4d78440358cb7f059454/XXL_height",
+        ],
         url: "",
       },
       {
@@ -528,7 +576,11 @@ function init() {
           "Кафедральный собор Туровской епархии. Бывший монастырь цистерцианок, ныне — главный оплот православия в Полесском регионе.",
         workTime: "07:00-19:00",
         year: 1745,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/15167717/2a00000196f466225e4421221943a2f4c6bb/orig",
+          "https://avatars.mds.yandex.net/get-altay/18285113/2a0000019c8e2a5aac6a42c73fc1d865108d/L_height",
+          "https://cdn.belarus.travel/Files/%D0%BC%D0%BE%D0%B7%D1%8B%D1%80%D1%8C/%D0%BC%D0%B8%D1%8522.jpg",
+        ],
         url: "",
       },
       {
@@ -539,7 +591,11 @@ function init() {
           "Построен в память о великих просветителях Туровской земли. Рядом находятся знаменитые «растущие» каменные кресты.",
         workTime: "08:00-18:00",
         year: 2013,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://ic.pics.livejournal.com/anonimusi/67966348/2649353/2649353_original.jpg",
+          "https://turov.by/upload/iblock/dd0/uqsymaaqsrbbo3nx4z64e51dd98zytiu.jpg",
+          "https://avatars.mds.yandex.net/get-altay/4524003/2a00000179e86aa9fbbbe09d0d28ca071558/L_height",
+        ],
         url: "",
       },
     ],
@@ -552,7 +608,11 @@ function init() {
           "Шедевр белорусского барокко XVII века. Внесен в предварительный список ЮНЕСКО. Славится уникальным четырехъярусным резным иконостасом, выполненным в технике сквозной резьбы.",
         workTime: "Ежедневно: 07:00-19:00",
         year: 1636,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://core-pht-proxy.maps.yandex.ru/v1/photos/download?photo_id=FBRFzH5YrVkWSaoPfR2JHA&image_size=XXL",
+          "https://core-pht-proxy.maps.yandex.ru/v1/photos/download?photo_id=eeS6iNinI8dTCMXVjbmZsQ&image_size=XXL",
+          "https://core-pht-proxy.maps.yandex.ru/v1/photos/download?photo_id=lN12gHQTNAoI0fChXoW8rQ&image_size=XXL",
+        ],
         url: "",
       },
       {
@@ -563,7 +623,11 @@ function init() {
           "Крупнейший православный храм города, способный вместить до 3500 прихожан. Построен в неовизантийском стиле, является кафедральным собором епархии.",
         workTime: "07:00-20:00",
         year: 2000,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/9237948/2a000001885e96402a3f6b9bf5f4ce8984ad/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/15066961/2a00000197df845b16fc56de6c2519d5577e/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/16497373/2a000001993a134304bea17b0dcdecf08fcd/XXL_height",
+        ],
         url: "",
       },
       {
@@ -574,7 +638,11 @@ function init() {
           "Памятник архитектуры начала XX века в форме креста с семью куполами. Назван в честь Василия Великого, Григория Богослова и Иоанна Златоуста.",
         workTime: "08:00-19:00",
         year: 1903,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/13237301/2a000001907e97d29f3de1c30abe6a390a41/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/481843/2a0000018d46cc18a61ed6019ffeca162dd1/XXL_height",
+          "https://avatars.mds.yandex.net/get-altay/14021655/2a000001920582efc53a68b6b6291c11487a/XXL_height",
+        ],
         url: "",
       },
       {
@@ -585,7 +653,11 @@ function init() {
           "Храм при знаменитой «Полыковичской кринице» — целебном источнике, известном с 1552 года. Место массового паломничества.",
         workTime: "09:00-18:00",
         year: 1830,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/15066961/2a000001978a26abe79335b2be1bbfd0c806/XXXL",
+          "https://avatars.mds.yandex.net/get-altay/1622057/2a00000188d19cb0d4d641f49388063fc841/XXXL",
+          "https://avatars.mds.yandex.net/get-altay/16444693/2a000001978a26bf6743e47a0ab329ad4dd8/XXXL",
+        ],
         url: "",
       },
       {
@@ -596,7 +668,11 @@ function init() {
           "Один из древнейших монастырей на востоке Беларуси, основанный князем Симеоном Лугвением. Известен явленным на стене ликом Христа.",
         workTime: "06:00-21:00",
         year: 1380,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/5195020/2a000001816223c4c7eb769a9ad5906b9cd6/XXXL",
+          "https://avatars.mds.yandex.net/get-altay/15452616/2a00000198979db365baecad776c16f6b25d/XXXL",
+          "https://avatars.mds.yandex.net/get-altay/5457654/2a0000017ed03c82b04369101e91119920b7/XXXL",
+        ],
         url: "",
       },
       {
@@ -607,7 +683,11 @@ function init() {
           "Величественный храм из красного кирпича, духовный центр Бобруйска с богатой историей восстановления.",
         workTime: "07:30-19:00",
         year: 1991,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/12731162/2a0000019077471322d827bc09485f587877/XXXL",
+          "https://avatars.mds.yandex.net/get-altay/3511135/2a0000017949492ade26ea3e1050f285c830/XXXL",
+          "https://avatars.mds.yandex.net/get-altay/363317/2a0000015dd5f4651a7ced53d98bf55cd851/XXXL",
+        ],
         url: "http://bobruisk.hram.by",
       },
       {
@@ -618,7 +698,11 @@ function init() {
           "Построен на месте древнего бернардинского костела. Образец эклектичной архитектуры с элементами византийского стиля.",
         workTime: "08:00-18:00",
         year: 1870,
-        images: ["./img/bg.jpg", "", ""],
+        images: [
+          "https://avatars.mds.yandex.net/get-altay/3986135/2a0000017a060a69417469c6b98e8377865b/XXXL",
+          "https://avatars.mds.yandex.net/get-altay/3986135/2a0000017a060a6f6522e9ff0dc7adc7c4cd/XXXL",
+          "https://avatars.mds.yandex.net/get-altay/13212052/2a00000190e40951d3b97ae49bca03000a7e/XXXL",
+        ],
         url: "",
       },
     ],
@@ -629,12 +713,11 @@ function init() {
   const urlParams = new URLSearchParams(window.location.search);
   const cityFromUrl = urlParams.get("city");
 
-  filterByCity(cityFromUrl);
+  filterByCity(cityFromUrl, colors);
 }
 
-function filterByCity(city) {
+function filterByCity(city, colors) {
   map.geoObjects.removeAll();
-  if (belarusPolygon) map.geoObjects.add(belarusPolygon);
 
   let marksToShow = [];
   if (city && allPlacemarks[city]) {
@@ -644,9 +727,14 @@ function filterByCity(city) {
   }
 
   if (marksToShow.length > 0) {
+    let clusterColor = "#000";
+    if (city && colors[city]) {
+      clusterColor = colors[city];
+    }
+
     const clusterer = new ymaps.Clusterer({
       preset: "islands#invertedVioletClusterIcons",
-      clusterIconColor: "#000",
+      clusterIconColor: clusterColor,
       groupByCoordinates: false,
       clusterDisableClickZoom: false,
       clusterHideIconOnBalloonOpen: false,
@@ -660,41 +748,6 @@ function filterByCity(city) {
   if (bounds) {
     map.setBounds(bounds, { checkZoomRange: true, duration: 300 });
   }
-}
-
-function drawBelarus(map) {
-  const simplifiedCoords = [
-    [56.0, 23.0],
-    [56.0, 26.0],
-    [55.5, 28.0],
-    [55.0, 30.5],
-    [54.0, 31.5],
-    [52.5, 31.5],
-    [52.0, 30.0],
-    [51.5, 28.0],
-    [51.5, 26.0],
-    [52.0, 24.0],
-    [53.0, 23.5],
-    [54.0, 23.5],
-    [55.0, 24.0],
-    [56.0, 23.0],
-  ];
-  belarusPolygon = new ymaps.GeoObject(
-    {
-      geometry: {
-        type: "Polygon",
-        coordinates: [simplifiedCoords],
-      },
-    },
-    {
-      fillColor: "#1E90FF33",
-      strokeColor: "#FFD700",
-      strokeWidth: 2,
-      zIndex: 1,
-      interactivityModel: "default#transparent",
-    },
-  );
-  map.geoObjects.add(belarusPolygon);
 }
 
 function createAllPlacemarks(placesData, colors) {
@@ -878,6 +931,17 @@ function updateInfoBlock(place) {
     historyBtn.style.display = "inline-block";
   } else {
     historyBtn.style.display = "none";
+  }
+
+  if (images.length > 0) {
+    const popupPic = document.querySelector(".browsing-history__form-pic");
+    if (popupPic) {
+      popupPic.src = images[0];
+      popupPic.onerror = function () {
+        this.src = "./img/no-image.jpg";
+        this.onerror = null;
+      };
+    }
   }
 }
 

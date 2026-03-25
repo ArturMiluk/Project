@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".nav__link, .nav__link--info");
   const dropdownParents = document.querySelectorAll(
-    ".nav__item--dropdown > .nav__link"
+    ".nav__item--dropdown > .nav__link",
   );
 
   let currentPath = window.location.pathname;
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   dropdownParents.forEach((parent) => {
     const dropdownItems = parent.parentElement.querySelectorAll(
-      ".nav__dropdown-item"
+      ".nav__dropdown-item",
     );
 
     dropdownItems.forEach((item) => {

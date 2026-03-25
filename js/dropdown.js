@@ -1,6 +1,6 @@
 class DropdownMenu {
   constructor() {
-    this.dropdownItems = document.querySelectorAll(".nav__item-dropdown");
+    this.dropdownItems = document.querySelectorAll(".nav__item--dropdown");
     if (this.dropdownItems.length > 0) {
       this.init();
     }
@@ -18,7 +18,7 @@ class DropdownMenu {
   }
 
   setupDropdown(item) {
-    const dropdown = item.querySelector(".nav__item-dropdown-menu");
+    const dropdown = item.querySelector(".nav__dropdown");
     if (!dropdown) return;
 
     item.addEventListener("mouseenter", () => {
@@ -41,9 +41,11 @@ class DropdownMenu {
   }
 
   setupCityClickHandlers() {
-    document
-      .querySelectorAll(".nav__item-dropdown-city")
-      .forEach((cityLink) => {
+    document.querySelectorAll(".nav__dropdown-item").forEach((cityLink) => {
+      if (
+        cityLink.getAttribute("href") &&
+        cityLink.getAttribute("href").includes("churches.html")
+      ) {
         cityLink.addEventListener("click", (e) => {
           e.preventDefault();
 
@@ -60,7 +62,8 @@ class DropdownMenu {
 
           this.closeAllDropdowns();
         });
-      });
+      }
+    });
   }
 
   applyCityFilter(city) {
@@ -72,8 +75,8 @@ class DropdownMenu {
 
       window.history.pushState({}, "", newUrl);
 
-      if (typeof window.applyFilter === "function") {
-        window.applyFilter();
+      if (typeof window.filterByCity === "function") {
+        window.filterByCity(city);
       }
 
       this.highlightActiveCity();
@@ -98,7 +101,7 @@ class DropdownMenu {
     if (this.isMobile()) return;
     dropdown.style.opacity = "0";
     dropdown.style.visibility = "hidden";
-    dropdown.style.transform = "translateY(10px)";
+    dropdown.style.transform = "translateY(-0.625rem)";
   }
 
   toggleDropdown(dropdown) {
@@ -109,20 +112,24 @@ class DropdownMenu {
       dropdown.style.opacity = "1";
       dropdown.style.visibility = "visible";
       dropdown.style.transform = "translateY(0)";
+      dropdown.classList.add("active");
+    } else {
+      dropdown.classList.remove("active");
     }
   }
 
   closeAllDropdowns() {
-    document.querySelectorAll(".nav__item-dropdown-menu").forEach((menu) => {
+    document.querySelectorAll(".nav__dropdown").forEach((menu) => {
       menu.style.opacity = "0";
       menu.style.visibility = "hidden";
-      menu.style.transform = "translateY(10px)";
+      menu.style.transform = "translateY(-0.625rem)";
+      menu.classList.remove("active");
     });
   }
 
   setupClickOutside() {
     document.addEventListener("click", (e) => {
-      if (!e.target.closest(".nav__item-dropdown")) {
+      if (!e.target.closest(".nav__item--dropdown")) {
         this.closeAllDropdowns();
       }
     });
@@ -141,24 +148,24 @@ class DropdownMenu {
     const selectedCity = urlParams.get("city");
     const currentPage = window.location.pathname;
 
-    document.querySelectorAll(".nav__item-dropdown-city").forEach((city) => {
-      city.classList.remove("nav__item-dropdown-city--active");
+    document.querySelectorAll(".nav__dropdown-item").forEach((city) => {
+      city.classList.remove("nav__dropdown-item--active");
     });
 
     if (currentPage.includes("churches.html")) {
       let activeCity;
       if (selectedCity) {
         activeCity = document.querySelector(
-          `.nav__item-dropdown-city[href*="city=${selectedCity}"]`
+          `.nav__dropdown-item[href*="city=${selectedCity}"]`,
         );
       } else {
         activeCity = document.querySelector(
-          '.nav__item-dropdown-city[href="./churches.html"]'
+          '.nav__dropdown-item[href="./churches.html"]',
         );
       }
 
       if (activeCity) {
-        activeCity.classList.add("nav__item-dropdown-city--active");
+        activeCity.classList.add("nav__dropdown-item--active");
       }
     }
   }
@@ -179,7 +186,7 @@ function updateActiveCity(city = null) {
     window.history.replaceState({}, "", newUrl);
   }
 
-  const dropdown = document.querySelector(".nav__item-dropdown");
+  const dropdown = document.querySelector(".nav__item--dropdown");
   if (dropdown) {
     const menu = new DropdownMenu();
     menu.highlightActiveCity();

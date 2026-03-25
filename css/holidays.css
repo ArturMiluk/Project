@@ -201,6 +201,10 @@
 }
 
 @media (max-width: 768px) {
+  .holidays__content {
+    margin-top: 6.25rem;
+  }
+
   .calendar__list {
     grid-template-columns: repeat(7, 5rem);
     grid-template-rows: repeat(5, 2.5rem);
@@ -212,8 +216,18 @@
 }
 
 @media (max-width: 480px) {
+  .holidays__content {
+    padding: 1.25rem;
+  }
+
   .calendar__list {
     grid-template-columns: repeat(4, 5rem);
     grid-template-rows: repeat(8, 2.5rem);
+  }
+}
+
+@media (max-width: 368px) {
+  .holidays__content {
+    padding: 1rem;
   }
 }

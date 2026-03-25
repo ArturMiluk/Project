@@ -68,12 +68,12 @@
 
 @media (max-width: 480px) {
   .family__content {
-    padding: 1.875rem 1.25rem;
+    padding: 1.25rem;
   }
 }
 
 @media (max-width: 368px) {
   .family__content {
-    padding: 1.5625rem 0.9375rem;
+    padding: 1rem;
   }
 }
