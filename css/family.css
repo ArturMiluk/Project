@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -29,8 +30,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 7rem 0 1.25rem 0;
-  padding: 2.5rem;
+  margin-top: 7rem;
+  padding: 1.25rem;
   background: transparent;
   border: 0.125rem solid rgba(255, 255, 255, 0.2);
   border-radius: 0.625rem;
@@ -66,14 +67,15 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480) {
   .family__content {
-    padding: 1.25rem;
+    margin-top: 5rem;
   }
 }
 
 @media (max-width: 368px) {
   .family__content {
+    margin-top: 4.5rem;
     padding: 1rem;
   }
 }

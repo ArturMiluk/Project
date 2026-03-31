@@ -716,25 +716,21 @@ function init() {
   filterByCity(cityFromUrl, colors);
 }
 
-function filterByCity(city, colors) {
+function filterByCity(city) {
   map.geoObjects.removeAll();
 
   let marksToShow = [];
-  if (city && allPlacemarks[city]) {
+
+  if (city && city !== "belarus" && allPlacemarks[city]) {
     marksToShow = allPlacemarks[city];
   } else {
     marksToShow = Object.values(allPlacemarks).flat();
   }
 
   if (marksToShow.length > 0) {
-    let clusterColor = "#000";
-    if (city && colors[city]) {
-      clusterColor = colors[city];
-    }
-
     const clusterer = new ymaps.Clusterer({
       preset: "islands#invertedVioletClusterIcons",
-      clusterIconColor: clusterColor,
+      clusterIconColor: "#000",
       groupByCoordinates: false,
       clusterDisableClickZoom: false,
       clusterHideIconOnBalloonOpen: false,
@@ -754,13 +750,10 @@ function createAllPlacemarks(placesData, colors) {
   Object.keys(placesData).forEach((city) => {
     allPlacemarks[city] = [];
     placesData[city].forEach((place) => {
-      let imageUrl =
-        place.image ||
-        (place.images && place.images[0]) ||
-        "./img/no-image.jpg";
+      let imageUrl = place.image || (place.images && place.images[0]) || "";
 
       const iconHtml = `
-        <div style="
+        <div class="custom-marker" style="
           width: 40px;
           height: 40px;
           border-radius: 50%;
@@ -769,11 +762,10 @@ function createAllPlacemarks(placesData, colors) {
           background: #fff;
           box-shadow: 0 2px 5px rgba(0,0,0,0.3);
           cursor: pointer;
-          transition: transform 0.2s;
-        " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        ">
           <img src="${imageUrl}" 
-               style="width: 100%; height: 100%; object-fit: cover; display: block;"
-               onerror="this.src='./img/no-image.jpg'; this.onerror=null;">
+              style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              onerror="this.src='./img/no-image.jpg'; this.onerror=null;">
         </div>
       `;
 

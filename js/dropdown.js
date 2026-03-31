@@ -48,6 +48,7 @@ class DropdownMenu {
       ) {
         cityLink.addEventListener("click", (e) => {
           e.preventDefault();
+          e.stopPropagation();
 
           const href = cityLink.getAttribute("href");
 
@@ -61,6 +62,16 @@ class DropdownMenu {
           }
 
           this.closeAllDropdowns();
+
+          const burger = document.querySelector(".header__burger");
+          const nav = document.querySelector(".nav");
+          const overlay = document.querySelector(".burger-overlay");
+
+          if (burger && burger.classList.contains("active")) {
+            burger.classList.remove("active");
+            nav.classList.remove("active");
+            if (overlay) overlay.classList.remove("active");
+          }
         });
       }
     });
@@ -76,14 +87,13 @@ class DropdownMenu {
       window.history.pushState({}, "", newUrl);
 
       if (typeof window.filterByCity === "function") {
-        window.filterByCity(city);
+        window.filterByCity(city === "belarus" ? null : city);
       }
 
       this.highlightActiveCity();
     } else {
       const newUrl =
         city === "belarus" ? "./churches.html" : `./churches.html?city=${city}`;
-
       window.location.href = newUrl;
     }
 

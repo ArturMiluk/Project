@@ -1,3 +1,41 @@
+const churchHolidays = {
+  "01-07": "Рождество Христово",
+  "01-19": "Крещение",
+  "02-15": "Сретение",
+  "04-07": "Благовещение",
+  "08-14": "Медовый Спас",
+  "08-19": "Яблочный Спас",
+  "08-28": "Успение",
+  "09-21": "Рождество Богородицы",
+  "10-14": "Покров",
+  "11-21": "Михайлов день",
+  "12-04": "Введение во храм",
+  "12-19": "День Николая",
+};
+
+const familyHolidays = {
+  "01-01": "Новый год",
+  "01-14": "Старый Новый год",
+  "02-14": "День святого Валентина",
+  "02-23": "День защитников Отечества",
+  "03-08": "Международный женский день",
+  "03-15": "День Конституции",
+  "03-25": "День Воли",
+  "04-01": "День смеха",
+  "04-02": "День единения народов",
+  "05-01": "День труда",
+  "05-09": "День Победы",
+  "05-14": "День матери",
+  "06-01": "День детей",
+  "07-03": "День Независимости",
+  "09-01": "День знаний",
+  "09-17": "День народного единства",
+  "10-01": "День пожилых людей",
+  "11-07": "День Октябрьской революции",
+  "12-25": "Католическое Рождество",
+  "12-31": "Новогодний вечер",
+};
+
 const belarusHolidays = {
   "01-01": "Новый год",
   "01-07": "Рождество Христово",
@@ -55,6 +93,22 @@ const movingHolidays2026 = {
   "11-21": "Михайлов день",
   "12-04": "Введение во храм",
 };
+
+function getHolidayType(month, day, year = 2026) {
+  const key = `${month}-${day}`;
+
+  const isChurch = !!(churchHolidays[key] || movingHolidays2026[key]);
+  const isFamily = !!familyHolidays[key];
+
+  return {
+    isChurch: isChurch,
+    isFamily: isFamily,
+    names: {
+      church: churchHolidays[key] || movingHolidays2026[key] || null,
+      family: familyHolidays[key] || null,
+    },
+  };
+}
 
 function getHolidaysForDate(month, day, year = 2026) {
   const key = `${month}-${day}`;
@@ -130,19 +184,33 @@ function setupCalendarClicks() {
       const month = String(now.getMonth() + 1).padStart(2, "0");
       const year = now.getFullYear();
 
+      const holidayType = getHolidayType(month, day, year);
       const holidays = getHolidaysForDate(month, day, year);
+      const formattedHolidays = [];
+
+      if (holidayType.isChurch && holidayType.names.church) {
+        formattedHolidays.push(`${holidayType.names.church}`);
+      }
+      if (holidayType.isFamily && holidayType.names.family) {
+        formattedHolidays.push(`${holidayType.names.family}`);
+      }
+
+      const otherHolidays = holidays.filter(
+        (h) => h !== holidayType.names.church && h !== holidayType.names.family,
+      );
+      otherHolidays.forEach((h) => formattedHolidays.push(`• ${h}`));
 
       const popupTitle = document.querySelector(".holidays-list__form-title");
       if (popupTitle) {
-        popupTitle.textContent = `Праздники на ${day}.${month}.${year}`;
+        popupTitle.textContent = `${day}.${month}.${year}`;
       }
 
       const popupSubtitle = document.querySelector(
         ".holidays-list__form-subtitle",
       );
       if (popupSubtitle) {
-        popupSubtitle.innerHTML = holidays.length
-          ? holidays.map((h) => `• ${h}`).join("<br>")
+        popupSubtitle.innerHTML = formattedHolidays.length
+          ? formattedHolidays.map((h) => `${h}`).join("<br>")
           : "В этот день праздников нет";
       }
 
@@ -177,11 +245,15 @@ function highlightHolidayDays() {
   document.querySelectorAll(".calendar__item").forEach((item) => {
     const day = item.textContent.trim();
     if (day && !isNaN(parseInt(day))) {
-      const holidays = getHolidaysForDate(month, day, year);
-      if (holidays.length > 0) {
-        item.classList.add("calendar__item--has-holiday");
-      } else {
-        item.classList.remove("calendar__item--has-holiday");
+      const holidayType = getHolidayType(month, day, year);
+
+      item.classList.remove("calendar__item--church", "calendar__item--family");
+
+      if (holidayType.isChurch) {
+        item.classList.add("calendar__item--church");
+      }
+      if (holidayType.isFamily) {
+        item.classList.add("calendar__item--family");
       }
     }
   });

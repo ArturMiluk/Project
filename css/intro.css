@@ -13,7 +13,7 @@
   bottom: 0;
   left: 0;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .intro__video-bg {
@@ -35,19 +35,16 @@
   position: relative;
   z-index: 3;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
 .intro__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
   width: 100%;
-  margin: 7rem 0 1.25rem 0;
-  padding: 2.5rem;
+  margin: 7rem 0 1.5rem 0;
+  padding: 1.25rem;
   background: transparent;
   border: 0.125rem solid rgba(255, 255, 255, 0.2);
   border-radius: 0.625rem;
@@ -55,14 +52,11 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.intro__main {
-  flex: 1.5;
-}
-
 .intro__title {
   font-size: 2.625rem;
   font-weight: 700;
   color: #fff;
+  text-align: center;
 }
 
 .intro__subtitle {
@@ -70,6 +64,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #fff;
+  text-align: center;
 }
 
 .intro__quote {
@@ -125,9 +120,10 @@
   color: #fff;
 }
 
-.intro__btn {
-  display: inline-block;
-  margin-top: 2rem;
+.intro__team-btn {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem auto 0 auto;
   padding: 0.75rem 2rem;
   font-size: 1rem;
   font-weight: 500;
@@ -140,38 +136,9 @@
   transition: all 0.3s linear;
 }
 
-.intro__btn:hover {
+.intro__team-btn:hover {
   color: #fff;
   background: #000;
-}
-
-.intro__team {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 0.125rem solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.625rem;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.intro__team-pic {
-  width: 100%;
-  height: auto;
-  max-height: 280px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.intro__team-title {
-  padding: 0.9375rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -190,10 +157,6 @@
   .intro__quote {
     font-size: 1.125rem;
   }
-
-  .intro__team-pic {
-    max-height: 240px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -205,7 +168,7 @@
   }
 
   .intro__title {
-    font-size: 1rem;
+    font-size: 1.75rem;
     line-height: 1.2;
     text-align: center;
   }
@@ -229,26 +192,10 @@
   .intro__description-list-item {
     font-size: 0.9375rem;
   }
-
-  .intro__btn {
-    display: block;
-    width: fit-content;
-    margin: 1.5rem auto 0 auto;
-  }
-
-  .intro__team {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .intro__team-pic {
-    max-height: 200px;
-  }
 }
 
 @media (max-width: 480px) {
   .intro__content {
-    padding: 1.25rem;
     gap: 1.25rem;
   }
 
@@ -276,18 +223,9 @@
     font-size: 0.875rem;
   }
 
-  .intro__btn {
+  .intro__team-btn {
     margin-top: 1.25rem;
     padding: 0.625rem 1.5rem;
-    font-size: 0.875rem;
-  }
-
-  .intro__team-pic {
-    max-height: 180px;
-  }
-
-  .intro__team-title {
-    padding: 0.75rem;
     font-size: 0.875rem;
   }
 }
@@ -305,7 +243,7 @@
     font-size: 0.9375rem;
   }
 
-  .intro__btn {
+  .intro__team-btn {
     margin-top: 1rem;
     padding: 0.5rem 1.25rem;
     font-size: 0.8135rem;

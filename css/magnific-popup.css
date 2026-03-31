@@ -301,7 +301,6 @@ button::-moz-focus-inner {
   background: #000;
 }
 
-/* Основное изображение в попапе — адаптивная версия */
 img.mfp-img {
   width: auto;
   max-width: 100%;
@@ -313,7 +312,6 @@ img.mfp-img {
   margin: 0 auto;
 }
 
-/* Тень за изображением */
 .mfp-figure {
   line-height: 0;
 }
@@ -369,7 +367,6 @@ img.mfp-img {
   cursor: pointer;
 }
 
-/* Мобильная адаптация */
 @media screen and (max-width: 800px) and (orientation: landscape),
   screen and (max-height: 300px) {
   .mfp-img-mobile .mfp-image-holder {
@@ -445,7 +442,6 @@ img.mfp-img {
   }
 }
 
-/* Дополнительная адаптация для очень маленьких экранов */
 @media (max-width: 768px) {
   img.mfp-img {
     padding: 20px 0 20px;

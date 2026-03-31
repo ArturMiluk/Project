@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -30,8 +31,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 7rem 0 1.25rem 0;
-  padding: 2.5rem;
+  margin: 7rem 0 1.5rem 0;
+  padding: 1.25rem;
   background: transparent;
   border: 0.125rem solid rgba(255, 255, 255, 0.2);
   border-radius: 0.625rem;
@@ -48,28 +49,11 @@
 
 .holidays__subtitle {
   margin-top: 2.5rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #fff;
-}
-
-.holidays__text {
-  margin-top: 2.5rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2;
   color: #fff;
-}
-
-.holidays__list {
-  margin-top: 2.5rem;
-}
-
-.holidays__item {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #fff;
+  text-align: center;
 }
 
 .holidays__calendar {
@@ -97,7 +81,7 @@
   justify-content: center;
   align-items: center;
   padding: 1.25rem 1.875rem;
-  background: rgba(0, 191, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 0.625rem;
   font-size: 1rem;
   font-weight: 500;
@@ -107,44 +91,67 @@
 }
 
 .calendar__item:hover {
-  background: rgba(0, 191, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.holiday {
-  position: absolute;
-  top: 2.5rem;
-  right: 2.5rem;
+.calendar__item--church {
+  background: rgba(255, 165, 0, 0.2);
+  border: 0.0625rem solid rgba(255, 165, 0, 0.3);
+}
+
+.calendar__item--church:hover {
+  background: rgba(255, 165, 0, 0.3);
+}
+
+.calendar__item--family {
+  background: rgba(0, 128, 0, 0.2);
+  border: 0.0625rem solid rgba(0, 128, 0, 0.3);
+}
+
+.calendar__item--family:hover {
+  background: rgba(0, 128, 0, 0.3);
+}
+
+.holidays__calendar-info {
+  margin-top: 1.25rem;
+}
+
+.holidays__calendar-info-list {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.holidays__calendar-info-list-item {
+  display: flex;
   justify-content: center;
-  width: 11.25rem;
-  height: 7.5rem;
-  background: rgba(0, 191, 255, 0.1);
-  border-radius: 0.625rem;
-}
-
-.holiday__title {
+  align-content: center;
   font-size: 1rem;
   font-weight: 500;
-  color: #fff;
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-
-.holiday__date {
-  margin-top: 0.625rem;
-  font-size: 1.5rem;
-  font-weight: 500;
+  line-height: 1.2;
   color: #fff;
 }
 
-.holiday__description {
-  margin-top: 0.625rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #fff;
-  text-align: center;
+.holidays__calendar-info-list-item:not(:last-child) {
+  margin-right: 1.25rem;
+}
+
+.holidays__calendar-info-list-item--orange {
+  width: 1rem;
+  height: 1rem;
+  background: rgba(255, 165, 0, 0.5);
+  border-radius: 50%;
+}
+
+.holidays__calendar-info-list-item--green {
+  width: 1rem;
+  height: 1rem;
+  background: rgba(0, 128, 0, 0.5);
+  border-radius: 50%;
+}
+
+.holidays__calendar-info-list-item-title {
+  margin-left: 0.5rem;
 }
 
 .holidays-list__form {
@@ -186,23 +193,50 @@
   background: rgba(255, 255, 0, 0.3);
 }
 
-.calendar__item--has-holiday {
-  position: relative;
+.holiday {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 11.25rem;
+  height: 7.5rem;
+  background: rgba(0, 191, 255, 0.1);
+  border-radius: 0.625rem;
 }
 
-.calendar__item--has-holiday::after {
-  content: "*";
-  position: absolute;
-  top: 0.125rem;
-  right: 0.125rem;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: #ffd700;
+.holiday__title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.holiday__date {
+  margin-top: 0.625rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.holiday__description {
+  margin-top: 0.625rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .holidays__content {
     margin-top: 6.25rem;
+  }
+
+  .holidays__title {
+    font-size: 1.75rem;
   }
 
   .calendar__list {
@@ -216,8 +250,8 @@
 }
 
 @media (max-width: 480px) {
-  .holidays__content {
-    padding: 1.25rem;
+  .holidays__title {
+    font-size: 1.75rem;
   }
 
   .calendar__list {
