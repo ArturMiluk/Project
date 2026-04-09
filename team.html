@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Храмы</title>
+    <title>Команда</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/header/header-logo.jpg">
-  </head>
-  <body>
+</head>
+<body>
     <header id="header" class="header">
       <div class="container">
         <div class="header__inner">
@@ -48,32 +48,24 @@
     </header>
 
     <main class="main">
-      <section class="churches">
-        <div class="container">
-          <div class="churches__inner">
-            <div class="churches__content">
-              <div id="churchesMap" class="churches__map"></div>
-              <div class="baloon">
-                <div class="baloon__title">Название</div>
-                <div class="baloon__gallery">
-                  <div class="gallery__main">
-                    <img src="./img/bg.jpg" alt="Изображение" class="gallery__main-pic">
-                  </div>
-                  <div class="gallery__thumbs"></div>
+        <section class="team">
+            <div class="container">
+                <div class="team__inner">
+                    <div class="team__content">
+                        <div class="team__title">Наша команда</div>
+                        <div class="team__subtitle">Люди, которые работали над проектом</div>
+                        <div class="team__slider">
+                            <button class="team__slider-btn team__slider-btn--prev" aria-label="Предыдущее"><</button>
+                            <div class="team__slider-container">
+                              <div class="team__slider-track"></div>
+                            </div>
+                            <button class="team__slider-btn team__slider-btn--next" aria-label="Следующее">></button>
+                        </div>
+                        <div class="team__dots"></div>
+                    </div>
                 </div>
-                <div class="baloon__description">Описание</div>
-                <div class="baloon__adress">Адрес</div>
-                <div class="baloon__work-time">График работы</div>
-                <div class="baloon__year">Год постройки: </div>
-                <div class="baloon__actions">
-                  <a href="" target="_blank" class="baloon__btn">Web-сайт</a>
-                  <a class="baloon__btn popup-with-form" href="#browsing-history__form">История посещений</a>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
     <footer class="footer">
@@ -87,19 +79,9 @@
       </div>
     </footer>
 
-    <div class="browsing-history__form mfp-hide white-popup-block" id="browsing-history__form">
-      <div class="browsing-history__form-title">История посещений группы</div>
-      <div class="browsing-history__form-subtitle">Фото группы, которая работала над данным проектом.</div>
-      <img src="./img/bg.jpg" alt="photo" class="browsing-history__form-pic">
-    </div>
-    
-    <script src="./js/jquery-3.5.1.js"></script>
-    <script src="./js/jquery.magnific-popup.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
-    <script src="./js/map.js"></script>
     <script src="./js/burger.js"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/active-link.js"></script>
-    <script src="./js/magnific-popup.js"></script>
-  </body>
+    <script src="./js/team.js"></script>
+</body>
 </html>

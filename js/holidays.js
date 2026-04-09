@@ -1,3 +1,4 @@
+// Классификация праздников
 const churchHolidays = {
   "01-07": "Рождество Христово",
   "01-19": "Крещение",
@@ -94,6 +95,31 @@ const movingHolidays2026 = {
   "12-04": "Введение во храм",
 };
 
+// Описания праздников
+const holidayDescriptions = {
+  "Новый год":
+    "Праздник наступления нового календарного года, один из самых любимых и ожидаемых праздников.",
+  "Рождество Христово":
+    "Великий христианский праздник, посвящённый рождению Иисуса Христа.",
+  Крещение:
+    "Христианский праздник, установленный в честь крещения Иисуса Христа в реке Иордан.",
+  "День защитников Отечества": "Праздник всех, кто служил или служит в армии.",
+  "Международный женский день": "Праздник весны, красоты и женственности.",
+  "День Победы": "Праздник победы Советского Союза над нацистской Германией.",
+  "День Независимости": "Главный государственный праздник Республики Беларусь.",
+  Пасха:
+    "Светлое Христово Воскресение — главное событие года для православных христиан.",
+  Троица: "Праздник сошествия Святого Духа на апостолов.",
+  Покров: "Праздник в честь явления Богородицы во Влахернском храме.",
+};
+
+function getHolidayDescription(holidayName) {
+  return (
+    holidayDescriptions[holidayName] ||
+    "Праздник, который объединяет людей и напоминает о важных ценностях."
+  );
+}
+
 function getHolidayType(month, day, year = 2026) {
   const key = `${month}-${day}`;
 
@@ -123,6 +149,121 @@ function getHolidaysForDate(month, day, year = 2026) {
   }
 
   return holidays;
+}
+
+function getAllHolidaysForYear(year = 2026) {
+  const allHolidays = [];
+  const allDates = {};
+
+  // Собираем все праздники из belarusHolidays
+  Object.keys(belarusHolidays).forEach((key) => {
+    const [month, day] = key.split("-");
+    allDates[key] = belarusHolidays[key];
+  });
+
+  // Добавляем переходящие праздники
+  Object.keys(movingHolidays2026).forEach((key) => {
+    if (year === 2026) {
+      allDates[key] = movingHolidays2026[key];
+    }
+  });
+
+  // Преобразуем в массив для сортировки
+  Object.keys(allDates).forEach((key) => {
+    const [month, day] = key.split("-");
+    const date = new Date(year, parseInt(month) - 1, parseInt(day));
+    const holidayType = getHolidayType(month, day, year);
+    const holidayName = allDates[key];
+
+    allHolidays.push({
+      date: date,
+      day: parseInt(day),
+      month: parseInt(month),
+      name: holidayName,
+      type: holidayType.isChurch
+        ? "Церковный"
+        : holidayType.isFamily
+          ? "Семейный"
+          : "Государственный",
+      description: getHolidayDescription(holidayName),
+    });
+  });
+
+  // Сортируем по дате
+  allHolidays.sort((a, b) => a.date - b.date);
+
+  return allHolidays;
+}
+
+function getUpcomingHolidays(count = 3) {
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  const allHolidays = getAllHolidaysForYear(currentYear);
+
+  // Находим праздники, которые ещё не прошли
+  const upcomingHolidays = allHolidays.filter((holiday) => {
+    const holidayDate = new Date(currentYear, holiday.month - 1, holiday.day);
+    // Сравниваем только по дате (без времени)
+    return (
+      holidayDate >=
+      new Date(today.getFullYear(), today.getMonth(), today.getDate())
+    );
+  });
+
+  // Если в текущем году нет праздников, берём из следующего года
+  if (upcomingHolidays.length === 0) {
+    const nextYearHolidays = getAllHolidaysForYear(currentYear + 1);
+    return nextYearHolidays.slice(0, count);
+  }
+
+  return upcomingHolidays.slice(0, count);
+}
+
+function formatDate(month, day) {
+  const monthNames = [
+    "янв",
+    "фев",
+    "мар",
+    "апр",
+    "май",
+    "июн",
+    "июл",
+    "авг",
+    "сен",
+    "окт",
+    "ноя",
+    "дек",
+  ];
+  return `${day} ${monthNames[month - 1]}`;
+}
+
+function updateUpcomingHolidays() {
+  const upcomingHolidays = getUpcomingHolidays(3);
+  const container = document.querySelector(".holidays__coming-list");
+
+  if (!container) return;
+
+  if (upcomingHolidays.length === 0) {
+    container.innerHTML =
+      '<div class="holidays__coming-list-item">Нет ближайших праздников</div>';
+    return;
+  }
+
+  let html = "";
+  upcomingHolidays.forEach((holiday) => {
+    html += `
+      <div class="holidays__coming-list-item">
+        <div class="holidays__coming-list-item-date">${formatDate(holiday.month, holiday.day)}</div>
+        <div class="holidays__coming-list-item-info">
+          <div class="holidays__coming-list-item-info-title">${holiday.name}</div>
+          <div class="holidays__coming-list-item-info-type">${holiday.type}</div>
+          <div class="holidays__coming-list-item-info-subtitle">${holiday.description}</div>
+        </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
 }
 
 async function getExactDate() {
@@ -261,6 +402,7 @@ function highlightHolidayDays() {
 
 document.addEventListener("DOMContentLoaded", () => {
   updateTodayBlock();
+  updateUpcomingHolidays();
   setupCalendarClicks();
   highlightCurrentDay();
   highlightHolidayDays();
@@ -275,11 +417,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
     updateTodayBlock();
+    updateUpcomingHolidays();
     highlightCurrentDay();
     highlightHolidayDays();
     setInterval(
       () => {
         updateTodayBlock();
+        updateUpcomingHolidays();
         highlightCurrentDay();
         highlightHolidayDays();
       },

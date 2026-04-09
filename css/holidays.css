@@ -193,11 +193,76 @@
   background: rgba(255, 255, 0, 0.3);
 }
 
+.holidays__coming {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.holidays__coming-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.holidays__coming-list {
+  margin-top: 1.25rem;
+}
+
+.holidays__coming-list-item {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  background: transparent;
+  border: 0.125rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.625rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.holidays__coming-list-item:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.holidays__coming-list-item-date {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.625rem;
+}
+
+.holidays__coming-list-item-info {
+  margin-left: 1rem;
+}
+
+.holidays__coming-list-item-info-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.holidays__coming-list-item-info-type {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+}
+
+.holidays__coming-list-item-info-subtitle {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
 .holiday {
   position: absolute;
-  top: 2.5rem;
-  right: 2.5rem;
-  display: flex;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -254,14 +319,80 @@
     font-size: 1.75rem;
   }
 
+  .holidays__calendar {
+    margin-top: 1.5rem;
+  }
+
   .calendar__list {
     grid-template-columns: repeat(4, 5rem);
     grid-template-rows: repeat(8, 2.5rem);
+  }
+
+  .holidays__calendar-info-list-item {
+    font-size: 0.75rem;
+  }
+
+  .holidays__calendar-info-list-item:not(:last-child) {
+    margin-right: 0.75rem;
+  }
+
+  .holidays__calendar-info-list-item--orange,
+  .holidays__calendar-info-list-item--green {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .holidays__calendar-info-list-item-title {
+    margin-left: 0.375rem;
+  }
+
+  .holidays__coming {
+    margin-top: 1.5rem;
+  }
+
+  .holidays__coming-list-item {
+    padding: 0.875rem;
+  }
+
+  .holidays__coming-list-item.holidays__coming-list-item:not(:first-child) {
+    margin-top: 0.75rem;
+  }
+
+  .holidays__coming-list-item-date {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .holidays__coming-list-item-info-title {
+    font-size: 0.875rem;
+  }
+
+  .holidays__coming-list-item-info-type,
+  .holidays__coming-list-item-info-subtitle {
+    font-size: 0.8125rem;
   }
 }
 
 @media (max-width: 368px) {
   .holidays__content {
     padding: 1rem;
+  }
+
+  .holidays__coming-list-item {
+    padding: 0.75rem;
+  }
+
+  .holidays__coming-list-item-date {
+    padding: 0.375rem 0.625rem;
+    font-size: 0.85rem;
+  }
+
+  .holidays__coming-list-item-info-title {
+    font-size: 0.8125rem;
+  }
+
+  .holidays__coming-list-item-info-type,
+  .holidays__coming-list-item-info-subtitle {
+    font-size: 0.75rem;
   }
 }
