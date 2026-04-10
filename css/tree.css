@@ -105,7 +105,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2.5rem;
+  margin: 2.5rem 0 1.5rem 0;
 }
 
 .tree__quote::before {

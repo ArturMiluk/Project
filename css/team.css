@@ -72,8 +72,10 @@
 }
 
 .team__slide-img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
   border: 0.125rem solid rgba(255, 255, 255, 0.3);
@@ -93,12 +95,11 @@
   background: rgba(255, 255, 255, 0.2);
   border: 0.0625rem solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  transition: all 0.3s linear;
+  transition: background 0.3s linear;
 }
 
 .team__slider-btn:hover {
   background: rgba(255, 255, 255, 0.3);
-  transform: scale(0.95);
 }
 
 .team__slider-container {
@@ -148,8 +149,7 @@
   }
 
   .team__slide-img {
-    width: 160px;
-    height: 160px;
+    max-width: 160px;
   }
 }
 
@@ -167,8 +167,7 @@
   }
 
   .team__slide-img {
-    width: 140px;
-    height: 140px;
+    max-width: 140px;
   }
 }
 
@@ -182,7 +181,12 @@
   }
 
   .team__slide-img {
-    width: 120px;
-    height: 12;
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 320px) {
+  .team__slide-img {
+    max-width: 100px;
   }
 }

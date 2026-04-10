@@ -717,6 +717,9 @@ function init() {
 }
 
 function filterByCity(city) {
+  document.body.style.overflow = "";
+  document.body.style.paddingRight = "";
+
   map.geoObjects.removeAll();
 
   let marksToShow = [];

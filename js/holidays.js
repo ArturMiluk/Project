@@ -95,7 +95,6 @@ const movingHolidays2026 = {
   "12-04": "Введение во храм",
 };
 
-// Описания праздников
 const holidayDescriptions = {
   "Новый год":
     "Праздник наступления нового календарного года, один из самых любимых и ожидаемых праздников.",
@@ -108,7 +107,7 @@ const holidayDescriptions = {
   "День Победы": "Праздник победы Советского Союза над нацистской Германией.",
   "День Независимости": "Главный государственный праздник Республики Беларусь.",
   Пасха:
-    "Светлое Христово Воскресение — главное событие года для православных христиан.",
+    "Светлое Христово Воскресение - главное событие года для православных христиан.",
   Троица: "Праздник сошествия Святого Духа на апостолов.",
   Покров: "Праздник в честь явления Богородицы во Влахернском храме.",
 };
@@ -155,20 +154,17 @@ function getAllHolidaysForYear(year = 2026) {
   const allHolidays = [];
   const allDates = {};
 
-  // Собираем все праздники из belarusHolidays
   Object.keys(belarusHolidays).forEach((key) => {
     const [month, day] = key.split("-");
     allDates[key] = belarusHolidays[key];
   });
 
-  // Добавляем переходящие праздники
   Object.keys(movingHolidays2026).forEach((key) => {
     if (year === 2026) {
       allDates[key] = movingHolidays2026[key];
     }
   });
 
-  // Преобразуем в массив для сортировки
   Object.keys(allDates).forEach((key) => {
     const [month, day] = key.split("-");
     const date = new Date(year, parseInt(month) - 1, parseInt(day));
@@ -189,7 +185,6 @@ function getAllHolidaysForYear(year = 2026) {
     });
   });
 
-  // Сортируем по дате
   allHolidays.sort((a, b) => a.date - b.date);
 
   return allHolidays;
@@ -200,17 +195,15 @@ function getUpcomingHolidays(count = 3) {
   const currentYear = today.getFullYear();
   const allHolidays = getAllHolidaysForYear(currentYear);
 
-  // Находим праздники, которые ещё не прошли
   const upcomingHolidays = allHolidays.filter((holiday) => {
     const holidayDate = new Date(currentYear, holiday.month - 1, holiday.day);
-    // Сравниваем только по дате (без времени)
+
     return (
       holidayDate >=
       new Date(today.getFullYear(), today.getMonth(), today.getDate())
     );
   });
 
-  // Если в текущем году нет праздников, берём из следующего года
   if (upcomingHolidays.length === 0) {
     const nextYearHolidays = getAllHolidaysForYear(currentYear + 1);
     return nextYearHolidays.slice(0, count);
