@@ -67,57 +67,17 @@
   text-align: center;
 }
 
-.intro__quote {
-  position: relative;
-  margin-top: 2rem;
-  padding-left: 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.intro__quote::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0.125rem;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-}
-
 .intro__description {
   margin-top: 1.5rem;
-}
-
-.intro__description-text {
-  margin-top: 1rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2;
   color: #fff;
+  text-align: center;
 }
 
-.intro__description-list-title {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-.intro__description-list {
-  margin-top: 0.75rem;
-  padding-left: 1.5rem;
-  list-style: disc;
-}
-
-.intro__description-list-item {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #fff;
+.intro__description span {
+  font-size: 1.25rem;
 }
 
 .intro__team-btn {
@@ -153,10 +113,6 @@
   .intro__subtitle {
     font-size: 1.25rem;
   }
-
-  .intro__quote {
-    font-size: 1.125rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -179,17 +135,7 @@
     text-align: center;
   }
 
-  .intro__quote {
-    margin-top: 1.5rem;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .intro__description-text {
-    font-size: 0.9375rem;
-  }
-
-  .intro__description-list-item {
+  .intro__description {
     font-size: 0.9375rem;
   }
 }
@@ -207,19 +153,7 @@
     font-size: 1rem;
   }
 
-  .intro__quote {
-    font-size: 0.875rem;
-  }
-
-  .intro__description-text {
-    font-size: 0.875rem;
-  }
-
-  .intro__description-list-title {
-    font-size: 0.875rem;
-  }
-
-  .intro__description-list-item {
+  .intro__description {
     font-size: 0.875rem;
   }
 
