@@ -47,14 +47,16 @@
 }
 
 .history__subtitle {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   font-size: 1.5rem;
   font-weight: 500;
   color: #fff;
+  text-align: center;
 }
 
 .history__text {
-  margin-top: 2.5rem;
+  max-width: 70ch;
+  margin-top: 1.5rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2;
@@ -65,17 +67,54 @@
   .history__content {
     margin-top: 6.25rem;
   }
+
+  .history__title {
+    font-size: 1.75rem;
+  }
+
+  .history__subtitle {
+    font-size: 1.25rem;
+  }
+
+  .history__text {
+    font-size: 0.9375rem;
+  }
 }
 
-@media (max-width: 480) {
+@media (max-width: 480px) {
   .history__content {
     margin-top: 5rem;
+    padding: 1rem;
+  }
+
+  .history__title {
+    font-size: 1.5rem;
+  }
+
+  .history__subtitle {
+    font-size: 1.125rem;
+  }
+
+  .history__text {
+    font-size: 0.875rem;
   }
 }
 
 @media (max-width: 368px) {
   .history__content {
     margin-top: 4.5rem;
-    padding: 1rem;
+    padding: 0.875rem;
+  }
+
+  .history__title {
+    font-size: 1.25rem;
+  }
+
+  .history__subtitle {
+    font-size: 1rem;
+  }
+
+  .history__text {
+    font-size: 0.8125rem;
   }
 }

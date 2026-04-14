@@ -8,6 +8,7 @@ const teamPhotos = [
   "./img/main/team/photo_7.jpg",
   "./img/main/team/photo_8.jpg",
   "./img/main/team/photo_9.jpg",
+  "./img/main/team/photo_10.jpg",
 ];
 
 let currentSlide = 0;
